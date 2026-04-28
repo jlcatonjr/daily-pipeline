@@ -302,8 +302,9 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "3e0e0656e1ef6635",
+  "manifest_fingerprint": "213eb3508c9b8a5d",
   "file_hashes": {
-    "security.agent.md": "0087e9934f013af7"
+    "security.agent.md": "97ab69b2ab4da344",
+    "references/security-vulnerability-watch.reference.md": "b5f466bb9fd60df1"
   }
 }

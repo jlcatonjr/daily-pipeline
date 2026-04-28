@@ -1,9 +1,15 @@
-stage,slug,purpose
-1,validate-selection,Validate multi-team inputs
-2,refresh-sources,Build framework availability matrix
-3,ingest-normalize,Normalize source teams
-4,commonality-analysis,Find shared capabilities and references
-5,synthesize-abstract-team,Create abstract team artifacts
-6,build-agentteams-integration,Produce AgentTeams integration request
-7,stage-registry,Emit machine-readable stage outcomes
-8,consolidated-report,Write markdown summary report
+stage,slug,purpose,execution_layer,authoritative_source
+1,validate-selection,Validate multi-team inputs,core,daily_pipeline/protocol.py
+2,refresh-sources,Build framework availability matrix,core,daily_pipeline/protocol.py
+3,ingest-normalize,Normalize source teams,core,daily_pipeline/protocol.py
+4,commonality-analysis,Find shared capabilities and references,core,daily_pipeline/protocol.py
+5,synthesize-abstract-team,Create abstract team artifacts,core,daily_pipeline/protocol.py
+6,build-agentteams-integration,Produce AgentTeams integration request,core,daily_pipeline/protocol.py
+7,stage-registry,Emit machine-readable stage outcomes,core,daily_pipeline/protocol.py
+8,consolidated-report,Write markdown summary report,core,daily_pipeline/protocol.py
+9,pipeline-orchestration,Coordinate post-core pipeline state and handoff,orchestration,protocols/stages.md
+9.5,agentteams-deterministic-sync,Run deterministic AgentTeams sync across candidate repos,orchestration,protocols/stages.md
+10,vk-investigation,Run per-repo orchestrator investigation across VK workspace,orchestration,protocols/stages.md
+10.1,vk-adversarial-review,Challenge investigation conclusions before remediation,orchestration,protocols/stages.md
+10.5,vk-source-updates,Apply source-aware updater synchronization before remediation,orchestration,protocols/stages.md
+11,vk-remediation,Execute per-repo remediation and sequential git push phase,orchestration,protocols/stages.md

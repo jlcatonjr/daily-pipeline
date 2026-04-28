@@ -141,7 +141,7 @@ Use this table to determine the verdict. **Criteria are deterministic** — mode
 ### Current Threat Intelligence Snapshot
 
 <!-- AGENTTEAMS:BEGIN threat_intelligence v=1 -->
-Generated at: `2026-04-28T04:28:30Z`
+Generated at: `2026-04-28T14:31:07Z`
 
 **Sources:**
 
@@ -155,20 +155,20 @@ Generated at: `2026-04-28T04:28:30Z`
 
 **Current major vulnerabilities:**
 
-- `CVE-2025-29635` | D-Link DIR-823X | D-Link DIR-823X Command Injection Vulnerability | added 2026-04-24 | EPSS 0.589390000, percentile 0.982340000 | CVSS 7.2 HIGH
-- `CVE-2024-7399` | Samsung MagicINFO 9 Server | Samsung MagicINFO 9 Server Path Traversal Vulnerability | added 2026-04-24 | EPSS 0.822630000, percentile 0.992280000 | CVSS 8.8 HIGH
-- `CVE-2024-57728` | SimpleHelp  SimpleHelp | SimpleHelp Path Traversal Vulnerability | added 2026-04-24 | EPSS 0.505870000, percentile 0.978590000 | CVSS 7.2 HIGH
-- `CVE-2024-57726` | SimpleHelp  SimpleHelp | SimpleHelp Missing Authorization Vulnerability | added 2026-04-24 | EPSS 0.490970000, percentile 0.977860000 | CVSS 9.9 CRITICAL
-- `CVE-2026-39987` | Marimo Marimo | Marimo Remote Code Execution Vulnerability | added 2026-04-23 | EPSS 0.552090000, percentile 0.980700000 | CVSS 9.8 CRITICAL
-- `CVE-2026-33825` | Microsoft Defender | Microsoft Defender Insufficient Granularity of Access Control Vulnerability | added 2026-04-22 | EPSS 0.032990000, percentile 0.872640000
-- `CVE-2026-20122` | Cisco Catalyst SD-WAN Manger | Cisco Catalyst SD-WAN Manager Incorrect Use of Privileged APIs Vulnerability | added 2026-04-20 | EPSS 0.009660000, percentile 0.766350000
-- `CVE-2026-20133` | Cisco Catalyst SD-WAN Manager | Cisco Catalyst SD-WAN Manager Exposure of Sensitive Information to an Unauthorized Actor Vulnerability | added 2026-04-20 | EPSS 0.011950000, percentile 0.789290000
+- `CVE-2025-29635` | D-Link DIR-823X | D-Link DIR-823X Command Injection Vulnerability | added 2026-04-24 | EPSS 0.589390000, percentile 0.982330000 | CVSS 7.2 HIGH
+- `CVE-2024-7399` | Samsung MagicINFO 9 Server | Samsung MagicINFO 9 Server Path Traversal Vulnerability | added 2026-04-24 | EPSS 0.822630000, percentile 0.992290000 | CVSS 8.8 HIGH
+- `CVE-2024-57728` | SimpleHelp  SimpleHelp | SimpleHelp Path Traversal Vulnerability | added 2026-04-24 | EPSS 0.593270000, percentile 0.982510000 | CVSS 7.2 HIGH
+- `CVE-2024-57726` | SimpleHelp  SimpleHelp | SimpleHelp Missing Authorization Vulnerability | added 2026-04-24 | EPSS 0.459630000, percentile 0.976420000 | CVSS 9.9 CRITICAL
+- `CVE-2026-39987` | Marimo Marimo | Marimo Remote Code Execution Vulnerability | added 2026-04-23 | EPSS 0.552090000, percentile 0.980720000 | CVSS 9.8 CRITICAL
+- `CVE-2026-33825` | Microsoft Defender | Microsoft Defender Insufficient Granularity of Access Control Vulnerability | added 2026-04-22 | EPSS 0.032990000, percentile 0.872650000
+- `CVE-2026-20122` | Cisco Catalyst SD-WAN Manger | Cisco Catalyst SD-WAN Manager Incorrect Use of Privileged APIs Vulnerability | added 2026-04-20 | EPSS 0.009660000, percentile 0.766440000
+- `CVE-2026-20133` | Cisco Catalyst SD-WAN Manager | Cisco Catalyst SD-WAN Manager Exposure of Sensitive Information to an Unauthorized Actor Vulnerability | added 2026-04-20 | EPSS 0.011200000, percentile 0.783120000
 - `CVE-2025-2749` | Kentico Kentico Xperience | Kentico Xperience Path Traversal Vulnerability | added 2026-04-20 | EPSS 0.050510000, percentile 0.897960000
-- `CVE-2023-27351` | PaperCut NG/MF | PaperCut NG/MF Improper Authentication Vulnerability | added 2026-04-20 | EPSS 0.861040000, percentile 0.994010000
-- `CVE-2025-48700` | Synacor Zimbra Collaboration Suite (ZCS) | Synacor Zimbra Collaboration Suite (ZCS) Cross-site Scripting Vulnerability | added 2026-04-20 | EPSS 0.187570000, percentile 0.953090000
-- `CVE-2026-20128` | Cisco Catalyst SD-WAN Manager | Cisco Catalyst SD-WAN Manager Storing Passwords in a Recoverable Format Vulnerability | added 2026-04-20 | EPSS 0.000450000, percentile 0.138780000
+- `CVE-2023-27351` | PaperCut NG/MF | PaperCut NG/MF Improper Authentication Vulnerability | added 2026-04-20 | EPSS 0.861040000, percentile 0.994020000
+- `CVE-2025-48700` | Synacor Zimbra Collaboration Suite (ZCS) | Synacor Zimbra Collaboration Suite (ZCS) Cross-site Scripting Vulnerability | added 2026-04-20 | EPSS 0.187570000, percentile 0.953110000
+- `CVE-2026-20128` | Cisco Catalyst SD-WAN Manager | Cisco Catalyst SD-WAN Manager Storing Passwords in a Recoverable Format Vulnerability | added 2026-04-20 | EPSS 0.000430000, percentile 0.128500000
 - `CVE-2025-32975` | Quest KACE Systems Management Appliance (SMA) | Quest KACE Systems Management Appliance (SMA) Improper Authentication Vulnerability | added 2026-04-20 | EPSS 0.465020000, percentile 0.976680000
-- `CVE-2024-27199` | JetBrains TeamCity | JetBrains TeamCity Relative Path Traversal Vulnerability | added 2026-04-20 | EPSS 0.905410000, percentile 0.996160000
+- `CVE-2024-27199` | JetBrains TeamCity | JetBrains TeamCity Relative Path Traversal Vulnerability | added 2026-04-20 | EPSS 0.910110000, percentile 0.996440000
 - `CVE-2026-34197` | Apache ActiveMQ | Apache ActiveMQ Improper Input Validation Vulnerability | added 2026-04-16 | EPSS 0.650690000, percentile 0.984880000
 
 **Prevention and mitigation playbook:**

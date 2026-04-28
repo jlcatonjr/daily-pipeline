@@ -25,23 +25,23 @@ Escalation (role/scope conflicts): `orchestrator.agent.md` and `conflict-auditor
 
 ## Standard Commands
 
-Run from `/Users/jamescaton/githubrepositories/agentteams`:
+Run from the daily-pipeline repository root:
 
 ```bash
-python3 build_team.py \
-  --description /Users/jamescaton/githubrepositories/daily-pipeline/.github/agents/_build-description.json \
-  --project /Users/jamescaton/githubrepositories/daily-pipeline \
+python3 "$AGENTTEAMS_REPO/build_team.py" \
+  --description .github/agents/_build-description.json \
+  --project . \
   --framework copilot-vscode \
-  --output /Users/jamescaton/githubrepositories/daily-pipeline/.github/agents \
+  --output .github/agents \
   --check
 ```
 
 ```bash
-python3 build_team.py \
-  --description /Users/jamescaton/githubrepositories/daily-pipeline/.github/agents/_build-description.json \
-  --project /Users/jamescaton/githubrepositories/daily-pipeline \
+python3 "$AGENTTEAMS_REPO/build_team.py" \
+  --description .github/agents/_build-description.json \
+  --project . \
   --framework copilot-vscode \
-  --output /Users/jamescaton/githubrepositories/daily-pipeline/.github/agents \
+  --output .github/agents \
   --update --merge --yes
 ```
 

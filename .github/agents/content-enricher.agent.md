@@ -57,8 +57,8 @@ Focus on rows where `status == pending`.
 
 For each pending finding, read the relevant source material:
 
-- **Chapter component specs** (`COMPONENT_SPEC`, `COMPONENT_SECTIONS`, `COMPONENT_QUALITY_CRITERIA`):
-  Read the corresponding notebook in `daily_pipeline/`. Extract the chapter title, section headings, and describe the learning objectives.
+- **Component specs** (`COMPONENT_SPEC`, `COMPONENT_SECTIONS`, `COMPONENT_QUALITY_CRITERIA`):
+  Read the corresponding Python modules and protocol docs in `daily_pipeline/` and `protocols/`. Extract component purpose, section boundaries, and quality criteria from repository sources.
 
 - **Style reference** (`STYLE_REFERENCE_PATH`):
   Check if a style guide, README, or prose conventions document exists in the project root. If none exists, set to `"N/A — no formal style guide"`.
@@ -100,9 +100,9 @@ Common tokens and their expected values for this project:
 
 | Token | Expected source |
 |-------|----------------|
-| `COMPONENT_SPEC` | Notebook chapter summary — title + list of topic sections |
-| `COMPONENT_SECTIONS` | Numbered list of `## Heading` entries from source notebook |
-| `COMPONENT_QUALITY_CRITERIA` | Executable, observable quality checklist for notebook authors |
+| `COMPONENT_SPEC` | Module or protocol component summary from repository source |
+| `COMPONENT_SECTIONS` | Numbered list of section headings from source markdown/module docs |
+| `COMPONENT_QUALITY_CRITERIA` | Executable, observable quality checklist for module/document maintainers |
 | `STYLE_REFERENCE_PATH` | Path to style guide or "N/A" if none exists |
 | `REFERENCE_DB_PATH` | Path to bibliography database or "N/A" if none exists |
 | `CONVERSION_PIPELINE` | Format conversion steps or "N/A" if output is uncompiled |
