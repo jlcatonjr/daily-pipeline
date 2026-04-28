@@ -77,3 +77,12 @@ class RunContext:
     run_dir: str
     degraded_mode: bool
     framework_matrix: dict[str, str]
+
+
+@dataclass
+class SyncResult:
+    target_repo: str
+    status: str  # ok | skipped | failed
+    skip_reason: str  # build_team_py_not_configured | build_team_py_not_found | build_description_missing | dry_run | ""
+    raw_output: str  # captured stdout+stderr from subprocess; telemetry only
+    warnings: list[str]

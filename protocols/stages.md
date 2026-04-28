@@ -77,6 +77,8 @@ Operational reference source: external orchestration script (for example `~/.loc
 - Action: run build_team.py --update --merge --yes for each candidate repo
 - Validation: checks orchestrator.agent.md contains Plan Documentation and Review (Workflow 10) and Final Check (Workflow 11)
 - Failure behavior: best-effort, non-halting
+- Python helpers: daily_pipeline/integration/sync.py exposes discover_sync_targets() and execute_agentteams_sync() for external orchestration use; these are callable helpers only — Stage 9.5 execution is external orchestration, not part of daily_pipeline/protocol.py
+- CLI path: python3 -m daily_pipeline.cli --sync --root $VK_ROOT --build-team-py $BUILD_TEAM_PY
 
 ### Stage 10 - vk-investigation
 - Input: eligible collector repos (with orchestrator agent)
@@ -111,6 +113,7 @@ Operational reference source: external orchestration script (for example `~/.loc
 - Runtime boundary:
   - daily_pipeline/protocol.py does not depend on scripts under ~/.local/bin
   - orchestration extension is external and optional for core protocol runs
+  - daily_pipeline/integration/sync.py may invoke build_team.py as a subprocess using sys.executable; this is not a ~/.local/bin dependency
 - Provenance:
   - shared capability/reference outputs must retain team/source traceability
 - Degraded mode:
@@ -127,3 +130,4 @@ Operational reference source: external orchestration script (for example `~/.loc
 - EXTENDED-PIPELINE-OPERATIONS.md
 - HANDOFF-PLAN.md
 - .github/agents/AGENT-TEAM-OPERATIONS.md
+- daily_pipeline/integration/sync.py

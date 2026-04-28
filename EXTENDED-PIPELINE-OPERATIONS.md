@@ -77,6 +77,9 @@ Portability note: absolute paths in this document are examples from one workstat
 - External dependency: `build_team.py` from agentteams repository
 - Location check: `$BUILD_TEAM_PY` (for example `~/githubrepositories/agentteams/build_team.py`)
 - If missing: Stage 9.5 skips with warning; pipeline continues
+- Python-callable helpers: `daily_pipeline.integration.sync` provides `discover_sync_targets(root_dir)` and `execute_agentteams_sync(target_repo, build_team_py, post_audit, dry_run)` for direct use by external orchestration code
+- Config field: `build_team_py` in `configs/defaults.json` (separate from `agentteams_repo`; see semantics note below)
+- Semantics: `agentteams_repo` = integration payload target (Stage 6 use); `build_team_py` = path to `build_team.py` executable (Stage 9.5 use)
 
 **Governance:**
 - Owner: daily-pipeline maintainer (responsible for configuring build metadata in each repo)
@@ -256,6 +259,16 @@ python3 -m daily_pipeline.cli --team tests/fixtures/team_a.json --team tests/fix
 **Stage 9.5 sync only:**
 ```bash
 "$PIPELINE_SCRIPT" --vk-sync-only
+```
+
+**Stage 9.5 sync only (Python CLI path — no external script required):**
+```bash
+python3 -m daily_pipeline.cli --sync --root "$VK_ROOT" --build-team-py "$BUILD_TEAM_PY"
+```
+
+**Stage 9.5 sync dry-run (discover targets; no subprocess invoked):**
+```bash
+python3 -m daily_pipeline.cli --sync --root "$VK_ROOT" --build-team-py "$BUILD_TEAM_PY" --dry-run
 ```
 
 **Single stage re-run:**

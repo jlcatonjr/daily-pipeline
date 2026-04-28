@@ -11,6 +11,7 @@ class PipelineConfig:
     reference_min_teams: int
     confidence_floor: float
     agentteams_repo: str
+    build_team_py: str | None  # path to build_team.py executable; None = unset; Stage 9.5 use only
 
 
 def load_config(config_path: str | None) -> PipelineConfig:
@@ -25,4 +26,5 @@ def load_config(config_path: str | None) -> PipelineConfig:
         reference_min_teams=int(content.get("reference_min_teams", 2)),
         confidence_floor=float(content.get("confidence_floor", 0.6)),
         agentteams_repo=str(content.get("agentteams_repo", "/Users/jamescaton/githubrepositories/agentteams")),
+        build_team_py=content.get("build_team_py") or None,
     )
