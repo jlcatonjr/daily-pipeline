@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Agent Team Check",
+      "type": "shell",
+      "command": "if [[ -z \"$AGENTTEAMS_REPO\" ]]; then echo 'Set AGENTTEAMS_REPO to your local agentteams repository path'; exit 1; fi; python3 \"$AGENTTEAMS_REPO/build_team.py\" --description \"${workspaceFolder}/.github/agents/_build-description.json\" --project \"${workspaceFolder}\" --framework copilot-vscode --output \"${workspaceFolder}/.github/agents\" --check",
+      "problemMatcher": []
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+stage,slug,purpose
+1,validate-selection,Validate multi-team inputs
+2,refresh-sources,Build framework availability matrix
+3,ingest-normalize,Normalize source teams
+4,commonality-analysis,Find shared capabilities and references
+5,synthesize-abstract-team,Create abstract team artifacts
+6,build-agentteams-integration,Produce AgentTeams integration request
+7,stage-registry,Emit machine-readable stage outcomes
+8,consolidated-report,Write markdown summary report

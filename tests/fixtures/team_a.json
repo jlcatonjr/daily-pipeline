@@ -1,0 +1,17 @@
+{
+  "name": "team-a",
+  "framework": "copilot-vscode",
+  "source": "fixture-a",
+  "agents": [
+    {
+      "name": "researcher",
+      "capabilities": ["docs research", "reference validation"],
+      "references": ["https://docs.github.com/latest", "https://anthropic.com/latest"]
+    },
+    {
+      "name": "orchestrator",
+      "capabilities": ["plan coordination", "conflict audit"],
+      "references": ["https://docs.github.com/latest"]
+    }
+  ]
+}

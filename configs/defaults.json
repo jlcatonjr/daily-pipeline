@@ -1,0 +1,6 @@
+{
+  "capability_min_teams": 2,
+  "reference_min_teams": 2,
+  "confidence_floor": 0.6,
+  "agentteams_repo": "/Users/jamescaton/githubrepositories/agentteams"
+}

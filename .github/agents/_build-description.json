@@ -1,0 +1,129 @@
+{
+  "$schema": "../agentteams/schemas/project-description.schema.json",
+  "project_name": "daily-pipeline",
+  "project_goal": "Build and run a standalone daily pipeline that ingests multiple agent teams, detects shared capabilities and references, synthesizes an abstract team, and prepares AgentTeams integration update requests for create/update workflows.",
+  "deliverables": [
+    "Python modules",
+    "Protocol artifacts",
+    "Integration request payloads",
+    "Daily run reports"
+  ],
+  "output_format": "Python 3.11 modules",
+  "primary_output_dir": "daily_pipeline/",
+  "build_output_dir": "tmp/daily-pipeline/",
+  "figures_dir": "docs/figures/",
+  "existing_project_path": "/Users/jamescaton/githubrepositories/daily-pipeline",
+  "agents_output_dir": ".github/agents/",
+  "authority_sources": [
+    {
+      "name": "Package Source",
+      "path": "daily_pipeline/",
+      "scope": "implementation behavior",
+      "rank": 1
+    },
+    {
+      "name": "Protocol Definitions",
+      "path": "protocols/",
+      "scope": "stage contracts and execution order",
+      "rank": 2
+    },
+    {
+      "name": "Configuration Schemas",
+      "path": "configs/",
+      "scope": "input validation and thresholds",
+      "rank": 3
+    },
+    {
+      "name": "Test Suite",
+      "path": "tests/",
+      "scope": "expected behavior and regressions",
+      "rank": 4
+    }
+  ],
+  "style_reference": "README.md",
+  "reference_db_path": ".github/agents/references/reference-db.csv",
+  "reference_key_convention": "AuthorYear",
+  "tools": [
+    {
+      "name": "Python",
+      "version": "3.11",
+      "category": "language",
+      "config_files": ["pyproject.toml"],
+      "needs_specialist_agent": true,
+      "docs_url": "https://docs.python.org/3.11/",
+      "api_surface": "argparse, dataclasses, pathlib, json",
+      "common_patterns": "Module-first architecture, CLI entrypoints, typed datamodels"
+    },
+    {
+      "name": "pytest",
+      "version": "8",
+      "category": "library",
+      "config_files": ["tests/"],
+      "needs_specialist_agent": false,
+      "docs_url": "https://docs.pytest.org/",
+      "api_surface": "test discovery, fixtures, assertions",
+      "common_patterns": "Fast unit tests and protocol smoke tests"
+    }
+  ],
+  "style_rules": [
+    "Preserve deterministic stage ordering and auditable outputs.",
+    "Never depend at runtime on external ~/.local/bin scripts.",
+    "All integration payloads must preserve provenance metadata."
+  ],
+  "selected_archetypes": [
+    "primary-producer",
+    "quality-auditor",
+    "technical-validator",
+    "reference-manager",
+    "output-compiler",
+    "tool-specific"
+  ],
+  "components": [
+    {
+      "slug": "ingest",
+      "name": "Team Ingestion",
+      "output_file": "ingest/loader.py",
+      "description": "Load selected source teams into normalized internal models.",
+      "sections": ["load-team-file", "load-teams"],
+      "quality_criteria": ["invalid team files are detectable", "ingestion output is deterministic"],
+      "tools": ["Python"]
+    },
+    {
+      "slug": "analysis",
+      "name": "Shared Capability and Reference Analysis",
+      "output_file": "analysis/",
+      "description": "Compute shared capabilities and references across selected teams.",
+      "sections": ["capability-normalization", "shared-capability-scan", "shared-reference-scan"],
+      "quality_criteria": ["confidence values are emitted", "thresholds are configurable"],
+      "tools": ["Python"]
+    },
+    {
+      "slug": "abstraction",
+      "name": "Abstract Team Synthesis",
+      "output_file": "abstraction/synthesizer.py",
+      "description": "Create abstract team outputs with source-team mapping and provenance.",
+      "sections": ["mapping", "provenance", "abstract-output"],
+      "quality_criteria": ["every abstract capability has provenance", "mapping is serializable"],
+      "tools": ["Python"]
+    },
+    {
+      "slug": "integration",
+      "name": "AgentTeams Integration",
+      "output_file": "integration/agentteams.py",
+      "description": "Prepare create/update integration payloads for AgentTeams workflows.",
+      "sections": ["payload-build", "payload-write"],
+      "quality_criteria": ["no private imports", "payload includes constraints and provenance"],
+      "tools": ["Python"]
+    },
+    {
+      "slug": "reporting",
+      "name": "Run Reporting",
+      "output_file": "reporting/writer.py",
+      "description": "Emit per-stage JSON and consolidated markdown reports.",
+      "sections": ["stage-report", "consolidated-report"],
+      "quality_criteria": ["all stages are reportable", "degraded-mode matrix is included"],
+      "tools": ["Python", "pytest"]
+    }
+  ],
+  "conversion_pipeline": "n/a"
+}

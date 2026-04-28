@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "daily-pipeline"
+version = "0.1.0"
+description = "Standalone daily pipeline for multi-team abstraction and AgentTeams integration"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+daily-pipeline = "daily_pipeline.cli:main"
+
+[tool.setuptools]
+packages = ["daily_pipeline", "daily_pipeline.ingest", "daily_pipeline.analysis", "daily_pipeline.abstraction", "daily_pipeline.integration", "daily_pipeline.reporting"]

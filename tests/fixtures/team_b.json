@@ -1,0 +1,17 @@
+{
+  "name": "team-b",
+  "framework": "claude",
+  "source": "fixture-b",
+  "agents": [
+    {
+      "name": "analyst",
+      "capabilities": ["docs research", "best practice review"],
+      "references": ["https://docs.github.com/latest", "https://anthropic.com/latest"]
+    },
+    {
+      "name": "auditor",
+      "capabilities": ["conflict audit", "risk analysis"],
+      "references": ["https://docs.github.com/latest"]
+    }
+  ]
+}

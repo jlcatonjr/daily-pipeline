@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Daily Pipeline Team Input",
+  "type": "object",
+  "required": ["name", "agents"],
+  "properties": {
+    "name": {"type": "string"},
+    "framework": {"type": "string"},
+    "source": {"type": "string"},
+    "metadata": {"type": "object"},
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name"],
+        "properties": {
+          "name": {"type": "string"},
+          "capabilities": {"type": "array", "items": {"type": "string"}},
+          "references": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}
