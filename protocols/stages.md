@@ -73,10 +73,10 @@ Operational reference source: external orchestration script (for example `~/.loc
 - Notes: not implemented inside daily_pipeline/protocol.py
 
 ### Stage 9.5 - agentteams-deterministic-sync
-- Input: VK_ROOT repos containing .github/agents/_build-description.json
+- Input: VK_ROOT root directory plus immediate child directories containing .github/agents/_build-description.json
 - Action: run build_team.py --update --merge --yes for each candidate repo
-- Validation: checks orchestrator.agent.md contains Plan Documentation and Review (Workflow 10) and Final Check (Workflow 11)
-- Failure behavior: best-effort, non-halting
+- Validation: local helper path validates target eligibility via _build-description.json presence; deeper orchestrator content checks (for example Workflow 10/11 assertions) are delegated to external orchestration/toolchain policy when enabled
+- Failure behavior: best-effort, non-halting for orchestration progression; standalone CLI sync may return non-zero when any target fails, for operator visibility
 - Python helpers: daily_pipeline/integration/sync.py exposes discover_sync_targets() and execute_agentteams_sync() for external orchestration use; these are callable helpers only — Stage 9.5 execution is external orchestration, not part of daily_pipeline/protocol.py
 - CLI path: python3 -m daily_pipeline.cli --sync --root $VK_ROOT --build-team-py $BUILD_TEAM_PY
 

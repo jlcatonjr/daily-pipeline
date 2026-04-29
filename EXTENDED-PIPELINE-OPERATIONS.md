@@ -63,9 +63,9 @@ Portability note: absolute paths in this document are examples from one workstat
 ### Stage 9.5 — Deterministic AgentTeams Synchronization
 
 **What it does:**
-- Discovers all repos with `.github/agents/_build-description.json` (build metadata)
+- Discovers candidate repos at `VK_ROOT` and immediate child directories with `.github/agents/_build-description.json` (build metadata)
 - Runs `build_team.py --update --merge --yes` on each repo
-- Validates that orchestrator.agent.md contains Plan Documentation and Review (Workflow 10) and Final Check (Workflow 11)
+- Validates candidate eligibility using build metadata presence; optional deeper orchestrator workflow checks are delegated to external orchestration/toolchain policy
 - Writes machine-readable summary for trend analysis
 
 **Why it's needed:**
@@ -80,6 +80,7 @@ Portability note: absolute paths in this document are examples from one workstat
 - Python-callable helpers: `daily_pipeline.integration.sync` provides `discover_sync_targets(root_dir)` and `execute_agentteams_sync(target_repo, build_team_py, post_audit, dry_run)` for direct use by external orchestration code
 - Config field: `build_team_py` in `configs/defaults.json` (separate from `agentteams_repo`; see semantics note below)
 - Semantics: `agentteams_repo` = integration payload target (Stage 6 use); `build_team_py` = path to `build_team.py` executable (Stage 9.5 use)
+- Exit semantics: orchestration progression remains best-effort/non-halting; standalone `python3 -m daily_pipeline.cli --sync ...` may return non-zero when one or more targets fail, for operator visibility
 
 **Governance:**
 - Owner: daily-pipeline maintainer (responsible for configuring build metadata in each repo)
