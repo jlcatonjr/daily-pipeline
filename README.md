@@ -119,3 +119,24 @@ Notes:
 - Models/contracts: `docs/api-reference/models.md`
 - Integration payload API: `docs/api-reference/integration-agentteams.md`
 - Stage 9.5 helper API: `docs/api-reference/integration-sync.md`
+
+## Documentation Application (MkDocs)
+
+This repository includes a docs application following the AgentTeams site pattern:
+
+- Config: `mkdocs.yml`
+- Docs app source: `docs_src/`
+- Build output (default): `site/`
+
+Install docs dependencies and run locally:
+
+```bash
+python3 -m pip install mkdocs mkdocs-material pymdown-extensions
+mkdocs serve
+```
+
+Build static site:
+
+```bash
+mkdocs build
+```
