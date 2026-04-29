@@ -1,5 +1,7 @@
 # Daily Pipeline
 
+API Reference: [docs/api-reference/index.md](docs/api-reference/index.md)
+
 Standalone multi-team daily pipeline module for building abstract agent-team outputs and integration requests.
 
 This repository has two execution layers:
