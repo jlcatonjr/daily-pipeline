@@ -51,6 +51,7 @@ SECTION MANIFEST — copilot-instructions.template.md
 - Compiled output lives in `tmp/daily-pipeline/` and is **never edited directly**
 - Figures are generated from source files in `docs/figures/` — source files are authoritative
 - Every deliverable must correspond to a Component Spec defined by a workstream expert
+- Work summaries are authored in `workSummaries/` from canonical `tmp/by-week/` plan artifacts, legacy `tmp/` fallbacks, and git history
 <!-- AGENTTEAMS:END output_conventions -->
 
 ---
@@ -75,6 +76,7 @@ SECTION MANIFEST — copilot-instructions.template.md
 - `@git-operations` — git/github operations and merge strategy workflow
 
 ### Domain Agents
+- `@work-summarizer` — synthesizes daily/weekly/monthly work summaries from plan artifacts and git history
 - `@primary-producer` — drafts and revises primary deliverables
 - `@quality-auditor` — read-only structural and prose quality audit
 - `@technical-validator` — verifies technical accuracy against authority sources
