@@ -18,26 +18,22 @@
     "integration",
     "reporting"
   ],
-  "files_written": [
-    ".github/agents/work-summarizer.agent.md",
-    ".github/agents/references/work-summary-spec.reference.md",
-    ".github/agents/references/work-summary-tooling.reference.md"
-  ],
+  "files_written": [],
   "manual_required": 2,
   "template_hashes": {
-    "universal/orchestrator.template.md": "dd00bde8bf81f451",
-    "universal/navigator.template.md": "9db306df5d5700c2",
-    "universal/security.template.md": "721275ff2afdcc12",
-    "universal/code-hygiene.template.md": "df4e5770cbe4e525",
-    "universal/adversarial.template.md": "78de0d3f3735c1f8",
-    "universal/conflict-auditor.template.md": "7aed52f8a607d1a3",
+    "universal/orchestrator.template.md": "5235f88a0e27869d",
+    "universal/navigator.template.md": "a774c9a70b43505a",
+    "universal/security.template.md": "6974720c9091639d",
+    "universal/code-hygiene.template.md": "92c2224832e1bb45",
+    "universal/adversarial.template.md": "de9896b303a341be",
+    "universal/conflict-auditor.template.md": "bd88a84d93a3500e",
     "universal/conflict-resolution.template.md": "a30ff077e5a03ce9",
     "universal/cleanup.template.md": "0c005812c2b52dd8",
-    "universal/agent-updater.template.md": "fee9126bf39575ef",
+    "universal/agent-updater.template.md": "8c51be1bff0c05ee",
     "universal/agent-refactor.template.md": "a9717cc56c35f4ac",
     "universal/repo-liaison.template.md": "f3ab2dffbbbb29ff",
-    "universal/git-operations.template.md": "b09209faaf14b17c",
-    "domain/work-summarizer.template.md": "92f20b7ec02d945e",
+    "universal/git-operations.template.md": "564a362a85cd90bc",
+    "domain/work-summarizer.template.md": "f696746ad47aad68",
     "domain/primary-producer.template.md": "c128e8f2fb52885f",
     "domain/quality-auditor.template.md": "5adfc79b00290c06",
     "domain/technical-validator.template.md": "47a48583cf212303",
@@ -45,17 +41,17 @@
     "domain/output-compiler.template.md": "fd90f3a13765386a",
     "domain/tool-specific.template.md": "628809efc5337794",
     "domain/tool-reference.template.md": "cf44c4bf906ba8b8",
-    "domain/code-hygiene-rules-reference.template.md": "d8591cae76d9bbad",
-    "universal/security-vulnerability-watch.reference.template.md": "12a588ab75ae5139",
+    "domain/code-hygiene-rules-reference.template.md": "8d7af49f0273b4dd",
+    "universal/security-vulnerability-watch.reference.template.md": "1680e6cfd2a72275",
     "universal/security-vulnerability-watch.json.template": "ebcec1b04ad46caa",
     "universal/adjacent-repos.reference.template.md": "d5f6783fe18f21c6",
     "universal/github-workflows-merge.reference.template.md": "9a85c14fca008010",
     "universal/work-summary-spec.reference.template.md": "d29ca7e680ad715d",
     "universal/work-summary-tooling.reference.template.md": "62e643b1a9711af6",
-    "workstream-expert.template.md": "a03699e3caabb58c",
+    "workstream-expert.template.md": "13161f3a3cdf1789",
     "copilot-instructions.template.md": "3ccf82ef795fcace",
     "builder/team-builder-copilot-vscode.template.md": "6a0e998c5ce278f2",
-    "domain/content-enricher.template.md": "2dc5e25c4606657b"
+    "domain/content-enricher.template.md": "d7e6e4a50dcef1c7"
   },
   "output_files_map": [
     {
@@ -328,15 +324,11 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "8d534c650fcf308b",
+  "manifest_fingerprint": "10219da69fa17c0d",
+  "fingerprint_algo_version": 1,
   "file_hashes": {
-    "work-summarizer.agent.md": "efe85bad4f8f3c27",
-    "references/work-summary-spec.reference.md": "96232231a1f7c6be",
-    "references/work-summary-tooling.reference.md": "f3656972717153a9",
-    "orchestrator.agent.md": "912fdb59c46d77d6",
-    "security.agent.md": "a0f4cbf05da9dc38",
-    "references/security-vulnerability-watch.reference.md": "25e030bd657a76e8",
-    "references/security-vulnerability-watch.json": "ec835130b905097b",
-    "../copilot-instructions.md": "edfdd80c608e4931"
+    "security.agent.md": "633ec14507f5e317",
+    "references/security-vulnerability-watch.reference.md": "a7f6dbf3dc6d6902",
+    "references/security-vulnerability-watch.json": "10e68e1974d387d2"
   }
 }

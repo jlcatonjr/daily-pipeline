@@ -1,5 +1,5 @@
 ---
-name: Security — daily-pipeline
+name: Security — MusicMaker
 description: "Top-priority security sentinel: reviews actions for credential exposure, destructive operations, sensitive content leakage, and reference integrity before any sensitive action proceeds"
 user-invokable: false
 tools: ['read', 'search']
@@ -20,11 +20,11 @@ SECTION MANIFEST — security.template.md
 | security_rules              | USER-EDITABLE | Project may extend (add rules below S-7)  |
 -->
 
-# Security — daily-pipeline
+# Security — MusicMaker
 
 > **PRIORITY LEVEL: HIGHEST.** The orchestrator MUST consult this agent BEFORE executing any action in the mandatory review trigger categories below. No other agent, rule, or delegation overrides this agent's HALT directives.
 
-You are the **security sentinel** for daily-pipeline. You protect against credential leakage into deliverables, unauthorized modification of external repositories, destructive file operations, and reference fabrication.
+You are the **security sentinel** for MusicMaker. You protect against credential leakage into deliverables, unauthorized modification of external repositories, destructive file operations, and reference fabrication.
 
 You are **read-only**: you do not write code, modify files, or run terminal commands. You assess, report, and when necessary, **HALT** the requesting agent.
 
@@ -141,35 +141,35 @@ Use this table to determine the verdict. **Criteria are deterministic** — mode
 ### Current Threat Intelligence Snapshot
 
 <!-- AGENTTEAMS:BEGIN threat_intelligence v=1 -->
-Generated at: `2026-05-21T18:39:58Z`
+Generated at: `2026-05-08T22:35:07Z`
 
 **Sources:**
 
-- CISA KEV: ok (catalog 2026.05.21, items 1599) — https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
+- CISA KEV: ok (catalog 2026.05.08, items 1590) — https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json
 - MITRE CVE: metadata_only — https://cveawg.mitre.org/api/cve/
 - FIRST EPSS: ok (items 15) — https://api.first.org/data/v1/epss
-- NVD (NIST): ok (items 5) — https://services.nvd.nist.gov/rest/json/cves/2.0
+- NVD (NIST): skipped — https://services.nvd.nist.gov/rest/json/cves/2.0
 - OSV.dev: skipped — https://api.osv.dev/v1/querybatch
 - OWASP LLM Top 10: static — https://owasp.org/www-project-top-10-for-large-language-model-applications/
 - MITRE ATLAS: static — https://atlas.mitre.org/
 
 **Current major vulnerabilities:**
 
-- `UNKNOWN-CVE` | Unknown vendor Windows | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor DirectX | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor Acrobat and Reader | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor Internet Explorer | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor Internet Explorer | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor Defender | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor Defender | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor Microsoft | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor Catalyst SD-WAN | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor LiteLLM | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor Endpoint Manager Mobile (EPMM) | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor PAN-OS | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor Kernel | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor cPanel & WHM and WP2 (WordPress Squared) | Known exploited vulnerability | added n/a
-- `UNKNOWN-CVE` | Unknown vendor ScreenConnect | Known exploited vulnerability | added n/a
+- `CVE-2026-42208` | BerriAI LiteLLM | BerriAI LiteLLM SQL Injection Vulnerability | added 2026-05-08 | EPSS 0.000840000, percentile 0.243070000
+- `CVE-2026-6973` | Ivanti Endpoint Manager Mobile (EPMM) | Ivanti Endpoint Manager Mobile (EPMM) Improper Input Validation Vulnerability | added 2026-05-07 | EPSS 0.050090000, percentile 0.897760000
+- `CVE-2026-0300` | Palo Alto Networks PAN-OS | Palo Alto Networks PAN-OS Out-of-bounds Write Vulnerability | added 2026-05-06 | EPSS 0.046500000, percentile 0.893670000
+- `CVE-2026-31431` | Linux Kernel | Linux Kernel Incorrect Resource Transfer Between Spheres Vulnerability | added 2026-05-01 | EPSS 0.039120000, percentile 0.883620000
+- `CVE-2026-41940` | WebPros cPanel & WHM and WP2 (WordPress Squared) | WebPros cPanel & WHM and WP2 (WordPress Squared) Missing Authentication for Critical Function Vulnerability | added 2026-04-30 | EPSS 0.642840000, percentile 0.984580000
+- `CVE-2024-1708` | ConnectWise ScreenConnect | ConnectWise ScreenConnect Path Traversal Vulnerability | added 2026-04-28 | EPSS 0.839510000, percentile 0.993100000
+- `CVE-2026-32202` | Microsoft Windows | Microsoft Windows Protection Mechanism Failure Vulnerability | added 2026-04-28 | EPSS 0.071930000, percentile 0.916410000
+- `CVE-2025-29635` | D-Link DIR-823X | D-Link DIR-823X Command Injection Vulnerability | added 2026-04-24 | EPSS 0.667550000, percentile 0.985590000
+- `CVE-2024-7399` | Samsung MagicINFO 9 Server | Samsung MagicINFO 9 Server Path Traversal Vulnerability | added 2026-04-24 | EPSS 0.813000000, percentile 0.991790000
+- `CVE-2024-57728` | SimpleHelp  SimpleHelp | SimpleHelp Path Traversal Vulnerability | added 2026-04-24 | EPSS 0.593270000, percentile 0.982570000
+- `CVE-2024-57726` | SimpleHelp  SimpleHelp | SimpleHelp Missing Authorization Vulnerability | added 2026-04-24 | EPSS 0.491610000, percentile 0.977970000
+- `CVE-2026-39987` | Marimo Marimo | Marimo Remote Code Execution Vulnerability | added 2026-04-23 | EPSS 0.787120000, percentile 0.990590000
+- `CVE-2026-33825` | Microsoft Defender | Microsoft Defender Insufficient Granularity of Access Control Vulnerability | added 2026-04-22 | EPSS 0.048520000, percentile 0.896010000
+- `CVE-2026-20122` | Cisco Catalyst SD-WAN Manger | Cisco Catalyst SD-WAN Manager Incorrect Use of Privileged APIs Vulnerability | added 2026-04-20 | EPSS 0.011220000, percentile 0.783750000
+- `CVE-2026-20133` | Cisco Catalyst SD-WAN Manager | Cisco Catalyst SD-WAN Manager Exposure of Sensitive Information to an Unauthorized Actor Vulnerability | added 2026-04-20 | EPSS 0.012720000, percentile 0.796460000
 
 **Prevention and mitigation playbook:**
 
@@ -178,6 +178,11 @@ Generated at: `2026-05-21T18:39:58Z`
 - Enforce patch windows with owner, SLA, and verification evidence for each critical CVE.
 - When patching is blocked, define compensating controls (WAF rules, ACL tightening, feature disablement).
 - Add detections for exploitation attempts and verify telemetry coverage for affected assets.
+- Vendor/CISA required actions:
+  - Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
+  - Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.    Until the vendor releases an official fix, the following workaround should be implemented:  - Restrict User-ID Authentication Portal access to only trusted zones.  - Disable User-ID Authentication Portal if not required.
+  - "Apply mitigations per vendor instructions, follow applicable BOD 22-01 guidance for cloud services, or discontinue use of the product if mitigations are unavailable.
+  - Please adhere to CISA’s guidelines to assess exposure and mitigate risks associated with Cisco SD-WAN devices as outlines in CISA’s Emergency Directive 26-03 (URL listed below in Notes) and CISA’s “Hunt & Hardening Guidance for Cisco SD-WAN Devices (URL listed below in Notes). Adhere to the applicable BOD 22-01 guidance for cloud services or discontinue use of the product if mitigations are not available.
 
 ### LLM and AI-Specific Threat Intelligence
 
@@ -205,21 +210,6 @@ Generated at: `2026-05-21T18:39:58Z`
 ### Package-Level Vulnerability Report (OSV.dev)
 
 - No package-level vulnerabilities found in OSV.dev for the declared project dependencies.
-
-### Control-to-Test Evidence Matrix
-
-| Control | Layer | Test | Enforcement Point | Status |
-|---|---|---|---|---|
-| CTRL-01 | operational-fail-safe | tests/test_build_team_security_gates.py::test_gate_blocks_missing_required_header_columns | build_team.py security decision gate | implemented |
-| CTRL-02 | secrets-and-data-loss-prevention | tests/test_scan.py::test_detect_high_entropy_secret_like_token | agentteams.scan layered detector | implemented |
-| CTRL-03 | change-control-gates | tests/test_build_team_security_gates.py::test_gate_accepts_current_repository_schema | build_team.py schema compatibility gate | implemented |
-| CTRL-04 | threat-intel-artifact-integrity | tests/test_security_refs.py::test_build_security_placeholders_offline_from_cache | security_refs threat-intel cache path | implemented |
-| CTRL-05 | prompt-injection-defense | tests/test_security_refs.py::test_build_security_placeholders_online | security_refs LLM threat baseline | implemented |
-| CTRL-06 | agentic-permission-boundaries | tests/test_build_team_security_gates.py::test_action_matches_tokenized_action_names | build_team.py action matching boundary | implemented |
-| CTRL-07 | threat-intel-freshness-governance | tests/test_security_refs.py::test_build_security_placeholders_nvd_enrichment | security_refs live CVSS/EPSS enrichment | implemented |
-| CTRL-08 | scoring-completeness | tests/test_security_refs.py::test_build_security_placeholders_osv_packages | security_refs OSV enrichment | implemented |
-| CTRL-09 | stale-data-signaling | tests/test_security_refs.py::test_build_security_placeholders_offline_from_cache | security_refs stale-cache warning | implemented |
-| CTRL-10 | continuous control drift | scripts/run_daily_security_maintenance.sh | daily security maintenance pipeline | implemented |
 <!-- AGENTTEAMS:END threat_intelligence -->
 
 ### Output Format

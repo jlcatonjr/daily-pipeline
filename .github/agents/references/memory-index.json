@@ -1,0 +1,2694 @@
+{
+  "artifact_type": "memory-index",
+  "memory_index_schema_version": "1.3",
+  "index_format_version": "json-bm25-postings-v1",
+  "index_build_id": "b138cd5d78f14d5e92d3fd11bd9ffd323b514246be76e544b1180591616fb452",
+  "index_write_owner": "agentteams.build_team",
+  "vector_runtime_mode": "sparse-tfidf-cosine",
+  "vector_model_id": null,
+  "vector_dim": null,
+  "fallback_policy": "non-blocking-file-read-then-search",
+  "source_fingerprint": "806b7a685aa985c8ee6e694a6d18dea79997153ac4bd394e66f7f4c5004d483a",
+  "project_name": "daily-pipeline",
+  "framework": "copilot-vscode",
+  "built_at": "2026-05-21T19:00:08.704391Z",
+  "source_count": 7,
+  "documents": [
+    {
+      "doc_id": 0,
+      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/README.md",
+      "title": "Daily Pipeline",
+      "length": 393,
+      "snippet": "Documentation: [https://jlcatonjr.github.io/daily-pipeline/](https://jlcatonjr.github.io/daily-pipeline/) API Reference: [docs/api-reference/index.md](docs/api-reference/index.md)",
+      "paragraphs": [
+        "Documentation: [https://jlcatonjr.github.io/daily-pipeline/](https://jlcatonjr.github.io/daily-pipeline/) API Reference: [docs/api-reference/index.md](docs/api-reference/index.md)",
+        "Standalone multi-team daily pipeline module for building abstract agent-team outputs and integration requests.",
+        "- Core package protocol: stages 1-8 implemented in `daily_pipeline/protocol.py` - Orchestration extension: stages 9, 9.5, 10, 10.1, 10.5, and 11 (externally orchestrated)",
+        "Daily Pipeline ingests selected team definitions, identifies shared capabilities and references, synthesizes an abstract team, and emits deterministic integration payloads for AgentTeams update-request flows.",
+        "- Multi-team selection and ingestion - Shared capability/reference analysis - Abstract team synthesis with provenance + mapping - Integration request payload generation - Per-stage artifacts and consolidated reporting - Operational guidance for orchestration extension stages",
+        "- Direct runtime dependency on scripts in `~/.local/bin`",
+        "```bash python3 -m pip install -e . python3 -m daily_pipeline.cli --help ```",
+        "1. Team mode (core stages 1-8) 2. Sync mode (`--sync`) for Stage 9.5 callable helper execution",
+        "These are separate behavior paths in CLI routing.",
+        "```bash python3 -m daily_pipeline.cli \\ --team tests/fixtures/team_a.json \\ --team tests/fixtures/team_b.json \\ --output-root tmp/daily-pipeline ```",
+        "- `--teams-file <path>` - `--trigger team-create|team-update` - `--allow-degraded` - `--config <path>` - `--dry-run`",
+        "- Stage JSON artifacts in `tmp/daily-pipeline/YYYY-MM-DD/` - Integration request under `integration_requests/` - Consolidated markdown report",
+        "```bash python3 -m daily_pipeline.cli \\ --sync \\ --root \"$VK_ROOT\" \\ --build-team-py \"$BUILD_TEAM_PY\" \\ --post-audit ```",
+        "```bash python3 -m daily_pipeline.cli \\ --sync \\ --root \"$VK_ROOT\" \\ --build-team-py \"$BUILD_TEAM_PY\" \\ --dry-run ```",
+        "- `--root` directory itself - Immediate child directories of `--root`",
+        "Repository is eligible when `.github/agents/_build-description.json` exists.",
+        "- Sync mode is a callable helper interface for orchestration extension behavior. - Stage 9.5 remains externally orchestrated and is not executed inside `run_protocol()`. - Stage-level contract remains best-effort/non-halting; standalone CLI sync returns non-zero if any target fails so operators can detect partial failure. - External script examples (such as `~/.local/bin/daily-pipeline.sh`) are optional runbook references, not runtime dependencies of core package execution.",
+        "- Stage index (core + orchestration extension): `protocols/stages.csv` - Full stage contracts (core + orchestration extension): `protocols/stages.md` - Extended operations runbook: `EXTENDED-PIPELINE-OPERATIONS.md`",
+        "- Documentation hub: `docs/index.md` - API reference index: `docs/api-reference/index.md` - CLI API: `docs/api-reference/cli.md` - Protocol API: `docs/api-reference/protocol.md` - Config API: `docs/api-reference/config.md` - Models/contracts: `docs/api-reference/models.md` - Integration payload API: `docs/api-reference/integration-agentteams.md` - Stage 9.5 helper API: `docs/api-reference/integration-sync.md`",
+        "This repository includes a docs application following the AgentTeams site pattern:"
+      ],
+      "source_hash": "0a9975bdafd77b7e70df09424f48d9c94b19461e8cfbacdb8cf273e3b0344659",
+      "source_mtime": 1777431326.1510975
+    },
+    {
+      "doc_id": 1,
+      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/cli-reference.md",
+      "title": "CLI Reference",
+      "length": 81,
+      "snippet": "```bash python3 -m daily_pipeline.cli \\ --team <team-a.json> \\ --team <team-b.json> \\ --output-root tmp/daily-pipeline ```",
+      "paragraphs": [
+        "```bash python3 -m daily_pipeline.cli \\ --team <team-a.json> \\ --team <team-b.json> \\ --output-root tmp/daily-pipeline ```",
+        "- `--teams-file` - `--config` - `--trigger team-create|team-update` - `--allow-degraded` - `--dry-run`",
+        "```bash python3 -m daily_pipeline.cli \\ --sync \\ --root \"$VK_ROOT\" \\ --build-team-py \"$BUILD_TEAM_PY\" \\ --post-audit ```",
+        "- `--root` (defaults to `$VK_ROOT` or `.`) - `--build-team-py` - `--post-audit` - `--dry-run`",
+        "- Routing is separated between team-mode and sync-mode behavior. - Parser exclusivity is enforced for `--team` and `--sync`. - `--teams-file` is a team-mode input and is not consumed in sync-mode execution."
+      ],
+      "source_hash": "3c045227cb9939a34c4a7747525eee67f632d8a76f6713e15fceb6a50afccf92",
+      "source_mtime": 1777429804.2255254
+    },
+    {
+      "doc_id": 2,
+      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/extended-operations.md",
+      "title": "Extended Operations",
+      "length": 52,
+      "snippet": "Operational runbook for orchestration extension stages is maintained in:",
+      "paragraphs": [
+        "Operational runbook for orchestration extension stages is maintained in:",
+        "Key lock points carried into this docs app:",
+        "- Stage 9.5 helper path in-package is callable, but orchestration ownership remains external. - Stage-level progression is best-effort; standalone sync CLI can return non-zero on failed targets. - Core package runtime remains independent of `~/.local/bin` script dependencies."
+      ],
+      "source_hash": "33684350368c3a1c0a42e2ea5999c079775b519fc0b518a25a7b25679c7abb9f",
+      "source_mtime": 1777429958.5820706
+    },
+    {
+      "doc_id": 3,
+      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/getting-started.md",
+      "title": "Getting Started",
+      "length": 77,
+      "snippet": "```bash python3 -m pip install -e . python3 -m daily_pipeline.cli --help ```",
+      "paragraphs": [
+        "```bash python3 -m pip install -e . python3 -m daily_pipeline.cli --help ```",
+        "```bash python3 -m daily_pipeline.cli \\ --team tests/fixtures/team_a.json \\ --team tests/fixtures/team_b.json \\ --output-root tmp/daily-pipeline ```",
+        "```bash python3 -m daily_pipeline.cli \\ --sync \\ --root \"$VK_ROOT\" \\ --build-team-py \"$BUILD_TEAM_PY\" \\ --post-audit ```",
+        "```bash python3 -m daily_pipeline.cli --team tests/fixtures/team_a.json --dry-run ```",
+        "```bash python3 -m daily_pipeline.cli --sync --root \"$VK_ROOT\" --build-team-py \"$BUILD_TEAM_PY\" --dry-run ```"
+      ],
+      "source_hash": "1247e0219df87b3b54033a00462b52136c59c9b31ae6600fb870c650a87cdad1",
+      "source_mtime": 1777429800.1626308
+    },
+    {
+      "doc_id": 4,
+      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/how-it-works.md",
+      "title": "How It Works",
+      "length": 105,
+      "snippet": "The core protocol performs deterministic ingestion, normalization, commonality analysis, abstract synthesis, integration-request construction, stage registry output, and reporting.",
+      "paragraphs": [
+        "The core protocol performs deterministic ingestion, normalization, commonality analysis, abstract synthesis, integration-request construction, stage registry output, and reporting.",
+        "- Stage 9: external handoff stage - Stage 9.5: deterministic sync helper path (callable APIs in `daily_pipeline/integration/sync.py`) - Stages 10, 10.1, 10.5, 11: cross-repository investigation/remediation operations",
+        "Stage 9.5 helper behavior is best-effort for orchestration progression. Standalone CLI sync can return non-zero when one or more targets fail, for operator visibility.",
+        "1. `root_dir` itself 2. Immediate child directories of `root_dir`",
+        "A directory is considered eligible when `.github/agents/_build-description.json` is present.",
+        "Core package execution does not require scripts from `~/.local/bin`. External script references are optional orchestration runbook examples."
+      ],
+      "source_hash": "6058c25cb45776edae10b608b95536a0afc5444458b8d12758b6355431a8c48a",
+      "source_mtime": 1777429802.1951704
+    },
+    {
+      "doc_id": 5,
+      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/index.md",
+      "title": "Daily Pipeline Documentation",
+      "length": 82,
+      "snippet": "1. Core protocol (Stages 1-8) implemented in `daily_pipeline/protocol.py` 2. Orchestration extension (Stages 9+) operated externally, with Stage 9.5 callable helper APIs available in `daily_pipeline/integration/sync.py`",
+      "paragraphs": [
+        "1. Core protocol (Stages 1-8) implemented in `daily_pipeline/protocol.py` 2. Orchestration extension (Stages 9+) operated externally, with Stage 9.5 callable helper APIs available in `daily_pipeline/integration/sync.py`",
+        "- [Getting Started](getting-started.md) - [How It Works](how-it-works.md) - [CLI Reference](cli-reference.md) - [Stage Contracts](stage-contracts.md) - [Extended Operations](extended-operations.md) - [API Reference](api-reference/index.md)",
+        "- `docs_src/` is the authoring source for MkDocs pages and navigation. - Repository reference docs under `docs/` remain available for direct Markdown browsing.",
+        "- `daily_pipeline/` implementation behavior - `protocols/stages.md` and `protocols/stages.csv` - `configs/` and `tests/`"
+      ],
+      "source_hash": "5b7f53f7719f92a7b4925bfb0578411a6e560b92efdc52ccab02282a5dc4d218",
+      "source_mtime": 1777429798.139338
+    },
+    {
+      "doc_id": 6,
+      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/stage-contracts.md",
+      "title": "Stage Contracts",
+      "length": 53,
+      "snippet": "- `protocols/stages.md` - `protocols/stages.csv`",
+      "paragraphs": [
+        "- `protocols/stages.md` - `protocols/stages.csv`",
+        "- Core stage contract summary on this page - Extended-orchestration context in [Extended Operations](extended-operations.md)",
+        "- `protocols/stages.md` - `protocols/stages.csv`",
+        "- Core execution remains Stages 1-8. - Stage 9 remains external handoff. - Stage 9.5 helper APIs are callable in-package but execution ownership remains external orchestration."
+      ],
+      "source_hash": "cd4d2f8d88afb641ca5f480daecf2927b01bab77d20569483b8b44d10b801058",
+      "source_mtime": 1777429956.56206
+    }
+  ],
+  "postings": {
+    "daily": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      },
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "pipeline": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      },
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "documentation": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      },
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "https": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "jlcatonjr": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "github": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "daily-pipeline": [
+      {
+        "doc_id": 0,
+        "tf": 5
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "api": [
+      {
+        "doc_id": 0,
+        "tf": 8
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "reference": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 3
+      }
+    ],
+    "docs": [
+      {
+        "doc_id": 0,
+        "tf": 13
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 3
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "api-reference": [
+      {
+        "doc_id": 0,
+        "tf": 9
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "index": [
+      {
+        "doc_id": 0,
+        "tf": 6
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "standalone": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "multi-team": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "module": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "building": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "abstract": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "agent-team": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "outputs": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "integration": [
+      {
+        "doc_id": 0,
+        "tf": 5
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "requests": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "repository": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "execution": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 2
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "layers": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "core": [
+      {
+        "doc_id": 0,
+        "tf": 7
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 4
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "package": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "protocol": [
+      {
+        "doc_id": 0,
+        "tf": 5
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 3
+      },
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "stages": [
+      {
+        "doc_id": 0,
+        "tf": 7
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 4
+      },
+      {
+        "doc_id": 5,
+        "tf": 4
+      },
+      {
+        "doc_id": 6,
+        "tf": 5
+      }
+    ],
+    "implemented": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "daily_pipeline": [
+      {
+        "doc_id": 0,
+        "tf": 6
+      },
+      {
+        "doc_id": 1,
+        "tf": 3
+      },
+      {
+        "doc_id": 3,
+        "tf": 5
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      },
+      {
+        "doc_id": 5,
+        "tf": 3
+      }
+    ],
+    "orchestration": [
+      {
+        "doc_id": 0,
+        "tf": 5
+      },
+      {
+        "doc_id": 2,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 3
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "extension": [
+      {
+        "doc_id": 0,
+        "tf": 5
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "externally": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "orchestrated": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "purpose": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "ingests": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "selected": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "team": [
+      {
+        "doc_id": 0,
+        "tf": 8
+      },
+      {
+        "doc_id": 1,
+        "tf": 5
+      },
+      {
+        "doc_id": 3,
+        "tf": 3
+      }
+    ],
+    "definitions": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "identifies": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "shared": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "capabilities": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "references": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "synthesizes": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "emits": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "deterministic": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "payloads": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "agentteams": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "update-request": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "flows": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "scope": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "selection": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "ingestion": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "capability": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "analysis": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "synthesis": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "provenance": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "mapping": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "request": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "payload": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "generation": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "per-stage": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "artifacts": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "consolidated": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "reporting": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "operational": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "guidance": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "non-goals": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "direct": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "runtime": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "dependency": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "scripts": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "local": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "bin": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "install": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "bash": [
+      {
+        "doc_id": 0,
+        "tf": 6
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 5
+      }
+    ],
+    "python3": [
+      {
+        "doc_id": 0,
+        "tf": 6
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 6
+      }
+    ],
+    "pip": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "cli": [
+      {
+        "doc_id": 0,
+        "tf": 9
+      },
+      {
+        "doc_id": 1,
+        "tf": 4
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 5
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "help": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "modes": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "supports": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "operator-facing": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "mode": [
+      {
+        "doc_id": 0,
+        "tf": 6
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "sync": [
+      {
+        "doc_id": 0,
+        "tf": 10
+      },
+      {
+        "doc_id": 1,
+        "tf": 4
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 3
+      },
+      {
+        "doc_id": 4,
+        "tf": 3
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "stage": [
+      {
+        "doc_id": 0,
+        "tf": 8
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 6
+      },
+      {
+        "doc_id": 5,
+        "tf": 2
+      },
+      {
+        "doc_id": 6,
+        "tf": 5
+      }
+    ],
+    "callable": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "helper": [
+      {
+        "doc_id": 0,
+        "tf": 5
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 3
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "these": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "separate": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "behavior": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "paths": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "routing": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "run": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      },
+      {
+        "doc_id": 3,
+        "tf": 5
+      }
+    ],
+    "files": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "tests": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 3
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "fixtures": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 3
+      }
+    ],
+    "team_a": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "json": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 3
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "team_b": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "output-root": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "tmp": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "optional": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "flags": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "teams-file": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "path": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      }
+    ],
+    "trigger": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "team-create": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "team-update": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "allow-degraded": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "config": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "dry-run": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "yyyy-mm-dd": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "under": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "integration_requests": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "markdown": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "report": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "across": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "discovered": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "repositories": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "root": [
+      {
+        "doc_id": 0,
+        "tf": 4
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "vk_root": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "build-team-py": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "build_team_py": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "post-audit": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 2
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      }
+    ],
+    "example": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "discovery": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "directory": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "itself": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "immediate": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "child": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "directories": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "eligible": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "agents": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "build-description": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "exists": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "notes": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 1,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "interface": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "remains": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 2
+      },
+      {
+        "doc_id": 6,
+        "tf": 3
+      }
+    ],
+    "executed": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "inside": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "run_protocol": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "stage-level": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "contract": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "best-effort": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "non-halting": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "returns": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "non-zero": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "target": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "fails": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "operators": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "detect": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "partial": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "failure": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "external": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 2
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "script": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "examples": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "such": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "runbook": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "dependencies": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "protocols": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 5,
+        "tf": 2
+      },
+      {
+        "doc_id": 6,
+        "tf": 4
+      }
+    ],
+    "csv": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "full": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "contracts": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 2
+      }
+    ],
+    "extended": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "operations": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "extended-pipeline-operations": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 2
+      }
+    ],
+    "hub": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "models": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      }
+    ],
+    "integration-agentteams": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "integration-sync": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "application": [
+      {
+        "doc_id": 0,
+        "tf": 2
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "mkdocs": [
+      {
+        "doc_id": 0,
+        "tf": 5
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "includes": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "following": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "site": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      }
+    ],
+    "pattern": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "yml": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "app": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "source": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "docs_src": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "build": [
+      {
+        "doc_id": 0,
+        "tf": 3
+      }
+    ],
+    "output": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "default": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "locally": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "mkdocs-material": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "pymdown-extensions": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "serve": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "static": [
+      {
+        "doc_id": 0,
+        "tf": 1
+      }
+    ],
+    "team-a": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "team-b": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "common": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "defaults": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "separated": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "between": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "team-mode": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "sync-mode": [
+      {
+        "doc_id": 1,
+        "tf": 2
+      }
+    ],
+    "parser": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "exclusivity": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "enforced": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "input": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "consumed": [
+      {
+        "doc_id": 1,
+        "tf": 1
+      }
+    ],
+    "maintained": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "related": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "pages": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "stage-contracts": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "file": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "key": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "lock": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "points": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "carried": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "in-package": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "ownership": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "progression": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "return": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "failed": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "targets": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      },
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "independent": [
+      {
+        "doc_id": 2,
+        "tf": 1
+      }
+    ],
+    "getting": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "started": [
+      {
+        "doc_id": 3,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "quick": [
+      {
+        "doc_id": 3,
+        "tf": 2
+      }
+    ],
+    "dry": [
+      {
+        "doc_id": 3,
+        "tf": 3
+      }
+    ],
+    "works": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "performs": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "normalization": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "commonality": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "integration-request": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "construction": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "registry": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "entrypoint": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "handoff": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "apis": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "cross-repository": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "investigation": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "remediation": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "more": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "fail": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "operator": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "visibility": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "discover_sync_targets": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "root_dir": [
+      {
+        "doc_id": 4,
+        "tf": 3
+      }
+    ],
+    "checks": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "considered": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "present": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "boundary": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "does": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "require": [
+      {
+        "doc_id": 4,
+        "tf": 1
+      }
+    ],
+    "provides": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "coordinated": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "operated": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "available": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "map": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "getting-started": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "how-it-works": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "cli-reference": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "extended-operations": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      },
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "source-of-truth": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "authoring": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "navigation": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "remain": [
+      {
+        "doc_id": 5,
+        "tf": 2
+      }
+    ],
+    "browsing": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "semantics": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "authoritative": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "implementation": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "configs": [
+      {
+        "doc_id": 5,
+        "tf": 1
+      }
+    ],
+    "canonical": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "convenience": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "see": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "summary": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "page": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "extended-orchestration": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ],
+    "context": [
+      {
+        "doc_id": 6,
+        "tf": 1
+      }
+    ]
+  },
+  "avgdl": 120.42857142857143,
+  "N": 7
+}

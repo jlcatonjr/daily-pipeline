@@ -1,0 +1,584 @@
+{
+  "schema_version": "1.2",
+  "project_name": "MusicMaker",
+  "framework": "copilot-vscode",
+  "project_type": "software",
+  "archetypes": [
+    "primary-producer",
+    "quality-auditor",
+    "style-guardian",
+    "technical-validator",
+    "format-converter",
+    "output-compiler",
+    "tool-doc-researcher"
+  ],
+  "components": [
+    "audio-engine",
+    "data-model",
+    "drag-reorder",
+    "interactions",
+    "midi-engine",
+    "music-notation",
+    "node-build-security",
+    "notation-renderer",
+    "playback-engine",
+    "test-suite",
+    "ui-controls"
+  ],
+  "files_written": [
+    ".github/agents/orchestrator.agent.md",
+    ".github/agents/navigator.agent.md",
+    ".github/agents/security.agent.md",
+    ".github/agents/code-hygiene.agent.md",
+    ".github/agents/adversarial.agent.md",
+    ".github/agents/conflict-auditor.agent.md",
+    ".github/agents/conflict-resolution.agent.md",
+    ".github/agents/cleanup.agent.md",
+    ".github/agents/agent-updater.agent.md",
+    ".github/agents/agent-refactor.agent.md",
+    ".github/agents/repo-liaison.agent.md",
+    ".github/agents/git-operations.agent.md",
+    ".github/agents/work-summarizer.agent.md",
+    ".github/agents/primary-producer.agent.md",
+    ".github/agents/quality-auditor.agent.md",
+    ".github/agents/style-guardian.agent.md",
+    ".github/agents/technical-validator.agent.md",
+    ".github/agents/format-converter.agent.md",
+    ".github/agents/output-compiler.agent.md",
+    ".github/agents/tool-doc-researcher.agent.md",
+    ".github/agents/tool-eslint.agent.md",
+    ".github/agents/tool-nodejs.agent.md",
+    ".github/agents/tool-tonejs.agent.md",
+    ".github/agents/tool-vexflow.agent.md",
+    ".github/agents/tool-vite.agent.md",
+    ".github/agents/references/ref-ajv-reference.md",
+    ".github/agents/references/ref-eslint-plugin-security-reference.md",
+    ".github/agents/references/ref-eslintjs-reference.md",
+    ".github/agents/references/ref-jest-reference.md",
+    ".github/agents/references/ref-jest-environment-jsdom-reference.md",
+    ".github/agents/references/ref-jestglobals-reference.md",
+    ".github/agents/references/ref-tone-reference.md",
+    ".github/agents/references/ref-web-audio-api-reference.md",
+    ".github/agents/references/ref-web-midi-api-reference.md",
+    ".github/agents/references/code-hygiene-rules.reference.md",
+    ".github/agents/references/security-vulnerability-watch.reference.md",
+    ".github/agents/references/security-vulnerability-watch.json",
+    ".github/agents/references/adjacent-repos.md",
+    ".github/agents/references/github-workflows-merge.reference.md",
+    ".github/agents/references/work-summary-spec.reference.md",
+    ".github/agents/references/work-summary-tooling.reference.md",
+    ".github/agents/audio-engine-expert.agent.md",
+    ".github/agents/data-model-expert.agent.md",
+    ".github/agents/drag-reorder-expert.agent.md",
+    ".github/agents/interactions-expert.agent.md",
+    ".github/agents/midi-engine-expert.agent.md",
+    ".github/agents/music-notation-expert.agent.md",
+    ".github/agents/node-build-security-expert.agent.md",
+    ".github/agents/notation-renderer-expert.agent.md",
+    ".github/agents/playback-engine-expert.agent.md",
+    ".github/agents/test-suite-expert.agent.md",
+    ".github/agents/ui-controls-expert.agent.md",
+    ".github/copilot-instructions.md",
+    ".github/agents/team-builder.agent.md",
+    ".github/agents/SETUP-REQUIRED.md",
+    ".github/agents/content-enricher.agent.md",
+    ".github/agents/references/pipeline-graph.md"
+  ],
+  "manual_required": 90,
+  "template_hashes": {
+    "universal/orchestrator.template.md": "dd00bde8bf81f451",
+    "universal/navigator.template.md": "9db306df5d5700c2",
+    "universal/security.template.md": "721275ff2afdcc12",
+    "universal/code-hygiene.template.md": "67878e41c6f6be47",
+    "universal/adversarial.template.md": "78de0d3f3735c1f8",
+    "universal/conflict-auditor.template.md": "7aed52f8a607d1a3",
+    "universal/conflict-resolution.template.md": "a30ff077e5a03ce9",
+    "universal/cleanup.template.md": "0c005812c2b52dd8",
+    "universal/agent-updater.template.md": "fee9126bf39575ef",
+    "universal/agent-refactor.template.md": "a9717cc56c35f4ac",
+    "universal/repo-liaison.template.md": "f3ab2dffbbbb29ff",
+    "universal/git-operations.template.md": "b09209faaf14b17c",
+    "domain/work-summarizer.template.md": "92f20b7ec02d945e",
+    "domain/primary-producer.template.md": "c128e8f2fb52885f",
+    "domain/quality-auditor.template.md": "5adfc79b00290c06",
+    "domain/style-guardian.template.md": "919e2e8d6cd90721",
+    "domain/technical-validator.template.md": "47a48583cf212303",
+    "domain/format-converter.template.md": "ecf8c801f1d66dab",
+    "domain/output-compiler.template.md": "fd90f3a13765386a",
+    "domain/tool-doc-researcher.template.md": "ed54707800500bed",
+    "domain/tool-specific.template.md": "628809efc5337794",
+    "domain/tool-build-system.template.md": "40f188095d086dfd",
+    "domain/tool-reference.template.md": "cf44c4bf906ba8b8",
+    "domain/code-hygiene-rules-reference.template.md": "8d7af49f0273b4dd",
+    "universal/security-vulnerability-watch.reference.template.md": "12a588ab75ae5139",
+    "universal/security-vulnerability-watch.json.template": "ebcec1b04ad46caa",
+    "universal/adjacent-repos.reference.template.md": "d5f6783fe18f21c6",
+    "universal/github-workflows-merge.reference.template.md": "9a85c14fca008010",
+    "universal/work-summary-spec.reference.template.md": "d29ca7e680ad715d",
+    "universal/work-summary-tooling.reference.template.md": "62e643b1a9711af6",
+    "workstream-expert.template.md": "a03699e3caabb58c",
+    "copilot-instructions.template.md": "3ccf82ef795fcace",
+    "builder/team-builder-copilot-vscode.template.md": "6a0e998c5ce278f2",
+    "domain/content-enricher.template.md": "2dc5e25c4606657b"
+  },
+  "output_files_map": [
+    {
+      "path": "orchestrator.agent.md",
+      "template": "universal/orchestrator.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "navigator.agent.md",
+      "template": "universal/navigator.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "security.agent.md",
+      "template": "universal/security.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "code-hygiene.agent.md",
+      "template": "universal/code-hygiene.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "adversarial.agent.md",
+      "template": "universal/adversarial.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "conflict-auditor.agent.md",
+      "template": "universal/conflict-auditor.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "conflict-resolution.agent.md",
+      "template": "universal/conflict-resolution.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "cleanup.agent.md",
+      "template": "universal/cleanup.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "agent-updater.agent.md",
+      "template": "universal/agent-updater.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "agent-refactor.agent.md",
+      "template": "universal/agent-refactor.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "repo-liaison.agent.md",
+      "template": "universal/repo-liaison.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "git-operations.agent.md",
+      "template": "universal/git-operations.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "work-summarizer.agent.md",
+      "template": "domain/work-summarizer.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "primary-producer.agent.md",
+      "template": "domain/primary-producer.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "quality-auditor.agent.md",
+      "template": "domain/quality-auditor.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "style-guardian.agent.md",
+      "template": "domain/style-guardian.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "technical-validator.agent.md",
+      "template": "domain/technical-validator.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "format-converter.agent.md",
+      "template": "domain/format-converter.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "output-compiler.agent.md",
+      "template": "domain/output-compiler.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "tool-doc-researcher.agent.md",
+      "template": "domain/tool-doc-researcher.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "tool-eslint.agent.md",
+      "template": "domain/tool-library.template.md",
+      "fallback_template": "domain/tool-specific.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "tool-nodejs.agent.md",
+      "template": "domain/tool-build-system.template.md",
+      "fallback_template": "domain/tool-specific.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "tool-tonejs.agent.md",
+      "template": "domain/tool-library.template.md",
+      "fallback_template": "domain/tool-specific.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "tool-vexflow.agent.md",
+      "template": "domain/tool-library.template.md",
+      "fallback_template": "domain/tool-specific.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "tool-vite.agent.md",
+      "template": "domain/tool-build-system.template.md",
+      "fallback_template": "domain/tool-specific.template.md",
+      "type": "agent",
+      "component_slug": null
+    },
+    {
+      "path": "references/ref-ajv-reference.md",
+      "template": "domain/tool-reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/ref-eslint-plugin-security-reference.md",
+      "template": "domain/tool-reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/ref-eslintjs-reference.md",
+      "template": "domain/tool-reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/ref-jest-reference.md",
+      "template": "domain/tool-reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/ref-jest-environment-jsdom-reference.md",
+      "template": "domain/tool-reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/ref-jestglobals-reference.md",
+      "template": "domain/tool-reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/ref-tone-reference.md",
+      "template": "domain/tool-reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/ref-web-audio-api-reference.md",
+      "template": "domain/tool-reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/ref-web-midi-api-reference.md",
+      "template": "domain/tool-reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/code-hygiene-rules.reference.md",
+      "template": "domain/code-hygiene-rules-reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/security-vulnerability-watch.reference.md",
+      "template": "universal/security-vulnerability-watch.reference.template.md",
+      "type": "artifact",
+      "component_slug": null
+    },
+    {
+      "path": "references/security-vulnerability-watch.json",
+      "template": "universal/security-vulnerability-watch.json.template",
+      "type": "artifact",
+      "component_slug": null
+    },
+    {
+      "path": "references/adjacent-repos.md",
+      "template": "universal/adjacent-repos.reference.template.md",
+      "type": "artifact",
+      "component_slug": null
+    },
+    {
+      "path": "references/github-workflows-merge.reference.md",
+      "template": "universal/github-workflows-merge.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/work-summary-spec.reference.md",
+      "template": "universal/work-summary-spec.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/work-summary-tooling.reference.md",
+      "template": "universal/work-summary-tooling.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "audio-engine-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "audio-engine"
+    },
+    {
+      "path": "data-model-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "data-model"
+    },
+    {
+      "path": "drag-reorder-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "drag-reorder"
+    },
+    {
+      "path": "interactions-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "interactions"
+    },
+    {
+      "path": "midi-engine-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "midi-engine"
+    },
+    {
+      "path": "music-notation-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "music-notation"
+    },
+    {
+      "path": "node-build-security-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "node-build-security"
+    },
+    {
+      "path": "notation-renderer-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "notation-renderer"
+    },
+    {
+      "path": "playback-engine-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "playback-engine"
+    },
+    {
+      "path": "test-suite-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "test-suite"
+    },
+    {
+      "path": "ui-controls-expert.agent.md",
+      "template": "workstream-expert.template.md",
+      "type": "agent",
+      "component_slug": "ui-controls"
+    },
+    {
+      "path": "../copilot-instructions.md",
+      "template": "copilot-instructions.template.md",
+      "type": "instructions",
+      "component_slug": null
+    },
+    {
+      "path": "team-builder.agent.md",
+      "template": "builder/team-builder-copilot-vscode.template.md",
+      "type": "builder",
+      "component_slug": null
+    },
+    {
+      "path": "SETUP-REQUIRED.md",
+      "template": "",
+      "type": "setup-required",
+      "component_slug": null
+    },
+    {
+      "path": "references/pipeline-graph.md",
+      "template": "",
+      "type": "graph",
+      "component_slug": null
+    },
+    {
+      "path": "content-enricher.agent.md",
+      "template": "domain/content-enricher.template.md",
+      "type": "agent",
+      "component_slug": null
+    }
+  ],
+  "agent_slug_list": [
+    "orchestrator",
+    "navigator",
+    "security",
+    "code-hygiene",
+    "adversarial",
+    "conflict-auditor",
+    "conflict-resolution",
+    "cleanup",
+    "agent-updater",
+    "agent-refactor",
+    "repo-liaison",
+    "git-operations",
+    "work-summarizer",
+    "primary-producer",
+    "quality-auditor",
+    "style-guardian",
+    "technical-validator",
+    "format-converter",
+    "output-compiler",
+    "tool-doc-researcher",
+    "tool-eslint",
+    "tool-nodejs",
+    "tool-tonejs",
+    "tool-vexflow",
+    "tool-vite",
+    "audio-engine-expert",
+    "data-model-expert",
+    "drag-reorder-expert",
+    "interactions-expert",
+    "midi-engine-expert",
+    "music-notation-expert",
+    "node-build-security-expert",
+    "notation-renderer-expert",
+    "playback-engine-expert",
+    "test-suite-expert",
+    "ui-controls-expert"
+  ],
+  "governance_agents": [
+    "navigator",
+    "security",
+    "code-hygiene",
+    "adversarial",
+    "conflict-auditor",
+    "conflict-resolution",
+    "cleanup",
+    "agent-updater",
+    "agent-refactor",
+    "repo-liaison",
+    "git-operations"
+  ],
+  "manifest_fingerprint": "141ab0815eeeae98",
+  "file_hashes": {
+    "orchestrator.agent.md": "f60776d2dd212953",
+    "navigator.agent.md": "bd408f64ddca2769",
+    "security.agent.md": "d1b68c2987695f7f",
+    "code-hygiene.agent.md": "669e9b513c098423",
+    "adversarial.agent.md": "75ad5b69a8e90001",
+    "conflict-auditor.agent.md": "07e255800cca14d0",
+    "conflict-resolution.agent.md": "e766f0e7fbe67113",
+    "cleanup.agent.md": "67ec36be4c0f2e02",
+    "agent-updater.agent.md": "00f31e6fdec1c635",
+    "agent-refactor.agent.md": "5c813c5b51a530ec",
+    "repo-liaison.agent.md": "d1985c5553badd1d",
+    "git-operations.agent.md": "ec02a3b070779b93",
+    "work-summarizer.agent.md": "939003778c486001",
+    "primary-producer.agent.md": "7ab81ea03f94f4f3",
+    "quality-auditor.agent.md": "3426036b15d13d2e",
+    "style-guardian.agent.md": "637ee73ed06b41e8",
+    "technical-validator.agent.md": "1a946437a83b9639",
+    "format-converter.agent.md": "c39c687b691c1e76",
+    "output-compiler.agent.md": "30b6823321382473",
+    "tool-doc-researcher.agent.md": "600eae9025c75c4c",
+    "tool-eslint.agent.md": "07f60acc2dd9b405",
+    "tool-nodejs.agent.md": "3a22fff4cbd5f512",
+    "tool-tonejs.agent.md": "e5780ac13e0535c3",
+    "tool-vexflow.agent.md": "92e7a81b04bb80d9",
+    "tool-vite.agent.md": "b8ea577d880c567b",
+    "references/ref-ajv-reference.md": "f21ef6d01c87b023",
+    "references/ref-eslint-plugin-security-reference.md": "7107ab92053c45c4",
+    "references/ref-eslintjs-reference.md": "c33cbf23653780f7",
+    "references/ref-jest-reference.md": "844c49279b1b2112",
+    "references/ref-jest-environment-jsdom-reference.md": "867da56134bdfb29",
+    "references/ref-jestglobals-reference.md": "57cbe2b2a850c773",
+    "references/ref-tone-reference.md": "ec81c16fdc0d5e00",
+    "references/ref-web-audio-api-reference.md": "b5dab28862fff6c9",
+    "references/ref-web-midi-api-reference.md": "0ff7e270e19610be",
+    "references/code-hygiene-rules.reference.md": "75009bc9bc9694d1",
+    "references/security-vulnerability-watch.reference.md": "e5bb08af7633abb2",
+    "references/security-vulnerability-watch.json": "d007bee760319c77",
+    "references/adjacent-repos.md": "38846956665b938e",
+    "references/github-workflows-merge.reference.md": "91460f6b4000f40c",
+    "references/work-summary-spec.reference.md": "96232231a1f7c6be",
+    "references/work-summary-tooling.reference.md": "f3656972717153a9",
+    "audio-engine-expert.agent.md": "df636bcc47d8c9de",
+    "data-model-expert.agent.md": "9aed9a6144b6d7b5",
+    "drag-reorder-expert.agent.md": "e68705372ab10823",
+    "interactions-expert.agent.md": "8f619605ad58edcc",
+    "midi-engine-expert.agent.md": "619253e1625e0019",
+    "music-notation-expert.agent.md": "5da63ff4113745c8",
+    "node-build-security-expert.agent.md": "8c72f74672b9397d",
+    "notation-renderer-expert.agent.md": "a9e7498748e65b47",
+    "playback-engine-expert.agent.md": "69345e496f7f827a",
+    "test-suite-expert.agent.md": "c8eb41901b82132b",
+    "ui-controls-expert.agent.md": "2ea1053f9bb39825",
+    "../copilot-instructions.md": "24d2b3abb5e39a09",
+    "team-builder.agent.md": "1ff52c0e52893357",
+    "SETUP-REQUIRED.md": "e1efbd6d49b765ec",
+    "content-enricher.agent.md": "7bf967d3df464b21",
+    "references/pipeline-graph.md": "05a88c086a2af7c5"
+  }
+}

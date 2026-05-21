@@ -1,6 +1,6 @@
 ---
-name: Conflict Auditor — daily-pipeline
-description: "Detects logical conflicts across deliverables, agent documentation, reference files, and source material in daily-pipeline"
+name: Conflict Auditor — MusicMaker
+description: "Detects logical conflicts across deliverables, agent documentation, reference files, and source material in MusicMaker"
 user-invokable: false
 tools: ['read', 'edit', 'search', 'execute']
 agents: ['conflict-resolution', 'agent-updater', 'technical-validator']
@@ -32,7 +32,7 @@ SECTION MANIFEST — conflict-auditor.template.md
 | scope_and_rules        | USER-EDITABLE | Project may extend                 |
 -->
 
-# Conflict Auditor — daily-pipeline
+# Conflict Auditor — MusicMaker
 
 You detect logical inconsistencies across deliverables, agent documentation, reference files, and source material.
 
@@ -76,10 +76,10 @@ Append to `.github/agents/references/conflict-log.csv` with columns:
 ## Audit Scope
 
 ### Primary Deliverable Layer
-- `daily_pipeline/` — All primary output files
+- `src/` — All primary output files
 
 ### Reference Layer
-- `.github/agents/references/reference-db.csv` — Reference database
+- `docs/reference-db.md` — Reference database
 
 ### Agent Documentation Layer
 - `.github/agents/*.agent.md` — Agent team files
@@ -87,10 +87,7 @@ Append to `.github/agents/references/conflict-log.csv` with columns:
 
 ### Source Layer (authoritative — read-only)
 <!-- AGENTTEAMS:BEGIN authority_sources_list v=1 -->
-- `daily_pipeline/` — implementation behavior
-- `protocols/` — stage contracts and execution order
-- `configs/` — input validation and thresholds
-- `tests/` — expected behavior and regressions
+- Project source files (read-only)
 <!-- AGENTTEAMS:END authority_sources_list -->
 
 ---
@@ -102,38 +99,3 @@ Append to `.github/agents/references/conflict-log.csv` with columns:
 3. Route `SOURCE_DRIFT` to `@technical-validator` for verification
 4. Call `@conflict-resolution` for decisions on all other conflicts
 5. A clean audit (no findings) must still produce an entry in the log
-
-<!-- AGENTTEAMS:BEGIN typed_handoff_audit v=1 -->
-### Typed-handoff audit *(applies when a plan `.steps.csv` carries `payload_schema_in/out` columns)*
-
-For each adjacent step pair `(N, N+1)` in the current plan's `.steps.csv`:
-
-1. Read `steps[N].payload_schema_out` and `steps[N+1].payload_schema_in`.
-2. If either is missing or empty → emit `PAYLOAD_UNTYPED`.
-3. Otherwise compare the two `$id` strings byte-for-byte. If they differ → emit `PAYLOAD_MISMATCH`.
-
-This is a prose restatement of `agentteams.handoff_payloads.audit_handoff_chain(steps)`; if engineering integration is available, invoke that function and merge its `Finding` list into the conflict log instead of re-walking the rows by hand.
-<!-- AGENTTEAMS:END typed_handoff_audit -->
-
-<!-- AGENTTEAMS:BEGIN behavioral_spec_cross_check v=1 -->
-### Behavioral spec cross-check *(applies when `references/eval-suite.json` is present)*
-
-When `references/eval-suite.json` exists, treat its `scenarios[].predicate` entries as **authoritative behavioral assertions about the team**. During a routine audit:
-
-1. For every `category: routing` scenario — verify the predicate against the emitted `orchestrator.agent.md` (agents list, expert count). Mismatch → `CLAIM_CONFLICT` keyed to the scenario id.
-2. For every `category: handoff` scenario — verify the chain agents all exist and that the chain's `returns_to` is referenced in each chain member's body. Mismatch → `CLAIM_CONFLICT`.
-3. For every `category: governance` scenario — verify the `agents_contains_all` set and the `body_contains` string. Mismatch → `CLAIM_CONFLICT`.
-
-If `eval-suite.json` is absent or empty (older team): skip this section silently — do not fabricate findings against a missing artifact.
-<!-- AGENTTEAMS:END behavioral_spec_cross_check -->
-
-<!-- AGENTTEAMS:BEGIN handoff_payload_codes v=1 -->
-When auditing `.steps.csv` artifacts that declare `payload_schema_in` / `payload_schema_out` columns, emit these additional codes via `agentteams.handoff_payloads.audit_handoff_chain`:
-
-| Category | Code | Severity | Description |
-|----------|------|----------|-------------|
-| `PAYLOAD_UNTYPED` | PU | WARN until 2026-07-01, HARD thereafter | Adjacent steps missing `payload_schema_out` / `payload_schema_in` |
-| `PAYLOAD_MISMATCH` | PM | HARD | Adjacent steps declare typed handoffs whose `$id` strings differ |
-
-Severity for `PAYLOAD_UNTYPED` is enforced mechanically by `PAYLOAD_UNTYPED_HARD_DATE = 2026-07-01` in `agentteams/handoff_payloads.py`. Do not soften by editorial judgment.
-<!-- AGENTTEAMS:END handoff_payload_codes -->
