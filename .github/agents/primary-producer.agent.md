@@ -19,6 +19,7 @@ handoffs:
     prompt: "Deliverable production is complete."
     send: false
 ---
+<!-- AGENTTEAMS:BEGIN content v=1 -->
 # Primary Producer — daily-pipeline
 
 You draft and revise the primary deliverables for daily-pipeline. All production is driven by a **Component Brief** prepared by the workstream expert for the component you are producing.
@@ -61,3 +62,8 @@ Every deliverable must meet these floors before leaving this agent:
 2. **Protocol Definitions** (`protocols/`) — stage contracts and execution order
 3. **Configuration Schemas** (`configs/`) — input validation and thresholds
 4. **Test Suite** (`tests/`) — expected behavior and regressions
+<!-- AGENTTEAMS:END content -->
+
+## Project-Specific Notes
+
+> ⚙️ **USER-EDITABLE** — project-specific rules, overrides, and extensions for this agent. This section lies outside every `AGENTTEAMS` fence and is preserved verbatim across `agentteams --update --merge`.

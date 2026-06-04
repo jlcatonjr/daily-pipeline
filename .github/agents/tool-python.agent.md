@@ -19,6 +19,7 @@ handoffs:
     prompt: "Python operation complete."
     send: false
 ---
+<!-- AGENTTEAMS:BEGIN content v=1 -->
 
 # Tool Specialist — Python — daily-pipeline
 
@@ -93,3 +94,8 @@ Escalate to orchestrator if:
 - Tool exits non-zero on two consecutive runs after config review
 - Config state is inconsistent with `3.11` requirements
 - Security-sensitive setting requires modification
+<!-- AGENTTEAMS:END content -->
+
+## Project-Specific Notes
+
+> ⚙️ **USER-EDITABLE** — project-specific rules, overrides, and extensions for this agent. This section lies outside every `AGENTTEAMS` fence and is preserved verbatim across `agentteams --update --merge`.

@@ -1,3 +1,4 @@
+<!-- AGENTTEAMS:BEGIN content v=1 -->
 # pytest Reference — daily-pipeline
 
 > Quick-reference for **pytest 8** (library) in daily-pipeline.
@@ -39,3 +40,4 @@ Fast unit tests and protocol smoke tests
 
 - `@technical-validator` — verify technical accuracy of pytest usage
 - `@primary-producer` — implements code that depends on pytest
+<!-- AGENTTEAMS:END content -->
