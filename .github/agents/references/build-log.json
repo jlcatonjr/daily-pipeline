@@ -19,13 +19,12 @@
     "reporting"
   ],
   "files_written": [
-    ".github/agents/references/unix-philosophy-mapping.reference.md",
-    ".github/agents/references/ai-bad-habits-watch.reference.md",
-    ".github/agents/references/framework-watch.reference.md"
+    ".github/agents/references/ref-python-reference.md",
+    ".github/agents/references/work-summary-backfill.reference.md"
   ],
   "manual_required": 2,
   "template_hashes": {
-    "universal/orchestrator.template.md": "fc0d1c26a3ecd7c9",
+    "universal/orchestrator.template.md": "b2da8904757b0cb1",
     "universal/navigator.template.md": "a0d0ac008e49068f",
     "universal/security.template.md": "22e1e8b5bd521eaf",
     "universal/code-hygiene.template.md": "4d857b0585c8e31f",
@@ -33,18 +32,18 @@
     "universal/conflict-auditor.template.md": "2ab99de3a03b6850",
     "universal/conflict-resolution.template.md": "426ec99b00bbdfb4",
     "universal/cleanup.template.md": "bf795b64968349f6",
-    "universal/agent-updater.template.md": "8c51be1bff0c05ee",
+    "universal/agent-updater.template.md": "c9636a2efa322a6d",
     "universal/agent-refactor.template.md": "a9717cc56c35f4ac",
     "universal/repo-liaison.template.md": "f3ab2dffbbbb29ff",
     "universal/git-operations.template.md": "df8b2433d8b7e471",
-    "domain/work-summarizer.template.md": "7f3d52d4dfd79acf",
+    "domain/work-summarizer.template.md": "fb11f5101db630c1",
     "domain/primary-producer.template.md": "c128e8f2fb52885f",
     "domain/quality-auditor.template.md": "5103798809fb292c",
     "domain/technical-validator.template.md": "9a6d62d53ac26b2c",
     "domain/reference-manager.template.md": "f7538df16abbbba8",
     "domain/output-compiler.template.md": "fd90f3a13765386a",
-    "domain/tool-specific.template.md": "628809efc5337794",
-    "domain/tool-reference.template.md": "cf44c4bf906ba8b8",
+    "domain/tool-specific.doc.template.md": "e55064bade37e957",
+    "domain/tool-reference.template.md": "5ce5638b7094cc86",
     "domain/code-hygiene-rules-reference.template.md": "6f1e6ae79203a025",
     "domain/unix-philosophy-mapping-reference.template.md": "6bba3ba218962376",
     "universal/security-vulnerability-watch.reference.template.md": "1680e6cfd2a72275",
@@ -55,9 +54,10 @@
     "universal/github-workflows-merge.reference.template.md": "9a85c14fca008010",
     "universal/work-summary-spec.reference.template.md": "d29ca7e680ad715d",
     "universal/work-summary-tooling.reference.template.md": "62e643b1a9711af6",
+    "universal/work-summary-backfill.reference.template.md": "5730bac043dc2874",
     "workstream-expert.template.md": "13161f3a3cdf1789",
     "copilot-instructions.template.md": "5d87300872d94df8",
-    "builder/team-builder-copilot-vscode.template.md": "6a0e998c5ce278f2",
+    "builder/team-builder-copilot-vscode.template.md": "07815e88da7ae6e1",
     "domain/content-enricher.template.md": "d7e6e4a50dcef1c7"
   },
   "output_files_map": [
@@ -176,17 +176,19 @@
       "component_slug": null
     },
     {
-      "path": "tool-python.agent.md",
-      "template": "domain/tool-language.template.md",
-      "fallback_template": "domain/tool-specific.template.md",
-      "type": "agent",
-      "component_slug": null
+      "path": "references/ref-python-reference.md",
+      "template": "domain/tool-language.doc.template.md",
+      "fallback_template": "domain/tool-specific.doc.template.md",
+      "type": "reference",
+      "component_slug": null,
+      "tool_slug": "tool-python"
     },
     {
       "path": "references/ref-pytest-reference.md",
       "template": "domain/tool-reference.template.md",
       "type": "reference",
-      "component_slug": null
+      "component_slug": null,
+      "tool_slug": "ref-pytest"
     },
     {
       "path": "references/code-hygiene-rules.reference.md",
@@ -245,6 +247,12 @@
     {
       "path": "references/work-summary-tooling.reference.md",
       "template": "universal/work-summary-tooling.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/work-summary-backfill.reference.md",
+      "template": "universal/work-summary-backfill.reference.template.md",
       "type": "reference",
       "component_slug": null
     },
@@ -329,7 +337,6 @@
     "reference-manager",
     "output-compiler",
     "tool-specific",
-    "tool-python",
     "ingest-expert",
     "analysis-expert",
     "abstraction-expert",
@@ -349,43 +356,17 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "74539ec3b197844d",
+  "manifest_fingerprint": "5366dda3c786990e",
   "fingerprint_algo_version": 1,
   "file_hashes": {
-    "references/unix-philosophy-mapping.reference.md": "7440180086b5bdf4",
-    "references/ai-bad-habits-watch.reference.md": "ee4100270041700b",
-    "references/framework-watch.reference.md": "abe279bb423509c9",
-    "orchestrator.agent.md": "be1c278565b20f6a",
-    "navigator.agent.md": "3e765789ea1870c0",
-    "security.agent.md": "3f4546c540348933",
-    "code-hygiene.agent.md": "78f327c593947daf",
-    "adversarial.agent.md": "fd37f0b2a8eb0316",
-    "conflict-auditor.agent.md": "7b976b454c65e3fd",
-    "conflict-resolution.agent.md": "57cd6357c6ad6682",
-    "cleanup.agent.md": "507a5c440d657155",
-    "agent-updater.agent.md": "1345a4aaf110b652",
-    "agent-refactor.agent.md": "1310d02413f76a12",
-    "repo-liaison.agent.md": "32dd85a054a9f3d4",
-    "git-operations.agent.md": "691ffb22ad5e4c72",
-    "work-summarizer.agent.md": "503b80f3bfbfba6d",
-    "primary-producer.agent.md": "b7e597e29d2736a9",
-    "quality-auditor.agent.md": "f5304c59193c6607",
-    "technical-validator.agent.md": "88b02d01149177be",
-    "reference-manager.agent.md": "bdc02fd4cb1929d7",
-    "output-compiler.agent.md": "34ad26e3855be3d9",
-    "tool-specific.agent.md": "74d6e24c8cd412f8",
-    "tool-python.agent.md": "f1848a85cb892765",
-    "references/code-hygiene-rules.reference.md": "b1c85d5d646aeb8a",
-    "references/security-vulnerability-watch.reference.md": "372cef58f902ed4c",
-    "references/security-vulnerability-watch.json": "2cefc6a713df61f8",
-    "ingest-expert.agent.md": "907d2207ee439c9a",
-    "analysis-expert.agent.md": "f5f5d13e68ea9cf4",
-    "abstraction-expert.agent.md": "c5bb187f150cdd19",
-    "integration-expert.agent.md": "33772cecc4397952",
-    "reporting-expert.agent.md": "d84dab476268c140",
-    "../copilot-instructions.md": "294a70169a898607",
-    "team-builder.agent.md": "c9015d31f9601494",
-    "content-enricher.agent.md": "167e8ce9db8072d8",
-    "references/pipeline-graph.md": "1a19df18982e14c7"
+    "references/ref-python-reference.md": "e2d506e8728f8516",
+    "references/work-summary-backfill.reference.md": "024cd86c297d89b4",
+    "security.agent.md": "5cbfad2fc4bcccaa",
+    "work-summarizer.agent.md": "7cc285972b6b2d6c",
+    "references/ref-pytest-reference.md": "38b0ffba6ebadf82",
+    "references/security-vulnerability-watch.reference.md": "6f401476066cb7e4",
+    "references/security-vulnerability-watch.json": "bb73c6c2fe00babe",
+    "references/framework-watch.reference.md": "e31ddfb95fe52a05",
+    "team-builder.agent.md": "2c0000df132d0101"
   }
 }

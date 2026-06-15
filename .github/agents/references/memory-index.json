@@ -1,8 +1,8 @@
 {
   "artifact_type": "memory-index",
   "memory_index_schema_version": "1.3",
-  "index_format_version": "json-bm25-postings-v1",
-  "index_build_id": "b138cd5d78f14d5e92d3fd11bd9ffd323b514246be76e544b1180591616fb452",
+  "index_format_version": "json-bm25-postings-v2",
+  "index_build_id": "d9d3c526e75cf89dc4fa349a6c0d3a518537a558a7db2db6cab26e327240f5e1",
   "index_write_owner": "agentteams.build_team",
   "vector_runtime_mode": "sparse-tfidf-cosine",
   "vector_model_id": null,
@@ -11,7 +11,7 @@
   "source_fingerprint": "806b7a685aa985c8ee6e694a6d18dea79997153ac4bd394e66f7f4c5004d483a",
   "project_name": "daily-pipeline",
   "framework": "copilot-vscode",
-  "built_at": "2026-05-21T19:00:08.704391Z",
+  "built_at": "2026-06-15T12:35:18.655914Z",
   "source_count": 7,
   "documents": [
     {
@@ -43,7 +43,8 @@
         "This repository includes a docs application following the AgentTeams site pattern:"
       ],
       "source_hash": "0a9975bdafd77b7e70df09424f48d9c94b19461e8cfbacdb8cf273e3b0344659",
-      "source_mtime": 1777431326.1510975
+      "source_mtime": 1777431326.1510975,
+      "vector_norm_sq": 1202.120438102171
     },
     {
       "doc_id": 1,
@@ -59,7 +60,8 @@
         "- Routing is separated between team-mode and sync-mode behavior. - Parser exclusivity is enforced for `--team` and `--sync`. - `--teams-file` is a team-mode input and is not consumed in sync-mode execution."
       ],
       "source_hash": "3c045227cb9939a34c4a7747525eee67f632d8a76f6713e15fceb6a50afccf92",
-      "source_mtime": 1777429804.2255254
+      "source_mtime": 1777429804.2255254,
+      "vector_norm_sq": 138.9843890417454
     },
     {
       "doc_id": 2,
@@ -73,7 +75,8 @@
         "- Stage 9.5 helper path in-package is callable, but orchestration ownership remains external. - Stage-level progression is best-effort; standalone sync CLI can return non-zero on failed targets. - Core package runtime remains independent of `~/.local/bin` script dependencies."
       ],
       "source_hash": "33684350368c3a1c0a42e2ea5999c079775b519fc0b518a25a7b25679c7abb9f",
-      "source_mtime": 1777429958.5820706
+      "source_mtime": 1777429958.5820706,
+      "vector_norm_sq": 55.14423935469168
     },
     {
       "doc_id": 3,
@@ -89,7 +92,8 @@
         "```bash python3 -m daily_pipeline.cli --sync --root \"$VK_ROOT\" --build-team-py \"$BUILD_TEAM_PY\" --dry-run ```"
       ],
       "source_hash": "1247e0219df87b3b54033a00462b52136c59c9b31ae6600fb870c650a87cdad1",
-      "source_mtime": 1777429800.1626308
+      "source_mtime": 1777429800.1626308,
+      "vector_norm_sq": 181.84597889062795
     },
     {
       "doc_id": 4,
@@ -106,7 +110,8 @@
         "Core package execution does not require scripts from `~/.local/bin`. External script references are optional orchestration runbook examples."
       ],
       "source_hash": "6058c25cb45776edae10b608b95536a0afc5444458b8d12758b6355431a8c48a",
-      "source_mtime": 1777429802.1951704
+      "source_mtime": 1777429802.1951704,
+      "vector_norm_sq": 143.68356282738065
     },
     {
       "doc_id": 5,
@@ -121,7 +126,8 @@
         "- `daily_pipeline/` implementation behavior - `protocols/stages.md` and `protocols/stages.csv` - `configs/` and `tests/`"
       ],
       "source_hash": "5b7f53f7719f92a7b4925bfb0578411a6e560b92efdc52ccab02282a5dc4d218",
-      "source_mtime": 1777429798.139338
+      "source_mtime": 1777429798.139338,
+      "vector_norm_sq": 125.33743935982127
     },
     {
       "doc_id": 6,
@@ -136,7 +142,8 @@
         "- Core execution remains Stages 1-8. - Stage 9 remains external handoff. - Stage 9.5 helper APIs are callable in-package but execution ownership remains external orchestration."
       ],
       "source_hash": "cd4d2f8d88afb641ca5f480daecf2927b01bab77d20569483b8b44d10b801058",
-      "source_mtime": 1777429956.56206
+      "source_mtime": 1777429956.56206,
+      "vector_norm_sq": 58.46555930420405
     }
   ],
   "postings": {
