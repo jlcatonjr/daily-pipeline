@@ -18,10 +18,7 @@
     "integration",
     "reporting"
   ],
-  "files_written": [
-    ".github/agents/references/ref-python-reference.md",
-    ".github/agents/references/work-summary-backfill.reference.md"
-  ],
+  "files_written": [],
   "manual_required": 2,
   "template_hashes": {
     "universal/orchestrator.template.md": "b2da8904757b0cb1",
@@ -359,14 +356,6 @@
   "manifest_fingerprint": "5366dda3c786990e",
   "fingerprint_algo_version": 1,
   "file_hashes": {
-    "references/ref-python-reference.md": "e2d506e8728f8516",
-    "references/work-summary-backfill.reference.md": "024cd86c297d89b4",
-    "security.agent.md": "5cbfad2fc4bcccaa",
-    "work-summarizer.agent.md": "7cc285972b6b2d6c",
-    "references/ref-pytest-reference.md": "38b0ffba6ebadf82",
-    "references/security-vulnerability-watch.reference.md": "6f401476066cb7e4",
-    "references/security-vulnerability-watch.json": "bb73c6c2fe00babe",
-    "references/framework-watch.reference.md": "e31ddfb95fe52a05",
-    "team-builder.agent.md": "2c0000df132d0101"
+    "references/security-vulnerability-watch.json": "5d407c2ec0522b4c"
   }
 }
