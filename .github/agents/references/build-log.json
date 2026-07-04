@@ -18,10 +18,13 @@
     "integration",
     "reporting"
   ],
-  "files_written": [],
+  "files_written": [
+    ".github/agents/references/pipeline-graph.svg",
+    ".github/agents/references/pipeline-handoffs.svg"
+  ],
   "manual_required": 2,
   "template_hashes": {
-    "universal/orchestrator.template.md": "22bdb9653dd48384",
+    "universal/orchestrator.template.md": "ee34760e1f596c17",
     "universal/navigator.template.md": "a0d0ac008e49068f",
     "universal/security.template.md": "22e1e8b5bd521eaf",
     "universal/code-hygiene.template.md": "5212068c8a00a608",
@@ -52,8 +55,9 @@
     "universal/work-summary-spec.reference.template.md": "d29ca7e680ad715d",
     "universal/work-summary-tooling.reference.template.md": "62e643b1a9711af6",
     "universal/work-summary-backfill.reference.template.md": "5730bac043dc2874",
+    "universal/parallelization.reference.template.md": "2c872341050a7781",
     "workstream-expert.template.md": "13161f3a3cdf1789",
-    "copilot-instructions.template.md": "5d87300872d94df8",
+    "copilot-instructions.template.md": "9c56d724f06a9549",
     "builder/team-builder-copilot-vscode.template.md": "5708c3fd29801a3d",
     "domain/content-enricher.template.md": "d7e6e4a50dcef1c7"
   },
@@ -254,6 +258,12 @@
       "component_slug": null
     },
     {
+      "path": "references/parallelization.reference.md",
+      "template": "universal/parallelization.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
       "path": "ingest-expert.agent.md",
       "template": "workstream-expert.template.md",
       "type": "agent",
@@ -308,6 +318,18 @@
       "component_slug": null
     },
     {
+      "path": "references/pipeline-graph.svg",
+      "template": "",
+      "type": "graph-svg",
+      "component_slug": null
+    },
+    {
+      "path": "references/pipeline-handoffs.svg",
+      "template": "",
+      "type": "graph-svg",
+      "component_slug": null
+    },
+    {
       "path": "content-enricher.agent.md",
       "template": "domain/content-enricher.template.md",
       "type": "agent",
@@ -353,13 +375,17 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "9beb58f46ca65326",
+  "manifest_fingerprint": "08f41082223863f6",
   "fingerprint_algo_version": 1,
   "file_hashes": {
-    "security.agent.md": "01cf5ed2752134a7",
-    "references/security-vulnerability-watch.reference.md": "4ed04b667352924f",
-    "references/security-vulnerability-watch.json": "4f4d97a4f1107cae",
-    "orchestrator.agent.md": "be1c278565b20f6a",
+    "references/pipeline-graph.svg": "fb55c9b54fa75b61",
+    "references/pipeline-handoffs.svg": "69ef0484587f0fde",
+    "security.agent.md": "770bb83aa6d881f8",
+    "primary-producer.agent.md": "3cc5601a375f8274",
+    "output-compiler.agent.md": "5c7796d85832f6b8",
+    "references/security-vulnerability-watch.reference.md": "f601c04d6935b85e",
+    "references/security-vulnerability-watch.json": "3e073cd0d8748556",
+    "orchestrator.agent.md": "4d60b32b8f0838ce",
     "navigator.agent.md": "3e765789ea1870c0",
     "code-hygiene.agent.md": "78f327c593947daf",
     "conflict-auditor.agent.md": "91ee35a0610f875b",
@@ -386,14 +412,13 @@
     "agent-refactor.agent.md": "1310d02413f76a12",
     "repo-liaison.agent.md": "32dd85a054a9f3d4",
     "work-summarizer.agent.md": "c188b5ffa2d2358d",
-    "primary-producer.agent.md": "b7e597e29d2736a9",
     "reference-manager.agent.md": "bdc02fd4cb1929d7",
-    "output-compiler.agent.md": "34ad26e3855be3d9",
     "references/ref-pytest-reference.md": "38b0ffba6ebadf82",
     "references/code-hygiene-rules.reference.md": "65b0448da4cfea6e",
     "references/github-workflows-merge.reference.md": "c1543808654b233e",
     "references/work-summary-spec.reference.md": "96232231a1f7c6be",
     "references/work-summary-tooling.reference.md": "f3656972717153a9",
-    "references/work-summary-backfill.reference.md": "024cd86c297d89b4"
+    "references/work-summary-backfill.reference.md": "024cd86c297d89b4",
+    "references/parallelization.reference.md": "d2321bf5ac1ed2f8"
   }
 }

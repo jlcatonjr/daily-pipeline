@@ -14,33 +14,7 @@
 
 Inter-package import dependencies (module-level detail in the tables below).
 
-```mermaid
-flowchart LR
-    classDef root fill:#e8eefb,stroke:#1b3fa0,color:#000
-    classDef sub  fill:#eef6ee,stroke:#3f8f4f,color:#000
-    daily_pipeline["daily_pipeline"]
-    class daily_pipeline root
-    daily_pipeline_abstraction["daily_pipeline.abstraction"]
-    class daily_pipeline_abstraction sub
-    daily_pipeline_analysis["daily_pipeline.analysis"]
-    class daily_pipeline_analysis sub
-    daily_pipeline_ingest["daily_pipeline.ingest"]
-    class daily_pipeline_ingest sub
-    daily_pipeline_integration["daily_pipeline.integration"]
-    class daily_pipeline_integration sub
-    daily_pipeline_reporting["daily_pipeline.reporting"]
-    class daily_pipeline_reporting sub
-    daily_pipeline --> daily_pipeline_abstraction
-    daily_pipeline --> daily_pipeline_analysis
-    daily_pipeline --> daily_pipeline_ingest
-    daily_pipeline --> daily_pipeline_integration
-    daily_pipeline --> daily_pipeline_reporting
-    daily_pipeline_abstraction --> daily_pipeline
-    daily_pipeline_analysis --> daily_pipeline
-    daily_pipeline_ingest --> daily_pipeline
-    daily_pipeline_integration --> daily_pipeline
-    daily_pipeline_reporting --> daily_pipeline
-```
+![daily_pipeline package dependency diagram](architecture-graph.svg)
 
 ---
 
@@ -54,6 +28,14 @@ flowchart LR
 | `daily_pipeline.ingest` | 1 | `daily_pipeline` |
 | `daily_pipeline.integration` | 2 | `daily_pipeline` |
 | `daily_pipeline.reporting` | 1 | `daily_pipeline` |
+
+---
+
+## Module Dependency Diagram
+
+Every module, coloured by package (full adjacency in the table below).
+
+![daily_pipeline module dependencies](architecture-modules.svg)
 
 ---
 
@@ -89,7 +71,38 @@ _None detected (standard library only)._
 
 ---
 
-## DOT Source
+## Diagram Source
+
+<details>
+<summary>Mermaid &amp; DOT source for the diagram above</summary>
+
+```mermaid
+flowchart LR
+    classDef root fill:#e8eefb,stroke:#1b3fa0,color:#000
+    classDef sub  fill:#eef6ee,stroke:#3f8f4f,color:#000
+    daily_pipeline["daily_pipeline"]
+    class daily_pipeline root
+    daily_pipeline_abstraction["daily_pipeline.abstraction"]
+    class daily_pipeline_abstraction sub
+    daily_pipeline_analysis["daily_pipeline.analysis"]
+    class daily_pipeline_analysis sub
+    daily_pipeline_ingest["daily_pipeline.ingest"]
+    class daily_pipeline_ingest sub
+    daily_pipeline_integration["daily_pipeline.integration"]
+    class daily_pipeline_integration sub
+    daily_pipeline_reporting["daily_pipeline.reporting"]
+    class daily_pipeline_reporting sub
+    daily_pipeline --> daily_pipeline_abstraction
+    daily_pipeline --> daily_pipeline_analysis
+    daily_pipeline --> daily_pipeline_ingest
+    daily_pipeline --> daily_pipeline_integration
+    daily_pipeline --> daily_pipeline_reporting
+    daily_pipeline_abstraction --> daily_pipeline
+    daily_pipeline_analysis --> daily_pipeline
+    daily_pipeline_ingest --> daily_pipeline
+    daily_pipeline_integration --> daily_pipeline
+    daily_pipeline_reporting --> daily_pipeline
+```
 
 ```dot
 digraph "daily_pipeline architecture" {
@@ -114,6 +127,8 @@ digraph "daily_pipeline architecture" {
     "daily_pipeline.reporting" -> "daily_pipeline";
 }
 ```
+
+</details>
 
 ---
 

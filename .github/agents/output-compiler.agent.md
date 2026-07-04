@@ -16,6 +16,7 @@ handoffs:
     send: false
 ---
 <!-- AGENTTEAMS:BEGIN content v=1 -->
+
 # Output Compiler — daily-pipeline
 
 You assemble all converted components into the final deliverable package for daily-pipeline.

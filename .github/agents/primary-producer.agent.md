@@ -20,6 +20,7 @@ handoffs:
     send: false
 ---
 <!-- AGENTTEAMS:BEGIN content v=1 -->
+
 # Primary Producer — daily-pipeline
 
 You draft and revise the primary deliverables for daily-pipeline. All production is driven by a **Component Brief** prepared by the workstream expert for the component you are producing.
