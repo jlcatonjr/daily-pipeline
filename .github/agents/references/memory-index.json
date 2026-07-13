@@ -2,17 +2,17 @@
   "artifact_type": "memory-index",
   "memory_index_schema_version": "1.3",
   "index_format_version": "json-bm25-postings-v2",
-  "index_build_id": "e9046761e1146186b30b49317bbaa38091ef40f7a93ad1784dcdf38396a9a4dc",
+  "index_build_id": "23049d2d442816878cef280db1316f1169bfb9d5144ae415bdc6462e6fe49b88",
   "index_write_owner": "agentteams.build_team",
   "vector_runtime_mode": "sparse-tfidf-cosine",
   "vector_model_id": null,
   "vector_dim": null,
   "fallback_policy": "non-blocking-file-read-then-search",
-  "source_fingerprint": "806b7a685aa985c8ee6e694a6d18dea79997153ac4bd394e66f7f4c5004d483a",
+  "source_fingerprint": "feaf19d9415f8d62a4e460ae4402b3492fae9b07092c5aa4e39cb79dc7b1c2a9",
   "project_name": "daily-pipeline",
   "framework": "copilot-vscode",
-  "built_at": "2026-06-23T23:03:42.517622Z",
-  "source_count": 7,
+  "built_at": "2026-07-09T20:13:54.598550Z",
+  "source_count": 8,
   "documents": [
     {
       "doc_id": 0,
@@ -44,7 +44,7 @@
       ],
       "source_hash": "0a9975bdafd77b7e70df09424f48d9c94b19461e8cfbacdb8cf273e3b0344659",
       "source_mtime": 1777431326.1510975,
-      "vector_norm_sq": 1202.120438102171
+      "vector_norm_sq": 1403.468413830925
     },
     {
       "doc_id": 1,
@@ -61,7 +61,7 @@
       ],
       "source_hash": "3c045227cb9939a34c4a7747525eee67f632d8a76f6713e15fceb6a50afccf92",
       "source_mtime": 1777429804.2255254,
-      "vector_norm_sq": 138.9843890417454
+      "vector_norm_sq": 163.98781084961405
     },
     {
       "doc_id": 2,
@@ -76,7 +76,7 @@
       ],
       "source_hash": "33684350368c3a1c0a42e2ea5999c079775b519fc0b518a25a7b25679c7abb9f",
       "source_mtime": 1777429958.5820706,
-      "vector_norm_sq": 55.14423935469168
+      "vector_norm_sq": 65.52100362226032
     },
     {
       "doc_id": 3,
@@ -93,7 +93,7 @@
       ],
       "source_hash": "1247e0219df87b3b54033a00462b52136c59c9b31ae6600fb870c650a87cdad1",
       "source_mtime": 1777429800.1626308,
-      "vector_norm_sq": 181.84597889062795
+      "vector_norm_sq": 219.80888025550473
     },
     {
       "doc_id": 4,
@@ -111,7 +111,7 @@
       ],
       "source_hash": "6058c25cb45776edae10b608b95536a0afc5444458b8d12758b6355431a8c48a",
       "source_mtime": 1777429802.1951704,
-      "vector_norm_sq": 143.68356282738065
+      "vector_norm_sq": 166.84864121266943
     },
     {
       "doc_id": 5,
@@ -127,7 +127,7 @@
       ],
       "source_hash": "5b7f53f7719f92a7b4925bfb0578411a6e560b92efdc52ccab02282a5dc4d218",
       "source_mtime": 1777429798.139338,
-      "vector_norm_sq": 125.33743935982127
+      "vector_norm_sq": 147.95263977238275
     },
     {
       "doc_id": 6,
@@ -143,7 +143,28 @@
       ],
       "source_hash": "cd4d2f8d88afb641ca5f480daecf2927b01bab77d20569483b8b44d10b801058",
       "source_mtime": 1777429956.56206,
-      "vector_norm_sq": 58.46555930420405
+      "vector_norm_sq": 72.25415920198229
+    },
+    {
+      "doc_id": 7,
+      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/references/architecture-graph.md",
+      "title": "daily_pipeline \u2014 Repository Architecture Map",
+      "length": 847,
+      "snippet": "> **Auto-generated.** Regenerated on every commit that touches the `daily_pipeline` package. Do not edit manually \u2014 changes will be overwritten.",
+      "paragraphs": [
+        "> **Auto-generated.** Regenerated on every commit that touches the `daily_pipeline` package. Do not edit manually \u2014 changes will be overwritten.",
+        "- Modules mapped: **17** - Packages: **6** - Internal import edges: **18** - Distinct external dependencies: **0**",
+        "Inter-package import dependencies (module-level detail in the tables below).",
+        "Every module, coloured by package (full adjacency in the table below).",
+        "Third-party (non-stdlib) top-level packages imported by the mapped package:",
+        "<details> <summary>Mermaid &amp; DOT source for the diagram above</summary>",
+        "```mermaid flowchart LR classDef root fill:#e8eefb,stroke:#1b3fa0,color:#000 classDef sub  fill:#eef6ee,stroke:#3f8f4f,color:#000 daily_pipeline[\"daily_pipeline\"] class daily_pipeline root daily_pipeline_abstraction[\"daily_pipeline.abstraction\"] class daily_pipeline_abstraction sub daily_pipeline_analysis[\"daily_pipeline.analysis\"] class daily_pipeline_analysis sub daily_pipeline_ingest[\"daily_pipeline.ingest\"] class daily_pipeline_ingest sub daily_pipeline_integration[\"daily",
+        "```dot digraph \"daily_pipeline architecture\" { rankdir=LR; node [fontname=\"Helvetica\", fontsize=11, shape=box, style=\"rounded,filled\", fillcolor=\"#eef6ee\"]; edge [fontsize=9]; \"daily_pipeline\" [fillcolor=\"#e8eefb\"]; \"daily_pipeline.abstraction\" [fillcolor=\"#eef6ee\"]; \"daily_pipeline.analysis\" [fillcolor=\"#eef6ee\"]; \"daily_pipeline.ingest\" [fillcolor=\"#eef6ee\"]; \"daily_pipeline.integration\" [fillcolor=\"#eef6ee\"]; \"daily_pipeline.reporting\" [fillcolor=\"#eef6ee\"]; \"daily_pipelin",
+        "```json { \"root_package\": \"daily_pipeline\", \"modules\": { \"daily_pipeline\": { \"package\": \"daily_pipeline\", \"path\": \"daily_pipeline/__init__.py\", \"is_package\": true, \"imports_internal\": [], \"external\": [], \"repo_local\": [] }, \"daily_pipeline.abstraction\": { \"package\": \"daily_pipeline\", \"path\": \"daily_pipeline/abstraction/__init__.py\", \"is_package\": true, \"imports_internal\": [], \"external\": [], \"repo_local\": [] }, \"daily_pipeline.abstraction.synthesizer\": { \"package\": \"daily_pip"
+      ],
+      "source_hash": "337c9508c3345d2122da5e5da03fdeb6d2f3194a5d24e8ccd9643d156a72515a",
+      "source_mtime": 1783125869.6732767,
+      "vector_norm_sq": 19489.398570255384
     }
   ],
   "postings": {
@@ -299,6 +320,10 @@
       {
         "doc_id": 0,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 5
       }
     ],
     "building": [
@@ -341,6 +366,10 @@
       {
         "doc_id": 5,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 29
       }
     ],
     "requests": [
@@ -364,6 +393,10 @@
       },
       {
         "doc_id": 6,
+        "tf": 1
+      },
+      {
+        "doc_id": 7,
         "tf": 1
       }
     ],
@@ -441,6 +474,10 @@
       {
         "doc_id": 4,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 23
       }
     ],
     "protocol": [
@@ -459,6 +496,10 @@
       {
         "doc_id": 5,
         "tf": 2
+      },
+      {
+        "doc_id": 7,
+        "tf": 22
       }
     ],
     "stages": [
@@ -517,6 +558,10 @@
       {
         "doc_id": 5,
         "tf": 3
+      },
+      {
+        "doc_id": 7,
+        "tf": 244
       }
     ],
     "orchestration": [
@@ -641,6 +686,10 @@
       {
         "doc_id": 0,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 8
       }
     ],
     "references": [
@@ -651,6 +700,10 @@
       {
         "doc_id": 4,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 8
       }
     ],
     "synthesizes": [
@@ -685,6 +738,10 @@
       {
         "doc_id": 0,
         "tf": 2
+      },
+      {
+        "doc_id": 7,
+        "tf": 10
       }
     ],
     "update-request": [
@@ -739,6 +796,10 @@
       {
         "doc_id": 4,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 29
       }
     ],
     "synthesis": [
@@ -807,6 +868,10 @@
       {
         "doc_id": 4,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 20
       }
     ],
     "operational": [
@@ -859,6 +924,10 @@
       {
         "doc_id": 0,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 4
       }
     ],
     "scripts": [
@@ -971,6 +1040,10 @@
       {
         "doc_id": 5,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 9
       }
     ],
     "help": [
@@ -1043,6 +1116,10 @@
       {
         "doc_id": 5,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 8
       }
     ],
     "stage": [
@@ -1251,6 +1328,10 @@
       {
         "doc_id": 4,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 2
       }
     ],
     "team_b": [
@@ -1337,6 +1418,10 @@
       {
         "doc_id": 4,
         "tf": 2
+      },
+      {
+        "doc_id": 7,
+        "tf": 17
       }
     ],
     "trigger": [
@@ -1387,6 +1472,10 @@
       {
         "doc_id": 1,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 9
       }
     ],
     "dry-run": [
@@ -1470,6 +1559,10 @@
       },
       {
         "doc_id": 3,
+        "tf": 2
+      },
+      {
+        "doc_id": 7,
         "tf": 2
       }
     ],
@@ -1751,6 +1844,10 @@
       {
         "doc_id": 0,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 28
       }
     ],
     "fails": [
@@ -1799,6 +1896,10 @@
       {
         "doc_id": 6,
         "tf": 2
+      },
+      {
+        "doc_id": 7,
+        "tf": 19
       }
     ],
     "script": [
@@ -1857,6 +1958,10 @@
       {
         "doc_id": 2,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 4
       }
     ],
     "protocols": [
@@ -1890,6 +1995,10 @@
     "full": [
       {
         "doc_id": 0,
+        "tf": 1
+      },
+      {
+        "doc_id": 7,
         "tf": 1
       }
     ],
@@ -1971,6 +2080,10 @@
       {
         "doc_id": 0,
         "tf": 2
+      },
+      {
+        "doc_id": 7,
+        "tf": 27
       }
     ],
     "integration-agentteams": [
@@ -2065,6 +2178,10 @@
       {
         "doc_id": 6,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 30
       }
     ],
     "docs_src": [
@@ -2569,6 +2686,10 @@
       {
         "doc_id": 5,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 1
       }
     ],
     "getting-started": [
@@ -2675,6 +2796,10 @@
       {
         "doc_id": 6,
         "tf": 1
+      },
+      {
+        "doc_id": 7,
+        "tf": 2
       }
     ],
     "page": [
@@ -2694,8 +2819,566 @@
         "doc_id": 6,
         "tf": 1
       }
+    ],
+    "begin": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "content": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "architecture": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "auto-generated": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "regenerated": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "every": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "commit": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "touches": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "edit": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "manually": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "changes": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "overwritten": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "modules": [
+      {
+        "doc_id": 7,
+        "tf": 3
+      }
+    ],
+    "mapped": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "packages": [
+      {
+        "doc_id": 7,
+        "tf": 3
+      }
+    ],
+    "internal": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "import": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "edges": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "distinct": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "diagram": [
+      {
+        "doc_id": 7,
+        "tf": 5
+      }
+    ],
+    "inter-package": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "module-level": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "detail": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "tables": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "below": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "architecture-graph": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "svg": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "depends": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "abstraction": [
+      {
+        "doc_id": 7,
+        "tf": 20
+      }
+    ],
+    "ingest": [
+      {
+        "doc_id": 7,
+        "tf": 20
+      }
+    ],
+    "coloured": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "adjacency": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "table": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "architecture-modules": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "imports": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "imported": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "synthesizer": [
+      {
+        "doc_id": 7,
+        "tf": 8
+      }
+    ],
+    "loader": [
+      {
+        "doc_id": 7,
+        "tf": 8
+      }
+    ],
+    "writer": [
+      {
+        "doc_id": 7,
+        "tf": 8
+      }
+    ],
+    "third-party": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "non-stdlib": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "top-level": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "none": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "detected": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "standard": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "library": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "only": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "details": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "mermaid": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "amp": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "dot": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "above": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "flowchart": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "classdef": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "fill": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "e8eefb": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "stroke": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "b3fa0": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "color": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "sub": [
+      {
+        "doc_id": 7,
+        "tf": 6
+      }
+    ],
+    "eef6ee": [
+      {
+        "doc_id": 7,
+        "tf": 7
+      }
+    ],
+    "f8f4f": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "class": [
+      {
+        "doc_id": 7,
+        "tf": 6
+      }
+    ],
+    "daily_pipeline_abstraction": [
+      {
+        "doc_id": 7,
+        "tf": 4
+      }
+    ],
+    "daily_pipeline_analysis": [
+      {
+        "doc_id": 7,
+        "tf": 4
+      }
+    ],
+    "daily_pipeline_ingest": [
+      {
+        "doc_id": 7,
+        "tf": 4
+      }
+    ],
+    "daily_pipeline_integration": [
+      {
+        "doc_id": 7,
+        "tf": 4
+      }
+    ],
+    "daily_pipeline_reporting": [
+      {
+        "doc_id": 7,
+        "tf": 4
+      }
+    ],
+    "digraph": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "rankdir": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "node": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "fontname": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "helvetica": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "fontsize": [
+      {
+        "doc_id": 7,
+        "tf": 2
+      }
+    ],
+    "shape": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "box": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "style": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "rounded": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "filled": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "fillcolor": [
+      {
+        "doc_id": 7,
+        "tf": 7
+      }
+    ],
+    "edge": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "root_package": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "init__": [
+      {
+        "doc_id": 7,
+        "tf": 6
+      }
+    ],
+    "is_package": [
+      {
+        "doc_id": 7,
+        "tf": 17
+      }
+    ],
+    "true": [
+      {
+        "doc_id": 7,
+        "tf": 6
+      }
+    ],
+    "imports_internal": [
+      {
+        "doc_id": 7,
+        "tf": 17
+      }
+    ],
+    "repo_local": [
+      {
+        "doc_id": 7,
+        "tf": 17
+      }
+    ],
+    "false": [
+      {
+        "doc_id": 7,
+        "tf": 11
+      }
+    ],
+    "package_edges": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "module_edges": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "external_dependencies": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "repo_local_dependencies": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
+    ],
+    "end": [
+      {
+        "doc_id": 7,
+        "tf": 1
+      }
     ]
   },
-  "avgdl": 120.42857142857143,
-  "N": 7
+  "avgdl": 211.25,
+  "N": 8
 }

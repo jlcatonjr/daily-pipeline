@@ -18,12 +18,16 @@
     "integration",
     "reporting"
   ],
-  "files_written": [],
+  "files_written": [
+    ".github/agents/references/security-linux-hardening.reference.md",
+    ".github/agents/references/security-macos-hardening.reference.md",
+    ".github/agents/references/security-windows-hardening.reference.md"
+  ],
   "manual_required": 2,
   "template_hashes": {
     "universal/orchestrator.template.md": "ee34760e1f596c17",
-    "universal/navigator.template.md": "a0d0ac008e49068f",
-    "universal/security.template.md": "22e1e8b5bd521eaf",
+    "universal/navigator.template.md": "003a30ed545c0523",
+    "universal/security.template.md": "eb2d9b0f5dd0daf9",
     "universal/code-hygiene.template.md": "5212068c8a00a608",
     "universal/adversarial.template.md": "54bb7645fbc898a0",
     "universal/conflict-auditor.template.md": "e25b928260b0e41f",
@@ -45,6 +49,9 @@
     "domain/unix-philosophy-mapping-reference.template.md": "b086c16596a3030b",
     "universal/security-vulnerability-watch.reference.template.md": "1680e6cfd2a72275",
     "universal/security-vulnerability-watch.json.template": "ebcec1b04ad46caa",
+    "universal/security-linux-hardening.reference.template.md": "622535f7bfa41de6",
+    "universal/security-macos-hardening.reference.template.md": "1333cb343a3e33cf",
+    "universal/security-windows-hardening.reference.template.md": "ac81a0b5b583aa6d",
     "universal/ai-bad-habits-watch.reference.template.md": "690a289b3fdbdf9e",
     "universal/framework-watch.reference.template.md": "7e895e4a5ccc6540",
     "universal/adjacent-repos.reference.template.md": "d5f6783fe18f21c6",
@@ -213,6 +220,24 @@
       "component_slug": null
     },
     {
+      "path": "references/security-linux-hardening.reference.md",
+      "template": "universal/security-linux-hardening.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/security-macos-hardening.reference.md",
+      "template": "universal/security-macos-hardening.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/security-windows-hardening.reference.md",
+      "template": "universal/security-windows-hardening.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
       "path": "references/ai-bad-habits-watch.reference.md",
       "template": "universal/ai-bad-habits-watch.reference.template.md",
       "type": "artifact",
@@ -372,17 +397,17 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "f72f185cf65df9e1",
+  "manifest_fingerprint": "3a18fa4efc7c802e",
   "fingerprint_algo_version": 1,
   "file_hashes": {
-    "security.agent.md": "b9246f46a8e7d95b",
-    "references/security-vulnerability-watch.reference.md": "f861ab930d79174e",
-    "references/security-vulnerability-watch.json": "ea87f89dd5953fe8",
-    "references/pipeline-graph.md": "6a2aa8304dc78bdb",
-    "references/pipeline-graph.svg": "f7765c71b87b0b68",
-    "references/pipeline-handoffs.svg": "dc8cd69b6d6a94e7",
+    "references/security-linux-hardening.reference.md": "8c7e835899a76788",
+    "references/security-macos-hardening.reference.md": "36f79607df0a0386",
+    "references/security-windows-hardening.reference.md": "c6730123f3b47d00",
+    "navigator.agent.md": "d9264c5c5a59d5f6",
+    "security.agent.md": "9a41d153113ed77e",
+    "references/security-vulnerability-watch.reference.md": "c2301663c7caa96e",
+    "references/security-vulnerability-watch.json": "5608bacab882e457",
     "orchestrator.agent.md": "4d60b32b8f0838ce",
-    "navigator.agent.md": "3e765789ea1870c0",
     "code-hygiene.agent.md": "78f327c593947daf",
     "conflict-auditor.agent.md": "91ee35a0610f875b",
     "conflict-resolution.agent.md": "b320a1e1383b1301",
@@ -416,6 +441,7 @@
     "references/work-summary-spec.reference.md": "96232231a1f7c6be",
     "references/work-summary-tooling.reference.md": "f3656972717153a9",
     "references/work-summary-backfill.reference.md": "024cd86c297d89b4",
-    "references/parallelization.reference.md": "d2321bf5ac1ed2f8"
+    "references/parallelization.reference.md": "d2321bf5ac1ed2f8",
+    "references/pipeline-graph.md": "6a2aa8304dc78bdb"
   }
 }
