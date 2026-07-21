@@ -6,6 +6,54 @@
       "type": "shell",
       "command": "if [[ -z \"$AGENTTEAMS_REPO\" ]]; then echo 'Set AGENTTEAMS_REPO to your local agentteams repository path'; exit 1; fi; python3 \"$AGENTTEAMS_REPO/build_team.py\" --description \"${workspaceFolder}/.github/agents/_build-description.json\" --project \"${workspaceFolder}\" --framework copilot-vscode --output \"${workspaceFolder}/.github/agents\" --check",
       "problemMatcher": []
+    },
+    {
+      "label": "script: run_daily_pipeline",
+      "type": "shell",
+      "command": "bash scripts/run_daily_pipeline.sh",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "detail": "AGENTTEAMS"
+    },
+    {
+      "label": "agentteams: update agents",
+      "type": "shell",
+      "command": "agentteams --update --merge",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "detail": "AGENTTEAMS"
+    },
+    {
+      "label": "agentteams: dry-run check",
+      "type": "shell",
+      "command": "agentteams --update --dry-run",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "detail": "AGENTTEAMS"
+    },
+    {
+      "label": "agentteams: fleet update (all)",
+      "type": "shell",
+      "command": "agentteams --fleet . --fleet-frameworks all --update --merge",
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "detail": "AGENTTEAMS"
     }
   ]
 }

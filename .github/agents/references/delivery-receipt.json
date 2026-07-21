@@ -1,10 +1,10 @@
 {
   "artifact_type": "delivery-receipt",
   "receipt_schema_version": "1.0",
-  "delivered_at": "2026-07-13T13:37:27Z",
+  "delivered_at": "2026-07-21T00:04:19Z",
   "project_name": "daily-pipeline",
   "framework": "copilot-vscode",
-  "manifest_fingerprint": "5719da44f80111c4",
+  "manifest_fingerprint": "2176cde169315318",
   "fingerprint_algo_version": 1,
   "output_dir": "/Users/jamescaton/githubrepositories/daily-pipeline/.github/agents",
   "agentteams_version": "1.0.0rc6"
