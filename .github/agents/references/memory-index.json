@@ -2,7 +2,7 @@
   "artifact_type": "memory-index",
   "memory_index_schema_version": "1.3",
   "index_format_version": "json-bm25-postings-v2",
-  "index_build_id": "23049d2d442816878cef280db1316f1169bfb9d5144ae415bdc6462e6fe49b88",
+  "index_build_id": "3cf4a51ef7a35c8bd08c81eb119137d477a18a9833170d41c2f038a562a3e7db",
   "index_write_owner": "agentteams.build_team",
   "vector_runtime_mode": "sparse-tfidf-cosine",
   "vector_model_id": null,
@@ -11,7 +11,7 @@
   "source_fingerprint": "feaf19d9415f8d62a4e460ae4402b3492fae9b07092c5aa4e39cb79dc7b1c2a9",
   "project_name": "daily-pipeline",
   "framework": "copilot-vscode",
-  "built_at": "2026-07-09T20:13:54.598550Z",
+  "built_at": "2026-07-13T13:37:27.250008Z",
   "source_count": 8,
   "documents": [
     {

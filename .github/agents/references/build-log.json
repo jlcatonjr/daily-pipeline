@@ -18,16 +18,12 @@
     "integration",
     "reporting"
   ],
-  "files_written": [
-    ".github/agents/references/security-linux-hardening.reference.md",
-    ".github/agents/references/security-macos-hardening.reference.md",
-    ".github/agents/references/security-windows-hardening.reference.md"
-  ],
+  "files_written": [],
   "manual_required": 2,
   "template_hashes": {
     "universal/orchestrator.template.md": "ee34760e1f596c17",
     "universal/navigator.template.md": "003a30ed545c0523",
-    "universal/security.template.md": "eb2d9b0f5dd0daf9",
+    "universal/security.template.md": "ae6475b6df0d1f4e",
     "universal/code-hygiene.template.md": "5212068c8a00a608",
     "universal/adversarial.template.md": "54bb7645fbc898a0",
     "universal/conflict-auditor.template.md": "e25b928260b0e41f",
@@ -397,17 +393,17 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "3a18fa4efc7c802e",
+  "manifest_fingerprint": "5719da44f80111c4",
   "fingerprint_algo_version": 1,
   "file_hashes": {
-    "references/security-linux-hardening.reference.md": "8c7e835899a76788",
-    "references/security-macos-hardening.reference.md": "36f79607df0a0386",
-    "references/security-windows-hardening.reference.md": "c6730123f3b47d00",
-    "navigator.agent.md": "d9264c5c5a59d5f6",
-    "security.agent.md": "9a41d153113ed77e",
-    "references/security-vulnerability-watch.reference.md": "c2301663c7caa96e",
-    "references/security-vulnerability-watch.json": "5608bacab882e457",
+    "security.agent.md": "2c1bfb20df6d7b10",
+    "references/security-vulnerability-watch.reference.md": "bc16f9299fc9395d",
+    "references/security-vulnerability-watch.json": "660b59c2770a270e",
+    "references/pipeline-graph.md": "6a2aa8304dc78bdb",
+    "references/pipeline-graph.svg": "f7765c71b87b0b68",
+    "references/pipeline-handoffs.svg": "dc8cd69b6d6a94e7",
     "orchestrator.agent.md": "4d60b32b8f0838ce",
+    "navigator.agent.md": "d9264c5c5a59d5f6",
     "code-hygiene.agent.md": "78f327c593947daf",
     "conflict-auditor.agent.md": "91ee35a0610f875b",
     "conflict-resolution.agent.md": "b320a1e1383b1301",
@@ -441,7 +437,6 @@
     "references/work-summary-spec.reference.md": "96232231a1f7c6be",
     "references/work-summary-tooling.reference.md": "f3656972717153a9",
     "references/work-summary-backfill.reference.md": "024cd86c297d89b4",
-    "references/parallelization.reference.md": "d2321bf5ac1ed2f8",
-    "references/pipeline-graph.md": "6a2aa8304dc78bdb"
+    "references/parallelization.reference.md": "d2321bf5ac1ed2f8"
   }
 }
