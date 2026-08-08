@@ -20,9 +20,22 @@ documentation before making changes.
 
 ## Key API Surface
 
+<!-- AGENTTEAMS:BEGIN key_api_surface v=1 -->
+## Key API Surface
+<!-- AGENTTEAMS:END key_api_surface -->
+
 <!-- AGENTTEAMS:BEGIN tool_api_surface v=1 -->
 argparse, dataclasses, pathlib, json
 <!-- AGENTTEAMS:END tool_api_surface -->
+
+<!-- AGENTTEAMS:BEGIN verification v=1 -->
+## Verification
+
+After every invocation, verify:
+- All expected output files are present
+- Output is not empty (zero-byte output indicates silent failure)
+- No error or warning lines appear in the log that weren't present in the previous successful run
+<!-- AGENTTEAMS:END verification -->
 
 <!-- Document the primary classes, functions, CLI commands, or configuration keys needed to operate Python effectively. -->
 

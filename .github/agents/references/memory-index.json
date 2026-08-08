@@ -2,21 +2,21 @@
   "artifact_type": "memory-index",
   "memory_index_schema_version": "1.3",
   "index_format_version": "json-bm25-postings-v2",
-  "index_build_id": "b38443a563afa5d3ff1d5e95985bf91b5998b0c2c435d5050716951c8a598e19",
+  "index_build_id": "cfa12b1a68cc8bf0d1beeeb6e1d3d98e5b440beae7685a28076cab95e6cc4c7c",
   "index_write_owner": "agentteams.build_team",
   "vector_runtime_mode": "sparse-tfidf-cosine",
   "vector_model_id": null,
   "vector_dim": null,
   "fallback_policy": "non-blocking-file-read-then-search",
-  "source_fingerprint": "feaf19d9415f8d62a4e460ae4402b3492fae9b07092c5aa4e39cb79dc7b1c2a9",
+  "source_fingerprint": "2bc4cf1bc5285ad6ef906ea48798a23275ddf5a55ce682db04453aa1c8f85635",
   "project_name": "daily-pipeline",
   "framework": "copilot-vscode",
-  "built_at": "2026-07-27T13:37:10.507224Z",
+  "built_at": "2026-08-06T18:44:43.464899Z",
   "source_count": 8,
   "documents": [
     {
       "doc_id": 0,
-      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/README.md",
+      "path": "README.md",
       "title": "Daily Pipeline",
       "length": 393,
       "snippet": "Documentation: [https://jlcatonjr.github.io/daily-pipeline/](https://jlcatonjr.github.io/daily-pipeline/) API Reference: [docs/api-reference/index.md](docs/api-reference/index.md)",
@@ -48,7 +48,7 @@
     },
     {
       "doc_id": 1,
-      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/cli-reference.md",
+      "path": "docs_src/cli-reference.md",
       "title": "CLI Reference",
       "length": 81,
       "snippet": "```bash python3 -m daily_pipeline.cli \\ --team <team-a.json> \\ --team <team-b.json> \\ --output-root tmp/daily-pipeline ```",
@@ -65,7 +65,7 @@
     },
     {
       "doc_id": 2,
-      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/extended-operations.md",
+      "path": "docs_src/extended-operations.md",
       "title": "Extended Operations",
       "length": 52,
       "snippet": "Operational runbook for orchestration extension stages is maintained in:",
@@ -80,7 +80,7 @@
     },
     {
       "doc_id": 3,
-      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/getting-started.md",
+      "path": "docs_src/getting-started.md",
       "title": "Getting Started",
       "length": 77,
       "snippet": "```bash python3 -m pip install -e . python3 -m daily_pipeline.cli --help ```",
@@ -97,7 +97,7 @@
     },
     {
       "doc_id": 4,
-      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/how-it-works.md",
+      "path": "docs_src/how-it-works.md",
       "title": "How It Works",
       "length": 105,
       "snippet": "The core protocol performs deterministic ingestion, normalization, commonality analysis, abstract synthesis, integration-request construction, stage registry output, and reporting.",
@@ -115,7 +115,7 @@
     },
     {
       "doc_id": 5,
-      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/index.md",
+      "path": "docs_src/index.md",
       "title": "Daily Pipeline Documentation",
       "length": 82,
       "snippet": "1. Core protocol (Stages 1-8) implemented in `daily_pipeline/protocol.py` 2. Orchestration extension (Stages 9+) operated externally, with Stage 9.5 callable helper APIs available in `daily_pipeline/integration/sync.py`",
@@ -131,7 +131,7 @@
     },
     {
       "doc_id": 6,
-      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/docs_src/stage-contracts.md",
+      "path": "docs_src/stage-contracts.md",
       "title": "Stage Contracts",
       "length": 53,
       "snippet": "- `protocols/stages.md` - `protocols/stages.csv`",
@@ -147,7 +147,7 @@
     },
     {
       "doc_id": 7,
-      "path": "/Users/jamescaton/githubrepositories/daily-pipeline/references/architecture-graph.md",
+      "path": "references/architecture-graph.md",
       "title": "daily_pipeline \u2014 Repository Architecture Map",
       "length": 847,
       "snippet": "> **Auto-generated.** Regenerated on every commit that touches the `daily_pipeline` package. Do not edit manually \u2014 changes will be overwritten.",

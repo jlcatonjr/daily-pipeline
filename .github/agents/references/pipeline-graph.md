@@ -38,7 +38,7 @@ The handoff-only control-flow backbone (agents-list edges omitted):
 | `analysis-expert` | workstream_expert | No | read, search, agent |
 | `cleanup` | governance | No | edit, search, execute |
 | `code-hygiene` | governance | No | read, search |
-| `conflict-auditor` | governance | No | read, edit, search, execute |
+| `conflict-auditor` | governance | No | read, search |
 | `conflict-resolution` | governance | No | edit, search, read |
 | `content-enricher` | domain | Yes | read, edit, search |
 | `git-operations` | governance | Yes | read, execute, search |
@@ -72,14 +72,14 @@ The handoff-only control-flow backbone (agents-list edges omitted):
 | `analysis-expert` | `orchestrator` | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
 | `cleanup` | `code-hygiene`, `orchestrator` | `orchestrator` |
 | `code-hygiene` | `orchestrator` | `agent-refactor`, `cleanup`, `conflict-auditor`, `orchestrator`, `security` |
-| `conflict-auditor` | `adversarial`, `agent-refactor`, `agent-updater`, `code-hygiene`, `orchestrator`, `primary-producer`, `reference-manager`, `repo-liaison`, `technical-validator`, `work-summarizer` | `agent-updater`, `conflict-resolution`, `orchestrator`, `technical-validator` |
+| `conflict-auditor` | `adversarial`, `agent-refactor`, `agent-updater`, `code-hygiene`, `orchestrator`, `primary-producer`, `reference-manager`, `repo-liaison`, `technical-validator`, `work-summarizer` | `agent-updater`, `conflict-resolution`, `technical-validator` |
 | `conflict-resolution` | `conflict-auditor`, `git-operations`, `orchestrator` | `agent-updater`, `orchestrator` |
 | `content-enricher` | — | `orchestrator`, `primary-producer`, `technical-validator` |
 | `git-operations` | `orchestrator` | `agent-updater`, `conflict-resolution`, `orchestrator`, `security` |
 | `ingest-expert` | `orchestrator` | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
 | `integration-expert` | `orchestrator` | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
 | `navigator` | `orchestrator` | `orchestrator` |
-| `orchestrator` | `abstraction-expert`, `adversarial`, `agent-refactor`, `agent-updater`, `analysis-expert`, `cleanup`, `code-hygiene`, `conflict-auditor`, `conflict-resolution`, `content-enricher`, `git-operations`, `ingest-expert`, `integration-expert`, `navigator`, `output-compiler`, `primary-producer`, `quality-auditor`, `reference-manager`, `repo-liaison`, `reporting-expert`, `security`, `technical-validator`, `tool-python`, `tool-specific`, `work-summarizer` | `abstraction-expert`, `adversarial`, `agent-refactor`, `agent-updater`, `analysis-expert`, `cleanup`, `code-hygiene`, `conflict-auditor`, `conflict-resolution`, `git-operations`, `ingest-expert`, `integration-expert`, `navigator`, `output-compiler`, `primary-producer`, `quality-auditor`, `reference-manager`, `repo-liaison`, `reporting-expert`, `security`, `technical-validator`, `tool-python`, `tool-specific` |
+| `orchestrator` | `abstraction-expert`, `adversarial`, `agent-refactor`, `agent-updater`, `analysis-expert`, `cleanup`, `code-hygiene`, `conflict-resolution`, `content-enricher`, `git-operations`, `ingest-expert`, `integration-expert`, `navigator`, `output-compiler`, `primary-producer`, `quality-auditor`, `reference-manager`, `repo-liaison`, `reporting-expert`, `security`, `technical-validator`, `tool-python`, `tool-specific`, `work-summarizer` | `abstraction-expert`, `adversarial`, `agent-refactor`, `agent-updater`, `analysis-expert`, `cleanup`, `code-hygiene`, `conflict-auditor`, `conflict-resolution`, `git-operations`, `ingest-expert`, `integration-expert`, `navigator`, `output-compiler`, `primary-producer`, `quality-auditor`, `reference-manager`, `repo-liaison`, `reporting-expert`, `security`, `technical-validator`, `tool-python`, `tool-specific` |
 | `output-compiler` | `orchestrator` | `orchestrator`, `technical-validator` |
 | `primary-producer` | `abstraction-expert`, `analysis-expert`, `content-enricher`, `ingest-expert`, `integration-expert`, `orchestrator`, `quality-auditor`, `reporting-expert`, `technical-validator` | `conflict-auditor`, `orchestrator`, `quality-auditor` |
 | `quality-auditor` | `orchestrator`, `primary-producer` | `orchestrator`, `primary-producer` |
@@ -193,10 +193,6 @@ flowchart LR
     code_hygiene -->|"Log Conflict"| conflict_auditor
     code_hygiene -->|"Return to Orchestrator"| orchestrator
     code_hygiene -->|"Security Clearance (for Deletions)"| security
-    conflict_auditor -->|"Update Agent Docs"| agent_updater
-    conflict_auditor -->|"Resolve Conflicts"| conflict_resolution
-    conflict_auditor -->|"Return to Orchestrator"| orchestrator
-    conflict_auditor -->|"Verify Source Drift"| technical_validator
     conflict_auditor -.-> agent_updater
     conflict_auditor -.-> conflict_resolution
     conflict_auditor -.-> technical_validator
@@ -369,10 +365,9 @@ digraph "daily-pipeline Agent Team" {
     "code-hygiene" -> "conflict-auditor" [style=solid, label="Log Conflict"];
     "code-hygiene" -> "orchestrator" [style=solid, label="Return to Orchestrator"];
     "code-hygiene" -> "security" [style=solid, label="Security Clearance (for Deletions)"];
-    "conflict-auditor" -> "agent-updater" [style=solid, label="Update Agent Docs"];
-    "conflict-auditor" -> "conflict-resolution" [style=solid, label="Resolve Conflicts"];
-    "conflict-auditor" -> "orchestrator" [style=solid, label="Return to Orchestrator"];
-    "conflict-auditor" -> "technical-validator" [style=solid, label="Verify Source Drift"];
+    "conflict-auditor" -> "agent-updater" [style=dashed];
+    "conflict-auditor" -> "conflict-resolution" [style=dashed];
+    "conflict-auditor" -> "technical-validator" [style=dashed];
     "conflict-resolution" -> "agent-updater" [style=solid, label="Update Agent Docs"];
     "conflict-resolution" -> "orchestrator" [style=solid, label="Return to Orchestrator"];
     "content-enricher" -> "orchestrator" [style=solid, label="Return to Orchestrator"];
@@ -533,9 +528,7 @@ digraph "daily-pipeline Agent Team" {
       "user_invokable": false,
       "tools": [
         "read",
-        "edit",
-        "search",
-        "execute"
+        "search"
       ]
     },
     "conflict-resolution": {
@@ -929,30 +922,6 @@ digraph "daily-pipeline Agent Team" {
       "target": "security",
       "edge_type": "handoff",
       "label": "Security Clearance (for Deletions)"
-    },
-    {
-      "source": "conflict-auditor",
-      "target": "agent-updater",
-      "edge_type": "handoff",
-      "label": "Update Agent Docs"
-    },
-    {
-      "source": "conflict-auditor",
-      "target": "conflict-resolution",
-      "edge_type": "handoff",
-      "label": "Resolve Conflicts"
-    },
-    {
-      "source": "conflict-auditor",
-      "target": "orchestrator",
-      "edge_type": "handoff",
-      "label": "Return to Orchestrator"
-    },
-    {
-      "source": "conflict-auditor",
-      "target": "technical-validator",
-      "edge_type": "handoff",
-      "label": "Verify Source Drift"
     },
     {
       "source": "conflict-auditor",
@@ -1691,7 +1660,6 @@ digraph "daily-pipeline Agent Team" {
     "conflict-auditor": [
       "agent-updater",
       "conflict-resolution",
-      "orchestrator",
       "technical-validator"
     ],
     "conflict-resolution": [
