@@ -18,31 +18,33 @@
     "integration",
     "reporting"
   ],
-  "files_written": [],
+  "files_written": [
+    ".github/agents/references/redteam-methodology.reference.md"
+  ],
   "manual_required": 2,
   "template_hashes": {
-    "universal/orchestrator.template.md": "86260a63063e5c6a",
-    "universal/navigator.template.md": "44761c1fbeac7fab",
-    "universal/security.template.md": "c24f0288ba86c1d3",
+    "universal/orchestrator.template.md": "a2e46ef24984366c",
+    "universal/navigator.template.md": "be2f562228ea5e1f",
+    "universal/security.template.md": "f0903dbb0ec12bbb",
     "universal/code-hygiene.template.md": "7b1eae41ef75358d",
-    "universal/adversarial.template.md": "ea4659f376567351",
-    "universal/conflict-auditor.template.md": "8646f491cdc44d02",
-    "universal/conflict-resolution.template.md": "fc8a741d01b40572",
+    "universal/adversarial.template.md": "3923a13f4fb1ae6a",
+    "universal/conflict-auditor.template.md": "371d5304d8a0f5fe",
+    "universal/conflict-resolution.template.md": "ff21ac7e7e1fc63c",
     "universal/cleanup.template.md": "bf795b64968349f6",
     "universal/agent-updater.template.md": "c9636a2efa322a6d",
     "universal/agent-refactor.template.md": "a9717cc56c35f4ac",
     "universal/repo-liaison.template.md": "a41269c1204528f3",
     "universal/git-operations.template.md": "82546b5e807d9c98",
     "domain/work-summarizer.template.md": "893bc7338f0336a6",
-    "domain/primary-producer.template.md": "c128e8f2fb52885f",
-    "domain/quality-auditor.template.md": "9f8489d342199598",
-    "domain/technical-validator.template.md": "b5605b7aba24259f",
+    "domain/primary-producer.template.md": "35bf874350a29a94",
+    "domain/quality-auditor.template.md": "bc44c5742a92d831",
+    "domain/technical-validator.template.md": "8cc603acf4b577e6",
     "domain/reference-manager.template.md": "e5541ea9e2cb7560",
     "domain/output-compiler.template.md": "fd90f3a13765386a",
     "domain/tool-specific.doc.template.md": "e96ac1f3fc2dfc7b",
     "domain/tool-reference.template.md": "5ce5638b7094cc86",
-    "domain/code-hygiene-rules-reference.template.md": "5ada4506462eef31",
-    "domain/unix-philosophy-mapping-reference.template.md": "abd9e9e89f925b48",
+    "domain/code-hygiene-rules-reference.template.md": "cf49b61dc45e4ca4",
+    "domain/unix-philosophy-mapping-reference.template.md": "702af6b4e9e2b952",
     "universal/security-vulnerability-watch.reference.template.md": "269cdacb3d94fdfa",
     "universal/security-vulnerability-watch.json.template": "ebcec1b04ad46caa",
     "universal/security-linux-hardening.reference.template.md": "4845cf83b84615f4",
@@ -57,6 +59,7 @@
     "universal/work-summary-backfill.reference.template.md": "5730bac043dc2874",
     "universal/parallelization.reference.template.md": "2c872341050a7781",
     "universal/instruction-authority.reference.template.md": "72149ab5244f9be3",
+    "universal/redteam-methodology.reference.template.md": "a0443337a9796294",
     "universal/retrospective-remediation.reference.template.md": "2ee97598dca23e68",
     "universal/cli-tool-discovery.reference.template.md": "203004e771c8b2fd",
     "universal/skill-generation.reference.template.md": "47bcf76ed8f69a80",
@@ -293,6 +296,12 @@
       "component_slug": null
     },
     {
+      "path": "references/redteam-methodology.reference.md",
+      "template": "universal/redteam-methodology.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
       "path": "references/retrospective-remediation.reference.md",
       "template": "universal/retrospective-remediation.reference.template.md",
       "type": "reference",
@@ -428,28 +437,33 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "e3f1e4af527af924",
+  "manifest_fingerprint": "35b8b7006fd730aa",
   "fingerprint_algo_version": 1,
   "file_hashes": {
-    "security.agent.md": "6def518df37e663e",
-    "conflict-auditor.agent.md": "ec76c360eb069e6b",
-    "references/code-hygiene-rules.reference.md": "0af286fa9bff9ee4",
-    "references/security-vulnerability-watch.reference.md": "cd7661cee8314ad6",
-    "references/security-vulnerability-watch.json": "e066345130830d6c",
+    "references/redteam-methodology.reference.md": "a1a0810c94c4b4a2",
+    "navigator.agent.md": "caf4b413acfeff4b",
+    "security.agent.md": "a3949787e4f056d4",
+    "conflict-auditor.agent.md": "0e205e95409388cc",
+    "conflict-resolution.agent.md": "c9eb8aa1bda2210f",
+    "primary-producer.agent.md": "15a2b37a6ccc8046",
+    "references/code-hygiene-rules.reference.md": "5de980fdd3ad88df",
+    "references/unix-philosophy-mapping.reference.md": "9d762540146b428e",
+    "references/security-vulnerability-watch.reference.md": "0cb5eeaf8d525ded",
+    "references/security-vulnerability-watch.json": "f3f29aab089b436c",
+    "references/pipeline-graph.md": "89c856e7dacadf19",
+    "references/pipeline-graph.svg": "f1bd3e585b22f2d9",
+    "references/pipeline-handoffs.svg": "dc8cd69b6d6a94e7",
     "orchestrator.agent.md": "3dde01c9b582c698",
-    "navigator.agent.md": "f6e728e39506c989",
     "code-hygiene.agent.md": "78f327c593947daf",
-    "conflict-resolution.agent.md": "d383219fd496ee48",
+    "adversarial.agent.md": "e34c5767c3305cd5",
     "agent-updater.agent.md": "1345a4aaf110b652",
     "repo-liaison.agent.md": "89321476f2cd5bba",
     "git-operations.agent.md": "691ffb22ad5e4c72",
-    "primary-producer.agent.md": "3cc5601a375f8274",
     "quality-auditor.agent.md": "8431a6eea44b1d63",
     "technical-validator.agent.md": "e0037edb761e1125",
     "reference-manager.agent.md": "a6de30beaa07a951",
     "output-compiler.agent.md": "5c7796d85832f6b8",
     "references/ref-python-reference.md": "7f8bfbc8d468a7e6",
-    "references/unix-philosophy-mapping.reference.md": "e5bc459c4ac54e7e",
     "references/security-linux-hardening.reference.md": "31d9ef1c588dbb10",
     "references/security-macos-hardening.reference.md": "fc17de4688021ce4",
     "references/security-windows-hardening.reference.md": "f271246735ae9ed0",
@@ -465,7 +479,6 @@
     "team-builder.agent.md": "2c0000df132d0101",
     "SETUP-REQUIRED.md": "5adab05ba57bb351",
     "content-enricher.agent.md": "167e8ce9db8072d8",
-    "adversarial.agent.md": "e34c5767c3305cd5",
     "cleanup.agent.md": "507a5c440d657155",
     "agent-refactor.agent.md": "1310d02413f76a12",
     "work-summarizer.agent.md": "84187d3c3984c212",
@@ -479,10 +492,17 @@
     "references/retrospective-remediation.reference.md": "05df07527aff9c80",
     "references/cli-tool-discovery.reference.md": "c26106b7fa028d19",
     "references/skill-generation.reference.md": "193081eccb28b67f",
-    "references/external-retrieval-quality-gate.reference.md": "499ecf97122cb7f0",
-    "references/pipeline-graph.md": "89c856e7dacadf19"
+    "references/external-retrieval-quality-gate.reference.md": "499ecf97122cb7f0"
   },
   "front_matter_baseline": {
+    "navigator.agent.md": {
+      "name": "Navigator \u2014 daily-pipeline",
+      "description": "\"Repository structure navigation, project map maintenance, file location lookups, and dependency queries for daily-pipeline\"",
+      "user-invokable": "false",
+      "tools": "['read', 'search', 'execute']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": ""
+    },
     "security.agent.md": {
       "name": "Security \u2014 daily-pipeline",
       "description": "\"Top-priority security sentinel: reviews actions for credential exposure, destructive operations, sensitive content leakage, and reference integrity before any sensitive action proceeds\"",
@@ -500,20 +520,29 @@
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": ""
     },
+    "conflict-resolution.agent.md": {
+      "name": "Conflict Resolution \u2014 daily-pipeline",
+      "description": "\"Makes ACCEPT/REJECT/REVISE decisions on conflicts flagged by the conflict auditor in daily-pipeline\"",
+      "user-invokable": "false",
+      "tools": "['edit', 'search', 'read']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": ""
+    },
+    "primary-producer.agent.md": {
+      "name": "Primary Producer \u2014 daily-pipeline",
+      "description": "\"Drafts and revises deliverables in daily-pipeline from Component Briefs provided by workstream expert agents\"",
+      "user-invokable": "false",
+      "tools": "['read', 'edit', 'search']",
+      "agents": "['quality-auditor', 'conflict-auditor']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": ""
+    },
     "orchestrator.agent.md": {
       "name": "Orchestrator \u2014 daily-pipeline",
       "description": "\"Coordinates all agent operations for daily-pipeline: routes work to domain agents, enforces constitutional rules, and closes every multi-file session with a consistency check.\"",
       "user-invokable": "true",
       "tools": "['read', 'edit', 'search', 'execute', 'todo', 'agent']",
       "agents": "",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": ""
-    },
-    "navigator.agent.md": {
-      "name": "Navigator \u2014 daily-pipeline",
-      "description": "\"Repository structure navigation, project map maintenance, file location lookups, and dependency queries for daily-pipeline\"",
-      "user-invokable": "false",
-      "tools": "['read', 'search', 'execute']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": ""
     },
@@ -525,11 +554,11 @@
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": ""
     },
-    "conflict-resolution.agent.md": {
-      "name": "Conflict Resolution \u2014 daily-pipeline",
-      "description": "\"Makes ACCEPT/REJECT/REVISE decisions on conflicts flagged by the conflict auditor in daily-pipeline\"",
-      "user-invokable": "false",
-      "tools": "['edit', 'search', 'read']",
+    "adversarial.agent.md": {
+      "name": "Adversarial \u2014 daily-pipeline",
+      "description": "\"Presupposition critic: challenges the assumptions underlying any plan, proposal, or diagnosis produced by the agent team. Traces how justified changes in presuppositions cascade through dependent logic.\"",
+      "user-invokable": "true",
+      "tools": "['read', 'search']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": ""
     },
@@ -555,15 +584,6 @@
       "description": "\"Executes and governs Git and GitHub operations in daily-pipeline, including commit/push, pull/merge/rebase, conflict handling, and recovery workflows.\"",
       "user-invokable": "true",
       "tools": "['read', 'execute', 'search']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": ""
-    },
-    "primary-producer.agent.md": {
-      "name": "Primary Producer \u2014 daily-pipeline",
-      "description": "\"Drafts and revises deliverables in daily-pipeline from Component Briefs provided by workstream expert agents\"",
-      "user-invokable": "false",
-      "tools": "['read', 'edit', 'search']",
-      "agents": "['quality-auditor', 'conflict-auditor']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": ""
     },
@@ -661,14 +681,6 @@
       "user-invokable": "true",
       "tools": "['read', 'edit', 'search']",
       "agents": "['primary-producer', 'technical-validator']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": ""
-    },
-    "adversarial.agent.md": {
-      "name": "Adversarial \u2014 daily-pipeline",
-      "description": "\"Presupposition critic: challenges the assumptions underlying any plan, proposal, or diagnosis produced by the agent team. Traces how justified changes in presuppositions cascade through dependent logic.\"",
-      "user-invokable": "true",
-      "tools": "['read', 'search']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": ""
     },
