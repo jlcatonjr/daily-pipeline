@@ -32,7 +32,7 @@ The handoff-only control-flow backbone (agents-list edges omitted):
 | Agent | Type | User-Invokable | Tools |
 | --- | --- | --- | --- |
 | `abstraction-expert` | workstream_expert | No | read, search, agent |
-| `adversarial` | governance | Yes | read, search |
+| `adversarial` | governance | No | read, search |
 | `agent-refactor` | governance | No | edit, search, agent |
 | `agent-updater` | governance | No | edit, search, execute, agent |
 | `analysis-expert` | workstream_expert | No | read, search, agent |
@@ -40,12 +40,12 @@ The handoff-only control-flow backbone (agents-list edges omitted):
 | `code-hygiene` | governance | No | read, search |
 | `conflict-auditor` | governance | No | read, search |
 | `conflict-resolution` | governance | No | edit, search, read |
-| `content-enricher` | domain | Yes | read, edit, search |
-| `git-operations` | governance | Yes | read, execute, search |
+| `content-enricher` | domain | No | read, edit, search |
+| `git-operations` | governance | No | read, execute, search |
 | `ingest-expert` | workstream_expert | No | read, search, agent |
 | `integration-expert` | workstream_expert | No | read, search, agent |
 | `navigator` | governance | No | read, search, execute |
-| `orchestrator` | governance | Yes | read, edit, search, execute, todo, agent |
+| `orchestrator` | governance | No | read, edit, search, execute, todo, agent |
 | `output-compiler` | domain | No | read, edit, execute |
 | `primary-producer` | domain | No | read, edit, search |
 | `quality-auditor` | domain | No | read, search |
@@ -53,11 +53,11 @@ The handoff-only control-flow backbone (agents-list edges omitted):
 | `repo-liaison` | governance | No | read, edit, search, execute, agent |
 | `reporting-expert` | workstream_expert | No | read, search, agent |
 | `security` | governance | No | read, search |
-| `team-builder` | governance | Yes | read, edit, search, execute, todo |
+| `team-builder` | governance | No | read, edit, search, execute, todo |
 | `technical-validator` | domain | No | read, search |
 | `tool-python` | tool_specialist | No | read, edit, execute, search |
 | `tool-specific` | tool_specialist | No | read, edit, execute, search |
-| `work-summarizer` | domain | Yes | read, search, execute, edit, agent |
+| `work-summarizer` | domain | No | read, search, execute, edit, agent |
 
 ---
 
@@ -466,7 +466,7 @@ digraph "daily-pipeline Agent Team" {
     "adversarial": {
       "display_name": "Adversarial",
       "agent_type": "governance",
-      "user_invokable": true,
+      "user_invokable": false,
       "tools": [
         "read",
         "search"
@@ -544,7 +544,7 @@ digraph "daily-pipeline Agent Team" {
     "content-enricher": {
       "display_name": "Content Enricher",
       "agent_type": "domain",
-      "user_invokable": true,
+      "user_invokable": false,
       "tools": [
         "read",
         "edit",
@@ -554,7 +554,7 @@ digraph "daily-pipeline Agent Team" {
     "git-operations": {
       "display_name": "Git Operations",
       "agent_type": "governance",
-      "user_invokable": true,
+      "user_invokable": false,
       "tools": [
         "read",
         "execute",
@@ -594,7 +594,7 @@ digraph "daily-pipeline Agent Team" {
     "orchestrator": {
       "display_name": "Orchestrator",
       "agent_type": "governance",
-      "user_invokable": true,
+      "user_invokable": false,
       "tools": [
         "read",
         "edit",
@@ -677,7 +677,7 @@ digraph "daily-pipeline Agent Team" {
     "team-builder": {
       "display_name": "Team Builder",
       "agent_type": "governance",
-      "user_invokable": true,
+      "user_invokable": false,
       "tools": [
         "read",
         "edit",
@@ -720,7 +720,7 @@ digraph "daily-pipeline Agent Team" {
     "work-summarizer": {
       "display_name": "Work Summarizer",
       "agent_type": "domain",
-      "user_invokable": true,
+      "user_invokable": false,
       "tools": [
         "read",
         "search",

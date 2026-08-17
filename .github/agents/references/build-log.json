@@ -18,9 +18,7 @@
     "integration",
     "reporting"
   ],
-  "files_written": [
-    ".github/agents/references/redteam-methodology.reference.md"
-  ],
+  "files_written": [],
   "manual_required": 2,
   "template_hashes": {
     "universal/orchestrator.template.md": "a2e46ef24984366c",
@@ -437,33 +435,31 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "35b8b7006fd730aa",
+  "manifest_fingerprint": "87bef97a7bf84da4",
   "fingerprint_algo_version": 1,
   "file_hashes": {
-    "references/redteam-methodology.reference.md": "a1a0810c94c4b4a2",
-    "navigator.agent.md": "caf4b413acfeff4b",
-    "security.agent.md": "a3949787e4f056d4",
-    "conflict-auditor.agent.md": "0e205e95409388cc",
-    "conflict-resolution.agent.md": "c9eb8aa1bda2210f",
-    "primary-producer.agent.md": "15a2b37a6ccc8046",
-    "references/code-hygiene-rules.reference.md": "5de980fdd3ad88df",
-    "references/unix-philosophy-mapping.reference.md": "9d762540146b428e",
-    "references/security-vulnerability-watch.reference.md": "0cb5eeaf8d525ded",
-    "references/security-vulnerability-watch.json": "f3f29aab089b436c",
+    "security.agent.md": "a32591f958932262",
+    "references/security-vulnerability-watch.reference.md": "a183b8c540e77eb6",
+    "references/security-vulnerability-watch.json": "06242e6c79ecbeb4",
     "references/pipeline-graph.md": "89c856e7dacadf19",
     "references/pipeline-graph.svg": "f1bd3e585b22f2d9",
     "references/pipeline-handoffs.svg": "dc8cd69b6d6a94e7",
     "orchestrator.agent.md": "3dde01c9b582c698",
+    "navigator.agent.md": "caf4b413acfeff4b",
     "code-hygiene.agent.md": "78f327c593947daf",
     "adversarial.agent.md": "e34c5767c3305cd5",
+    "conflict-auditor.agent.md": "0e205e95409388cc",
+    "conflict-resolution.agent.md": "c9eb8aa1bda2210f",
     "agent-updater.agent.md": "1345a4aaf110b652",
     "repo-liaison.agent.md": "89321476f2cd5bba",
     "git-operations.agent.md": "691ffb22ad5e4c72",
+    "primary-producer.agent.md": "15a2b37a6ccc8046",
     "quality-auditor.agent.md": "8431a6eea44b1d63",
     "technical-validator.agent.md": "e0037edb761e1125",
     "reference-manager.agent.md": "a6de30beaa07a951",
     "output-compiler.agent.md": "5c7796d85832f6b8",
     "references/ref-python-reference.md": "7f8bfbc8d468a7e6",
+    "references/unix-philosophy-mapping.reference.md": "9d762540146b428e",
     "references/security-linux-hardening.reference.md": "31d9ef1c588dbb10",
     "references/security-macos-hardening.reference.md": "fc17de4688021ce4",
     "references/security-windows-hardening.reference.md": "f271246735ae9ed0",
@@ -483,6 +479,7 @@
     "agent-refactor.agent.md": "1310d02413f76a12",
     "work-summarizer.agent.md": "84187d3c3984c212",
     "references/ref-pytest-reference.md": "38b0ffba6ebadf82",
+    "references/code-hygiene-rules.reference.md": "5de980fdd3ad88df",
     "references/github-workflows-merge.reference.md": "c1543808654b233e",
     "references/work-summary-spec.reference.md": "96232231a1f7c6be",
     "references/work-summary-tooling.reference.md": "f3656972717153a9",
@@ -495,6 +492,23 @@
     "references/external-retrieval-quality-gate.reference.md": "499ecf97122cb7f0"
   },
   "front_matter_baseline": {
+    "security.agent.md": {
+      "name": "Security \u2014 daily-pipeline",
+      "description": "\"Top-priority security sentinel: reviews actions for credential exposure, destructive operations, sensitive content leakage, and reference integrity before any sensitive action proceeds\"",
+      "user-invokable": "false",
+      "tools": "['read', 'search']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": ""
+    },
+    "orchestrator.agent.md": {
+      "name": "Orchestrator \u2014 daily-pipeline",
+      "description": "\"Coordinates all agent operations for daily-pipeline: routes work to domain agents, enforces constitutional rules, and closes every multi-file session with a consistency check.\"",
+      "user-invokable": "true",
+      "tools": "['read', 'edit', 'search', 'execute', 'todo', 'agent']",
+      "agents": "",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": ""
+    },
     "navigator.agent.md": {
       "name": "Navigator \u2014 daily-pipeline",
       "description": "\"Repository structure navigation, project map maintenance, file location lookups, and dependency queries for daily-pipeline\"",
@@ -503,10 +517,18 @@
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": ""
     },
-    "security.agent.md": {
-      "name": "Security \u2014 daily-pipeline",
-      "description": "\"Top-priority security sentinel: reviews actions for credential exposure, destructive operations, sensitive content leakage, and reference integrity before any sensitive action proceeds\"",
+    "code-hygiene.agent.md": {
+      "name": "Code Hygiene \u2014 daily-pipeline",
+      "description": "\"Read-only auditor that enforces modular architecture, file hygiene, script lifecycle, anti-sprawl rules, and agent documentation quality. Delegates removals to @cleanup; delegates structural extraction to @agent-refactor.\"",
       "user-invokable": "false",
+      "tools": "['read', 'search']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": ""
+    },
+    "adversarial.agent.md": {
+      "name": "Adversarial \u2014 daily-pipeline",
+      "description": "\"Presupposition critic: challenges the assumptions underlying any plan, proposal, or diagnosis produced by the agent team. Traces how justified changes in presuppositions cascade through dependent logic.\"",
+      "user-invokable": "true",
       "tools": "['read', 'search']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": ""
@@ -525,40 +547,6 @@
       "description": "\"Makes ACCEPT/REJECT/REVISE decisions on conflicts flagged by the conflict auditor in daily-pipeline\"",
       "user-invokable": "false",
       "tools": "['edit', 'search', 'read']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": ""
-    },
-    "primary-producer.agent.md": {
-      "name": "Primary Producer \u2014 daily-pipeline",
-      "description": "\"Drafts and revises deliverables in daily-pipeline from Component Briefs provided by workstream expert agents\"",
-      "user-invokable": "false",
-      "tools": "['read', 'edit', 'search']",
-      "agents": "['quality-auditor', 'conflict-auditor']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": ""
-    },
-    "orchestrator.agent.md": {
-      "name": "Orchestrator \u2014 daily-pipeline",
-      "description": "\"Coordinates all agent operations for daily-pipeline: routes work to domain agents, enforces constitutional rules, and closes every multi-file session with a consistency check.\"",
-      "user-invokable": "true",
-      "tools": "['read', 'edit', 'search', 'execute', 'todo', 'agent']",
-      "agents": "",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": ""
-    },
-    "code-hygiene.agent.md": {
-      "name": "Code Hygiene \u2014 daily-pipeline",
-      "description": "\"Read-only auditor that enforces modular architecture, file hygiene, script lifecycle, anti-sprawl rules, and agent documentation quality. Delegates removals to @cleanup; delegates structural extraction to @agent-refactor.\"",
-      "user-invokable": "false",
-      "tools": "['read', 'search']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": ""
-    },
-    "adversarial.agent.md": {
-      "name": "Adversarial \u2014 daily-pipeline",
-      "description": "\"Presupposition critic: challenges the assumptions underlying any plan, proposal, or diagnosis produced by the agent team. Traces how justified changes in presuppositions cascade through dependent logic.\"",
-      "user-invokable": "true",
-      "tools": "['read', 'search']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": ""
     },
@@ -584,6 +572,15 @@
       "description": "\"Executes and governs Git and GitHub operations in daily-pipeline, including commit/push, pull/merge/rebase, conflict handling, and recovery workflows.\"",
       "user-invokable": "true",
       "tools": "['read', 'execute', 'search']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": ""
+    },
+    "primary-producer.agent.md": {
+      "name": "Primary Producer \u2014 daily-pipeline",
+      "description": "\"Drafts and revises deliverables in daily-pipeline from Component Briefs provided by workstream expert agents\"",
+      "user-invokable": "false",
+      "tools": "['read', 'edit', 'search']",
+      "agents": "['quality-auditor', 'conflict-auditor']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": ""
     },
