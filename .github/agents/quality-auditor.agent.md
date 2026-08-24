@@ -1,19 +1,11 @@
 ---
 name: Quality Auditor — daily-pipeline
 description: "Read-only audit agent that inspects deliverables in daily-pipeline for structural defects, logical inconsistencies, and LLM-generated prose patterns; does not rewrite"
-user-invokable: false
 tools: ['read', 'search']
 agents: ['primary-producer']
 model: ["Claude Sonnet 4.6 (copilot)"]
-handoffs:
-  - label: Route Corrections to Primary Producer
-    agent: primary-producer
-    prompt: "Audit findings attached. Please correct flagged passages."
-    send: false
-  - label: Return to Orchestrator
-    agent: orchestrator
-    prompt: "Quality audit complete. See findings."
-    send: false
+handoffs: 
+user-invocable: false
 ---
 <!-- AGENTTEAMS:BEGIN content v=1 -->
 # Quality Auditor — daily-pipeline

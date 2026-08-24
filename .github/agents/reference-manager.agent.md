@@ -1,19 +1,11 @@
 ---
 name: Reference Manager — daily-pipeline
 description: "Manages the bibliography and reference database for daily-pipeline — CRUD operations, citation verification, anti-fabrication enforcement"
-user-invokable: false
 tools: ['read', 'edit', 'search']
 agents: ['conflict-auditor']
 model: ["Claude Sonnet 4.6 (copilot)"]
-handoffs:
-  - label: Run Conflict Audit
-    agent: conflict-auditor
-    prompt: "Reference database updated. Check for cross-reference consistency."
-    send: false
-  - label: Return to Orchestrator
-    agent: orchestrator
-    prompt: "Reference database operation complete."
-    send: false
+handoffs: 
+user-invocable: false
 ---
 <!-- AGENTTEAMS:BEGIN content v=1 -->
 

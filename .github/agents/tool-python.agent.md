@@ -1,7 +1,7 @@
 ---
 name: Tool Specialist — Python — daily-pipeline
 description: "Manages configuration and invocation of Python (3.11) in daily-pipeline — install, configure, run, verify, clean up"
-user-invokable: false
+user-invocable: false
 tools: ['read', 'edit', 'execute', 'search']
 agents: ['technical-validator', 'security']
 model: ["Claude Sonnet 4.6 (copilot)"]

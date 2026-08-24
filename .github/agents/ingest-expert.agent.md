@@ -1,27 +1,11 @@
 ---
 name: "Team Ingestion Expert — daily-pipeline"
 description: "Component expert for Team Ingestion in daily-pipeline — prepares Component Briefs, reviews drafts against brief checklist, approves deliverables"
-user-invokable: false
 tools: ['read', 'search', 'agent']
 agents: ['primary-producer', 'adversarial', 'reference-manager']
 model: ["Claude Sonnet 4.6 (copilot)"]
-handoffs:
-  - label: Vet Brief Before Drafting
-    agent: adversarial
-    prompt: "Component Brief prepared. Review for hidden presuppositions before drafting begins."
-    send: false
-  - label: Send to Primary Producer
-    agent: primary-producer
-    prompt: "Component Brief accepted. Ready for drafting."
-    send: false
-  - label: Verify Citations
-    agent: reference-manager
-    prompt: "Verify citation keys in Component Brief before drafting begins."
-    send: false
-  - label: Return to Orchestrator
-    agent: orchestrator
-    prompt: "Team Ingestion has been reviewed and accepted."
-    send: false
+handoffs: 
+user-invocable: false
 ---
 
 <!--

@@ -1,132 +1,68 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1944 1066" width="1944" height="1066" font-family="monospace">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 1166" width="680" height="1166" font-family="monospace">
   <title>daily-pipeline — Handoff Backbone</title>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
       <polygon points="0,0 10,5 0,10" fill="#8a8a8a"/>
     </marker>
   </defs>
-  <path d="M348,317 L416,317 C452,317 452,281 488,281" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M348,317 L416,317 C452,317 452,319 488,319 L600,319 C636,319 636,491 672,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M348,317 L416,317 C452,317 452,159 488,159 L600,159 C636,159 636,257 672,257 L792,257 C828,257 828,49 864,49 L1008,49 C1044,49 1044,213 1080,213 L1256,213 C1292,213 1292,547 1328,547 L1332,547" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M348,317 L416,317 C452,317 452,187 488,187 L600,187 C636,187 636,285 672,285 L792,285 C828,285 828,105 864,105 L1008,105 C1044,105 1044,297 1080,297 L1256,297 C1292,297 1292,679 1328,679" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M600,281 C636,281 636,313 672,313 L792,313 C828,313 828,21 864,21 L1008,21 C1044,21 1044,129 1080,129 L1256,129 C1292,129 1292,349 1328,349 L1488,349 C1524,349 1524,373 1560,373 L1704,373 C1740,373 1740,533 1776,533" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M600,281 C636,281 636,491 672,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M1700,467 L1704,467 C1740,467 1740,533 1776,533" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1564,467 L1560,467 C1524,467 1524,377 1488,377 L1328,377 C1292,377 1292,241 1256,241 L1080,241 C1044,241 1044,189 1008,189 L864,189 C828,189 828,491 792,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M1344,415 L1328,415 C1292,415 1292,157 1256,157 L1080,157 C1044,157 1044,77 1008,77 L864,77 C828,77 828,341 792,341 L672,341 C636,341 636,281 600,281" fill="none" stroke="#8a8a8a" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <path d="M1472,415 L1488,415 C1524,415 1524,467 1560,467 L1564,467" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1472,415 L1488,415 C1524,415 1524,401 1560,401 L1704,401 C1740,401 1740,533 1776,533" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1344,415 L1328,415 C1292,415 1292,185 1256,185 L1080,185 C1044,185 1044,133 1008,133 L864,133 C828,133 828,491 792,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M416,365 C452,365 452,281 488,281" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M416,365 C452,365 452,347 488,347 L600,347 C636,347 636,491 672,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M416,365 C452,365 452,215 488,215 L600,215 C636,215 636,369 672,369 L792,369 C828,369 828,161 864,161 L1008,161 C1044,161 1044,269 1080,269 L1256,269 C1292,269 1292,547 1328,547 L1332,547" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M416,365 C452,365 452,243 488,243 L600,243 C636,243 636,397 672,397 L792,397 C828,397 828,245 864,245 L1008,245 C1044,245 1044,457 1080,457 L1256,457 C1292,457 1292,679 1328,679" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1128,795 L1080,795 C1044,795 1044,453 1008,453 L864,453 C828,453 828,491 792,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M996,735 L1008,735 C1044,735 1044,513 1080,513 L1256,513 C1292,513 1292,481 1328,481 L1488,481 C1524,481 1524,467 1560,467 L1564,467" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M996,735 L1008,735 C1044,735 1044,795 1080,795 L1128,795" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M996,735 L1008,735 C1044,735 1044,541 1080,541 L1256,541 C1292,541 1292,509 1328,509 L1488,509 C1524,509 1524,505 1560,505 L1704,505 C1740,505 1740,533 1776,533" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M876,735 L864,735 C828,735 828,491 792,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M996,735 L1008,735 C1044,735 1044,927 1080,927 L1124,927" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1256,335 C1292,335 1292,415 1328,415 L1344,415" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1080,335 C1044,335 1044,217 1008,217 L864,217 C828,217 828,491 792,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M292,413 L416,413 C452,413 452,403 488,403 L600,403 C636,403 636,491 672,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M292,413 L416,413 C452,413 452,375 488,375 L600,375 C636,375 636,425 672,425 L792,425 C828,425 828,481 864,481 L1008,481 C1044,481 1044,663 1080,663" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1004,415 L1008,415 C1044,415 1044,373 1080,373 L1256,373 C1292,373 1292,415 1328,415 L1344,415" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1004,415 L1008,415 C1044,415 1044,335 1080,335" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M868,415 L864,415 C828,415 828,491 792,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M1004,415 L1008,415 C1044,415 1044,927 1080,927 L1124,927" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M312,461 L416,461 C452,461 452,281 488,281" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M312,461 L416,461 C452,461 452,431 488,431 L600,431 C636,431 636,491 672,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M312,461 L416,461 C452,461 452,459 488,459 L600,459 C636,459 636,453 672,453 L792,453 C828,453 828,321 864,321 L1008,321 C1044,321 1044,401 1080,401 L1256,401 C1292,401 1292,547 1328,547 L1332,547" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M312,461 L416,461 C452,461 452,515 488,515 L600,515 C636,515 636,529 672,529 L792,529 C828,529 828,557 864,557 L1008,557 C1044,557 1044,569 1080,569 L1256,569 C1292,569 1292,679 1328,679" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M344,509 L416,509 C452,509 452,281 488,281" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M344,509 L416,509 C452,509 452,487 488,487 L600,487 C636,487 636,491 672,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M344,509 L416,509 C452,509 452,655 488,655 L600,655 C636,655 636,585 672,585 L792,585 C828,585 828,773 864,773 L1008,773 C1044,773 1044,701 1080,701 L1256,701 C1292,701 1292,547 1328,547 L1332,547" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M344,509 L416,509 C452,509 452,739 488,739 L600,739 C636,739 636,669 672,669 L792,669 C828,669 828,905 864,905 L1008,905 C1044,905 1044,833 1080,833 L1256,833 C1292,833 1292,679 1328,679" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M888,283 L864,283 C828,283 828,491 792,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M792,491 C828,491 828,377 864,377 L1008,377 C1044,377 1044,429 1080,429 L1256,429 C1292,429 1292,453 1328,453 L1488,453 C1524,453 1524,429 1560,429 L1704,429 C1740,429 1740,533 1776,533" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M792,491 C828,491 828,519 864,519" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M792,491 C828,491 828,349 864,349 L1008,349 C1044,349 1044,485 1080,485 L1256,485 C1292,485 1292,547 1328,547 L1332,547" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M792,491 C828,491 828,669 864,669 L1008,669 C1044,669 1044,625 1080,625 L1256,625 C1292,625 1292,613 1328,613 L1488,613 C1524,613 1524,683 1560,683" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M792,491 C828,491 828,613 864,613 L1008,613 C1044,613 1044,597 1080,597 L1256,597 C1292,597 1292,679 1328,679" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M792,491 C828,491 828,867 864,867 L876,867" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M792,491 C828,491 828,829 864,829 L1008,829 C1044,829 1044,927 1080,927 L1124,927" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M792,491 C828,491 828,585 864,585 L1008,585 C1044,585 1044,663 1080,663" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M1008,519 C1044,519 1044,663 1080,663" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1484,547 L1488,547 C1524,547 1524,533 1560,533 L1704,533 L1776,533" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1484,547 L1488,547 C1524,547 1524,683 1560,683" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
-  <path d="M1488,679 C1524,679 1524,617 1560,617 L1704,617 C1740,617 1740,533 1776,533" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M996,867 L1008,867 C1044,867 1044,729 1080,729 L1256,729 C1292,729 1292,641 1328,641 L1488,641 C1524,641 1524,589 1560,589 L1704,589 C1740,589 1740,533 1776,533" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M996,867 L1008,867 C1044,867 1044,927 1080,927 L1124,927" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M308,557 L416,557 C452,557 452,281 488,281" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M308,557 L416,557 C452,557 452,543 488,543 L600,543 C636,543 636,491 672,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M308,557 L416,557 C452,557 452,795 488,795 L600,795 C636,795 636,753 672,753 L792,753 C828,753 828,933 864,933 L1008,933 C1044,933 1044,757 1080,757 L1256,757 C1292,757 1292,547 1328,547 L1332,547" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M308,557 L416,557 C452,557 452,879 488,879 L600,879 C636,879 636,781 672,781 L792,781 C828,781 828,989 864,989 L1008,989 C1044,989 1044,861 1080,861 L1256,861 C1292,861 1292,679 1328,679" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1256,663 C1292,663 1292,585 1328,585 L1488,585 C1524,585 1524,561 1560,561 L1704,561 C1740,561 1740,533 1776,533" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1256,663 C1292,663 1292,547 1328,547 L1332,547" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M1256,663 C1292,663 1292,679 1328,679" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M288,653 L416,653 C452,653 452,599 488,599 L600,599 C636,599 636,491 672,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M288,653 L416,653 C452,653 452,683 488,683 L600,683 C636,683 636,641 672,641 L792,641 C828,641 828,961 864,961 L1008,961 C1044,961 1044,927 1080,927 L1124,927" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M288,653 L416,653 C452,653 452,711 488,711 L600,711 C636,711 636,557 672,557 L792,557 C828,557 828,641 864,641 L1008,641 C1044,641 1044,663 1080,663" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M288,701 L416,701 C452,701 452,627 488,627 L600,627 C636,627 636,491 672,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M288,701 L416,701 C452,701 452,823 488,823 L600,823 C636,823 636,725 672,725 L792,725 C828,725 828,1017 864,1017 L1008,1017 C1044,1017 1044,927 1080,927 L1124,927" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M288,701 L416,701 C452,701 452,767 488,767 L600,767 C636,767 636,613 672,613 L792,613 C828,613 828,697 864,697 L1008,697 C1044,697 1044,663 1080,663" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M288,605 L416,605 C452,605 452,281 488,281" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M288,605 L416,605 C452,605 452,907 488,907 L600,907 C636,907 636,809 672,809 L792,809 C828,809 828,1045 864,1045 L1008,1045 C1044,1045 1044,889 1080,889 L1256,889 C1292,889 1292,717 1328,717 L1488,717 C1524,717 1524,645 1560,645 L1704,645 C1740,645 1740,533 1776,533" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M288,605 L416,605 C452,605 452,571 488,571 L600,571 C636,571 636,491 672,491" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M288,605 L416,605 C452,605 452,851 488,851 L600,851 C636,851 636,697 672,697 L792,697 C828,697 828,801 864,801 L1008,801 C1044,801 1044,663 1080,663" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <rect x="84" y="302" width="264" height="30" rx="6" fill="#fff8e8" stroke="#ccaa44" stroke-width="1.5"/>
-  <text x="216" y="322" font-size="13" text-anchor="middle" fill="#000000">Abstract Team Synthesis Expert</text>
-  <rect x="488" y="266" width="112" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="544" y="286" font-size="13" text-anchor="middle" fill="#000000">Adversarial</text>
-  <rect x="1564" y="452" width="136" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="1632" y="472" font-size="13" text-anchor="middle" fill="#000000">Agent Refactor</text>
-  <rect x="1344" y="400" width="128" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="1408" y="420" font-size="13" text-anchor="middle" fill="#000000">Agent Updater</text>
-  <rect x="16" y="350" width="400" height="30" rx="6" fill="#fff8e8" stroke="#ccaa44" stroke-width="1.5"/>
-  <text x="216" y="370" font-size="13" text-anchor="middle" fill="#000000">Shared Capability and Reference Analysis Expert</text>
-  <rect x="1128" y="780" width="80" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="1168" y="800" font-size="13" text-anchor="middle" fill="#000000">Cleanup</text>
-  <rect x="876" y="720" width="120" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="936" y="740" font-size="13" text-anchor="middle" fill="#000000">Code Hygiene</text>
-  <rect x="1776" y="518" width="152" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="1852" y="538" font-size="13" text-anchor="middle" fill="#000000">Conflict Auditor</text>
-  <rect x="1080" y="320" width="176" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="1168" y="340" font-size="13" text-anchor="middle" fill="#000000">Conflict Resolution</text>
-  <rect x="140" y="398" width="152" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
-  <text x="216" y="418" font-size="13" text-anchor="middle" fill="#000000">Content Enricher</text>
-  <rect x="868" y="400" width="136" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="936" y="420" font-size="13" text-anchor="middle" fill="#000000">Git Operations</text>
-  <rect x="120" y="446" width="192" height="30" rx="6" fill="#fff8e8" stroke="#ccaa44" stroke-width="1.5"/>
-  <text x="216" y="466" font-size="13" text-anchor="middle" fill="#000000">Team Ingestion Expert</text>
-  <rect x="88" y="494" width="256" height="30" rx="6" fill="#fff8e8" stroke="#ccaa44" stroke-width="1.5"/>
-  <text x="216" y="514" font-size="13" text-anchor="middle" fill="#000000">AgentTeams Integration Expert</text>
-  <rect x="888" y="268" width="96" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="936" y="288" font-size="13" text-anchor="middle" fill="#000000">Navigator</text>
-  <rect x="672" y="476" width="120" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="732" y="496" font-size="13" text-anchor="middle" fill="#000000">Orchestrator</text>
-  <rect x="864" y="504" width="144" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
-  <text x="936" y="524" font-size="13" text-anchor="middle" fill="#000000">Output Compiler</text>
-  <rect x="1332" y="532" width="152" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
-  <text x="1408" y="552" font-size="13" text-anchor="middle" fill="#000000">Primary Producer</text>
-  <rect x="1560" y="668" width="144" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
-  <text x="1632" y="688" font-size="13" text-anchor="middle" fill="#000000">Quality Auditor</text>
-  <rect x="1328" y="664" width="160" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
-  <text x="1408" y="684" font-size="13" text-anchor="middle" fill="#000000">Reference Manager</text>
-  <rect x="876" y="852" width="120" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="936" y="872" font-size="13" text-anchor="middle" fill="#000000">Repo Liaison</text>
-  <rect x="124" y="542" width="184" height="30" rx="6" fill="#fff8e8" stroke="#ccaa44" stroke-width="1.5"/>
-  <text x="216" y="562" font-size="13" text-anchor="middle" fill="#000000">Run Reporting Expert</text>
-  <rect x="1124" y="912" width="88" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="1168" y="932" font-size="13" text-anchor="middle" fill="#000000">Security</text>
-  <rect x="156" y="734" width="120" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
-  <text x="216" y="754" font-size="13" text-anchor="middle" fill="#000000">Team Builder</text>
-  <rect x="1080" y="648" width="176" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
-  <text x="1168" y="668" font-size="13" text-anchor="middle" fill="#000000">Technical Validator</text>
-  <rect x="144" y="638" width="144" height="30" rx="6" fill="#ffe8e8" stroke="#cc6666" stroke-width="1.5"/>
-  <text x="216" y="658" font-size="13" text-anchor="middle" fill="#000000">Tool Specialist</text>
-  <rect x="144" y="686" width="144" height="30" rx="6" fill="#ffe8e8" stroke="#cc6666" stroke-width="1.5"/>
-  <text x="216" y="706" font-size="13" text-anchor="middle" fill="#000000">Tool Specialist</text>
-  <rect x="144" y="590" width="144" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
-  <text x="216" y="610" font-size="13" text-anchor="middle" fill="#000000">Work Summarizer</text>
+  <path d="M288,31 L416,31 C452,31 452,535 488,535 L516,535" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M288,31 L416,31 C452,31 452,583 488,583 L532,583" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M288,31 L416,31 C452,31 452,631 488,631" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M288,79 L416,79 C452,79 452,535 488,535 L516,535" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M288,79 L416,79 C452,79 452,583 488,583 L532,583" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M288,79 L416,79 C452,79 452,631 488,631" fill="none" stroke="#8a8a8a" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="84" y="112" width="264" height="30" rx="6" fill="#fff8e8" stroke="#ccaa44" stroke-width="1.5"/>
+  <text x="216" y="132" font-size="13" text-anchor="middle" fill="#000000">Abstract Team Synthesis Expert</text>
+  <rect x="160" y="160" width="112" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="180" font-size="13" text-anchor="middle" fill="#000000">Adversarial</text>
+  <rect x="148" y="208" width="136" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="228" font-size="13" text-anchor="middle" fill="#000000">Agent Refactor</text>
+  <rect x="152" y="256" width="128" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="276" font-size="13" text-anchor="middle" fill="#000000">Agent Updater</text>
+  <rect x="16" y="304" width="400" height="30" rx="6" fill="#fff8e8" stroke="#ccaa44" stroke-width="1.5"/>
+  <text x="216" y="324" font-size="13" text-anchor="middle" fill="#000000">Shared Capability and Reference Analysis Expert</text>
+  <rect x="176" y="352" width="80" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="372" font-size="13" text-anchor="middle" fill="#000000">Cleanup</text>
+  <rect x="156" y="400" width="120" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="420" font-size="13" text-anchor="middle" fill="#000000">Code Hygiene</text>
+  <rect x="140" y="448" width="152" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="468" font-size="13" text-anchor="middle" fill="#000000">Conflict Auditor</text>
+  <rect x="128" y="496" width="176" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="516" font-size="13" text-anchor="middle" fill="#000000">Conflict Resolution</text>
+  <rect x="140" y="544" width="152" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
+  <text x="216" y="564" font-size="13" text-anchor="middle" fill="#000000">Content Enricher</text>
+  <rect x="148" y="592" width="136" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="612" font-size="13" text-anchor="middle" fill="#000000">Git Operations</text>
+  <rect x="120" y="640" width="192" height="30" rx="6" fill="#fff8e8" stroke="#ccaa44" stroke-width="1.5"/>
+  <text x="216" y="660" font-size="13" text-anchor="middle" fill="#000000">Team Ingestion Expert</text>
+  <rect x="88" y="688" width="256" height="30" rx="6" fill="#fff8e8" stroke="#ccaa44" stroke-width="1.5"/>
+  <text x="216" y="708" font-size="13" text-anchor="middle" fill="#000000">AgentTeams Integration Expert</text>
+  <rect x="168" y="736" width="96" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="756" font-size="13" text-anchor="middle" fill="#000000">Navigator</text>
+  <rect x="516" y="520" width="120" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="576" y="540" font-size="13" text-anchor="middle" fill="#000000">Orchestrator</text>
+  <rect x="144" y="784" width="144" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
+  <text x="216" y="804" font-size="13" text-anchor="middle" fill="#000000">Output Compiler</text>
+  <rect x="140" y="832" width="152" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
+  <text x="216" y="852" font-size="13" text-anchor="middle" fill="#000000">Primary Producer</text>
+  <rect x="144" y="880" width="144" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
+  <text x="216" y="900" font-size="13" text-anchor="middle" fill="#000000">Quality Auditor</text>
+  <rect x="136" y="928" width="160" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
+  <text x="216" y="948" font-size="13" text-anchor="middle" fill="#000000">Reference Manager</text>
+  <rect x="156" y="976" width="120" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="996" font-size="13" text-anchor="middle" fill="#000000">Repo Liaison</text>
+  <rect x="124" y="1024" width="184" height="30" rx="6" fill="#fff8e8" stroke="#ccaa44" stroke-width="1.5"/>
+  <text x="216" y="1044" font-size="13" text-anchor="middle" fill="#000000">Run Reporting Expert</text>
+  <rect x="532" y="568" width="88" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="576" y="588" font-size="13" text-anchor="middle" fill="#000000">Security</text>
+  <rect x="156" y="1072" width="120" height="30" rx="6" fill="#e8e8ff" stroke="#6666cc" stroke-width="1.5"/>
+  <text x="216" y="1092" font-size="13" text-anchor="middle" fill="#000000">Team Builder</text>
+  <rect x="488" y="616" width="176" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
+  <text x="576" y="636" font-size="13" text-anchor="middle" fill="#000000">Technical Validator</text>
+  <rect x="144" y="16" width="144" height="30" rx="6" fill="#ffe8e8" stroke="#cc6666" stroke-width="1.5"/>
+  <text x="216" y="36" font-size="13" text-anchor="middle" fill="#000000">Tool Specialist</text>
+  <rect x="144" y="64" width="144" height="30" rx="6" fill="#ffe8e8" stroke="#cc6666" stroke-width="1.5"/>
+  <text x="216" y="84" font-size="13" text-anchor="middle" fill="#000000">Tool Specialist</text>
+  <rect x="144" y="1120" width="144" height="30" rx="6" fill="#e8ffe8" stroke="#66aa66" stroke-width="1.5"/>
+  <text x="216" y="1140" font-size="13" text-anchor="middle" fill="#000000">Work Summarizer</text>
 </svg>

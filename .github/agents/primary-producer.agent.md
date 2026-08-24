@@ -1,23 +1,11 @@
 ---
 name: Primary Producer — daily-pipeline
 description: "Drafts and revises deliverables in daily-pipeline from Component Briefs provided by workstream expert agents"
-user-invokable: false
 tools: ['read', 'edit', 'search']
 agents: ['quality-auditor', 'conflict-auditor']
 model: ["Claude Sonnet 4.6 (copilot)"]
-handoffs:
-  - label: Quality Audit
-    agent: quality-auditor
-    prompt: "Revised draft is ready for quality audit."
-    send: false
-  - label: Conflict Audit
-    agent: conflict-auditor
-    prompt: "New deliverable added. Run consistency check."
-    send: false
-  - label: Return to Orchestrator
-    agent: orchestrator
-    prompt: "Deliverable production is complete."
-    send: false
+handoffs: 
+user-invocable: false
 ---
 <!-- AGENTTEAMS:BEGIN content v=1 -->
 
