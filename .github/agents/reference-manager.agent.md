@@ -4,7 +4,15 @@ description: "Manages the bibliography and reference database for daily-pipeline
 tools: ['read', 'edit', 'search']
 agents: ['conflict-auditor']
 model: ["Claude Sonnet 4.6 (copilot)"]
-handoffs: 
+handoffs:
+  - label: Run Conflict Audit
+    agent: conflict-auditor
+    prompt: "Reference database updated. Check for cross-reference consistency."
+    send: false
+  - label: Return to Orchestrator
+    agent: orchestrator
+    prompt: "Reference database operation complete."
+    send: false
 user-invocable: false
 ---
 <!-- AGENTTEAMS:BEGIN content v=1 -->

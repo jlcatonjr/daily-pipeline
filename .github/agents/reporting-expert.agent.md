@@ -4,7 +4,23 @@ description: "Component expert for Run Reporting in daily-pipeline — prepares 
 tools: ['read', 'search', 'agent']
 agents: ['primary-producer', 'adversarial', 'reference-manager']
 model: ["Claude Sonnet 4.6 (copilot)"]
-handoffs: 
+handoffs:
+  - label: Vet Brief Before Drafting
+    agent: adversarial
+    prompt: "Component Brief prepared. Review for hidden presuppositions before drafting begins."
+    send: false
+  - label: Send to Primary Producer
+    agent: primary-producer
+    prompt: "Component Brief accepted. Ready for drafting."
+    send: false
+  - label: Verify Citations
+    agent: reference-manager
+    prompt: "Verify citation keys in Component Brief before drafting begins."
+    send: false
+  - label: Return to Orchestrator
+    agent: orchestrator
+    prompt: "Run Reporting has been reviewed and accepted."
+    send: false
 user-invocable: false
 ---
 
