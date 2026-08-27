@@ -38,7 +38,7 @@ The handoff-only control-flow backbone (agents-list edges omitted):
 | `analysis-expert` | workstream_expert | No | read, search, agent |
 | `cleanup` | governance | No | edit, search, execute |
 | `code-hygiene` | governance | No | read, search |
-| `conflict-auditor` | governance | No | read, edit, search, execute |
+| `conflict-auditor` | governance | No | read, search |
 | `conflict-resolution` | governance | No | edit, search, read |
 | `content-enricher` | domain | Yes | read, edit, search |
 | `git-operations` | governance | Yes | read, execute, search |
@@ -65,33 +65,33 @@ The handoff-only control-flow backbone (agents-list edges omitted):
 
 | Agent | Receives from | Hands off to |
 | --- | --- | --- |
-| `abstraction-expert` | `orchestrator` | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
+| `abstraction-expert` | — | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
 | `adversarial` | `abstraction-expert`, `agent-updater`, `analysis-expert`, `ingest-expert`, `integration-expert`, `orchestrator`, `reporting-expert`, `work-summarizer` | `conflict-auditor`, `orchestrator` |
 | `agent-refactor` | `agent-updater`, `code-hygiene`, `orchestrator` | `conflict-auditor`, `orchestrator` |
 | `agent-updater` | `conflict-auditor`, `conflict-resolution`, `git-operations`, `orchestrator` | `adversarial`, `agent-refactor`, `conflict-auditor`, `orchestrator` |
-| `analysis-expert` | `orchestrator` | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
+| `analysis-expert` | — | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
 | `cleanup` | `code-hygiene`, `orchestrator` | `orchestrator` |
 | `code-hygiene` | `orchestrator` | `agent-refactor`, `cleanup`, `conflict-auditor`, `orchestrator`, `security` |
 | `conflict-auditor` | `adversarial`, `agent-refactor`, `agent-updater`, `code-hygiene`, `orchestrator`, `primary-producer`, `reference-manager`, `repo-liaison`, `technical-validator`, `work-summarizer` | `agent-updater`, `conflict-resolution`, `orchestrator`, `technical-validator` |
 | `conflict-resolution` | `conflict-auditor`, `git-operations`, `orchestrator` | `agent-updater`, `orchestrator` |
 | `content-enricher` | — | `orchestrator`, `primary-producer`, `technical-validator` |
 | `git-operations` | `orchestrator` | `agent-updater`, `conflict-resolution`, `orchestrator`, `security` |
-| `ingest-expert` | `orchestrator` | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
-| `integration-expert` | `orchestrator` | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
+| `ingest-expert` | — | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
+| `integration-expert` | — | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
 | `navigator` | `orchestrator` | `orchestrator` |
-| `orchestrator` | `abstraction-expert`, `adversarial`, `agent-refactor`, `agent-updater`, `analysis-expert`, `cleanup`, `code-hygiene`, `conflict-auditor`, `conflict-resolution`, `content-enricher`, `git-operations`, `ingest-expert`, `integration-expert`, `navigator`, `output-compiler`, `primary-producer`, `quality-auditor`, `reference-manager`, `repo-liaison`, `reporting-expert`, `security`, `technical-validator`, `tool-python`, `tool-specific`, `work-summarizer` | `abstraction-expert`, `adversarial`, `agent-refactor`, `agent-updater`, `analysis-expert`, `cleanup`, `code-hygiene`, `conflict-auditor`, `conflict-resolution`, `git-operations`, `ingest-expert`, `integration-expert`, `navigator`, `output-compiler`, `primary-producer`, `quality-auditor`, `reference-manager`, `repo-liaison`, `reporting-expert`, `security`, `technical-validator`, `tool-python`, `tool-specific` |
+| `orchestrator` | `abstraction-expert`, `adversarial`, `agent-refactor`, `agent-updater`, `analysis-expert`, `cleanup`, `code-hygiene`, `conflict-auditor`, `conflict-resolution`, `content-enricher`, `git-operations`, `ingest-expert`, `integration-expert`, `navigator`, `output-compiler`, `primary-producer`, `quality-auditor`, `reference-manager`, `repo-liaison`, `reporting-expert`, `security`, `technical-validator`, `tool-python`, `tool-specific`, `work-summarizer` | `adversarial`, `agent-refactor`, `agent-updater`, `cleanup`, `code-hygiene`, `conflict-auditor`, `conflict-resolution`, `git-operations`, `navigator`, `output-compiler`, `primary-producer`, `quality-auditor`, `reference-manager`, `repo-liaison`, `security`, `technical-validator`, `work-summarizer` |
 | `output-compiler` | `orchestrator` | `orchestrator`, `technical-validator` |
 | `primary-producer` | `abstraction-expert`, `analysis-expert`, `content-enricher`, `ingest-expert`, `integration-expert`, `orchestrator`, `quality-auditor`, `reporting-expert`, `technical-validator` | `conflict-auditor`, `orchestrator`, `quality-auditor` |
 | `quality-auditor` | `orchestrator`, `primary-producer` | `orchestrator`, `primary-producer` |
 | `reference-manager` | `abstraction-expert`, `analysis-expert`, `ingest-expert`, `integration-expert`, `orchestrator`, `reporting-expert`, `technical-validator` | `conflict-auditor`, `orchestrator` |
 | `repo-liaison` | `orchestrator` | `conflict-auditor`, `orchestrator`, `security` |
-| `reporting-expert` | `orchestrator` | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
+| `reporting-expert` | — | `adversarial`, `orchestrator`, `primary-producer`, `reference-manager` |
 | `security` | `code-hygiene`, `git-operations`, `orchestrator`, `repo-liaison`, `tool-python`, `tool-specific` | `orchestrator` |
 | `team-builder` | — | — |
 | `technical-validator` | `conflict-auditor`, `content-enricher`, `orchestrator`, `output-compiler`, `tool-python`, `tool-specific`, `work-summarizer` | `conflict-auditor`, `orchestrator`, `primary-producer`, `reference-manager` |
-| `tool-python` | `orchestrator` | `orchestrator`, `security`, `technical-validator` |
-| `tool-specific` | `orchestrator` | `orchestrator`, `security`, `technical-validator` |
-| `work-summarizer` | — | `adversarial`, `conflict-auditor`, `orchestrator`, `technical-validator` |
+| `tool-python` | — | `orchestrator`, `security`, `technical-validator` |
+| `tool-specific` | — | `orchestrator`, `security`, `technical-validator` |
+| `work-summarizer` | `orchestrator` | `adversarial`, `conflict-auditor`, `orchestrator`, `technical-validator` |
 
 ---
 
@@ -241,29 +241,7 @@ flowchart LR
     orchestrator -->|"Cross-Repository Liaison"| repo_liaison
     orchestrator -->|"Security Review"| security
     orchestrator -->|"Validate Technical Accuracy"| technical_validator
-    orchestrator -.-> abstraction_expert
-    orchestrator -.-> adversarial
-    orchestrator -.-> agent_refactor
-    orchestrator -.-> agent_updater
-    orchestrator -.-> analysis_expert
-    orchestrator -.-> cleanup
-    orchestrator -.-> code_hygiene
-    orchestrator -.-> conflict_auditor
-    orchestrator -.-> conflict_resolution
-    orchestrator -.-> git_operations
-    orchestrator -.-> ingest_expert
-    orchestrator -.-> integration_expert
-    orchestrator -.-> navigator
-    orchestrator -.-> output_compiler
-    orchestrator -.-> primary_producer
-    orchestrator -.-> quality_auditor
-    orchestrator -.-> reference_manager
-    orchestrator -.-> repo_liaison
-    orchestrator -.-> reporting_expert
-    orchestrator -.-> security
-    orchestrator -.-> technical_validator
-    orchestrator -.-> tool_python
-    orchestrator -.-> tool_specific
+    orchestrator -->|"Summarize Work Period"| work_summarizer
     output_compiler -->|"Return to Orchestrator"| orchestrator
     output_compiler -->|"Validate Technical Accuracy"| technical_validator
     output_compiler -.-> technical_validator
@@ -407,13 +385,7 @@ digraph "daily-pipeline Agent Team" {
     "orchestrator" -> "repo-liaison" [style=solid, label="Cross-Repository Liaison"];
     "orchestrator" -> "security" [style=solid, label="Security Review"];
     "orchestrator" -> "technical-validator" [style=solid, label="Validate Technical Accuracy"];
-    "orchestrator" -> "abstraction-expert" [style=dashed];
-    "orchestrator" -> "analysis-expert" [style=dashed];
-    "orchestrator" -> "ingest-expert" [style=dashed];
-    "orchestrator" -> "integration-expert" [style=dashed];
-    "orchestrator" -> "reporting-expert" [style=dashed];
-    "orchestrator" -> "tool-python" [style=dashed];
-    "orchestrator" -> "tool-specific" [style=dashed];
+    "orchestrator" -> "work-summarizer" [style=solid, label="Summarize Work Period"];
     "output-compiler" -> "orchestrator" [style=solid, label="Return to Orchestrator"];
     "output-compiler" -> "technical-validator" [style=solid, label="Validate Technical Accuracy"];
     "primary-producer" -> "conflict-auditor" [style=solid, label="Conflict Audit"];
@@ -533,9 +505,7 @@ digraph "daily-pipeline Agent Team" {
       "user_invokable": false,
       "tools": [
         "read",
-        "edit",
-        "search",
-        "execute"
+        "search"
       ]
     },
     "conflict-resolution": {
@@ -1220,141 +1190,9 @@ digraph "daily-pipeline Agent Team" {
     },
     {
       "source": "orchestrator",
-      "target": "abstraction-expert",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "adversarial",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "agent-refactor",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "agent-updater",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "analysis-expert",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "cleanup",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "code-hygiene",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "conflict-auditor",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "conflict-resolution",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "git-operations",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "ingest-expert",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "integration-expert",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "navigator",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "output-compiler",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "primary-producer",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "quality-auditor",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "reference-manager",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "repo-liaison",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "reporting-expert",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "security",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "technical-validator",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "tool-python",
-      "edge_type": "agents-list",
-      "label": null
-    },
-    {
-      "source": "orchestrator",
-      "target": "tool-specific",
-      "edge_type": "agents-list",
-      "label": null
+      "target": "work-summarizer",
+      "edge_type": "handoff",
+      "label": "Summarize Work Period"
     },
     {
       "source": "output-compiler",
@@ -1725,29 +1563,23 @@ digraph "daily-pipeline Agent Team" {
       "orchestrator"
     ],
     "orchestrator": [
-      "abstraction-expert",
       "adversarial",
       "agent-refactor",
       "agent-updater",
-      "analysis-expert",
       "cleanup",
       "code-hygiene",
       "conflict-auditor",
       "conflict-resolution",
       "git-operations",
-      "ingest-expert",
-      "integration-expert",
       "navigator",
       "output-compiler",
       "primary-producer",
       "quality-auditor",
       "reference-manager",
       "repo-liaison",
-      "reporting-expert",
       "security",
       "technical-validator",
-      "tool-python",
-      "tool-specific"
+      "work-summarizer"
     ],
     "output-compiler": [
       "orchestrator",

@@ -1,7 +1,7 @@
 ---
 name: Tool Specialist — build_team.py — daily-pipeline
 description: "Manages configuration and invocation of build_team.py (current project-supported version) in daily-pipeline — install, configure, run, verify, clean up"
-user-invokable: false
+user-invocable: false
 tools: ['read', 'edit', 'execute', 'search']
 agents: ['technical-validator', 'security']
 model: ["Claude Sonnet 4.6 (copilot)"]

@@ -1,7 +1,6 @@
 ---
 name: Agent Updater — daily-pipeline
 description: "Synchronizes agent documentation after project structure, deliverable, or reference changes in daily-pipeline"
-user-invokable: false
 tools: ['edit', 'search', 'execute', 'agent']
 agents: ['adversarial', 'conflict-auditor', 'agent-refactor']
 model: ["Claude Sonnet 4.6 (copilot)"]
@@ -22,6 +21,7 @@ handoffs:
     agent: orchestrator
     prompt: "Agent documentation has been synchronized with project changes."
     send: false
+user-invocable: false
 ---
 <!-- AGENTTEAMS:BEGIN content v=1 -->
 
