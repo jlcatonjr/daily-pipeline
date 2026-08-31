@@ -18,9 +18,7 @@
     "integration",
     "reporting"
   ],
-  "files_written": [
-    ".github/agents/references/security-infrastructure-layers.reference.md"
-  ],
+  "files_written": [],
   "manual_required": 2,
   "template_hashes": {
     "universal/orchestrator.template.md": "7cb6cc382bcde9ca",
@@ -444,13 +442,16 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "a84ff61685abbf1c",
+  "manifest_fingerprint": "26a0c62d3bf49d83",
   "fingerprint_algo_version": 1,
   "file_hashes": {
-    "references/security-infrastructure-layers.reference.md": "6c5ebd5bd8180fa5",
+    "security.agent.md": "304855b51fc18899",
+    "references/security-vulnerability-watch.reference.md": "d21fcf710fdfd51d",
+    "references/security-vulnerability-watch.json": "d1f7ed90e15d2a32",
+    "references/pipeline-graph.md": "89c856e7dacadf19",
+    "references/pipeline-graph.svg": "f1bd3e585b22f2d9",
     "orchestrator.agent.md": "9942dd0d740189a9",
     "navigator.agent.md": "a26e13fbe85948ba",
-    "security.agent.md": "892c457babc975ef",
     "code-hygiene.agent.md": "5ed8df910e4ec29f",
     "adversarial.agent.md": "711660c5d8f70e9f",
     "conflict-auditor.agent.md": "2afa47ad1ec6d545",
@@ -466,18 +467,6 @@
     "technical-validator.agent.md": "1ce229fa6775d15b",
     "reference-manager.agent.md": "1fbbfefa625e48e0",
     "output-compiler.agent.md": "e2bbef9c2d36d202",
-    "references/security-vulnerability-watch.reference.md": "603e6cea6f64e495",
-    "references/security-vulnerability-watch.json": "ac9a05c6db6f0514",
-    "references/adjacent-repos.md": "05c49c7e5247e342",
-    "ingest-expert.agent.md": "0e51edc2bfb4caa8",
-    "analysis-expert.agent.md": "eb11f4ff87d949d2",
-    "abstraction-expert.agent.md": "90821e79b819420e",
-    "integration-expert.agent.md": "7523d3c1cb71f147",
-    "reporting-expert.agent.md": "dfaada18a7d3abd5",
-    "content-enricher.agent.md": "a46be9d86f71b295",
-    "references/pipeline-graph.md": "89c856e7dacadf19",
-    "references/pipeline-graph.svg": "f1bd3e585b22f2d9",
-    "references/pipeline-handoffs.svg": "dc8cd69b6d6a94e7",
     "references/ref-python-reference.md": "7f8bfbc8d468a7e6",
     "references/unix-philosophy-mapping.reference.md": "9d762540146b428e",
     "references/security-linux-hardening.reference.md": "31d9ef1c588dbb10",
@@ -485,9 +474,16 @@
     "references/security-windows-hardening.reference.md": "f271246735ae9ed0",
     "references/ai-bad-habits-watch.reference.md": "23a8012bf8f5196f",
     "references/framework-watch.reference.md": "32f76e882da9f9fd",
+    "references/adjacent-repos.md": "05c49c7e5247e342",
+    "ingest-expert.agent.md": "0e51edc2bfb4caa8",
+    "analysis-expert.agent.md": "eb11f4ff87d949d2",
+    "abstraction-expert.agent.md": "90821e79b819420e",
+    "integration-expert.agent.md": "7523d3c1cb71f147",
+    "reporting-expert.agent.md": "dfaada18a7d3abd5",
     "../copilot-instructions.md": "2ab83d65f08f8377",
     "team-builder.agent.md": "9d29aab02681c08c",
     "SETUP-REQUIRED.md": "5adab05ba57bb351",
+    "content-enricher.agent.md": "a46be9d86f71b295",
     "references/ref-pytest-reference.md": "38b0ffba6ebadf82",
     "references/code-hygiene-rules.reference.md": "5de980fdd3ad88df",
     "references/github-workflows-merge.reference.md": "c1543808654b233e",
@@ -502,6 +498,14 @@
     "references/external-retrieval-quality-gate.reference.md": "499ecf97122cb7f0"
   },
   "front_matter_baseline": {
+    "security.agent.md": {
+      "name": "Security \u2014 daily-pipeline",
+      "description": "\"Top-priority security sentinel: reviews actions for credential exposure, destructive operations, sensitive content leakage, and reference integrity before any sensitive action proceeds\"",
+      "tools": "['read', 'search']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Security review is complete. Return to the orchestrator with findings.\"\n    send: false",
+      "user-invocable": "false"
+    },
     "orchestrator.agent.md": {
       "name": "Orchestrator \u2014 daily-pipeline",
       "description": "\"Coordinates all agent operations for daily-pipeline: routes work to domain agents, enforces constitutional rules, and closes every multi-file session with a consistency check.\"",
@@ -517,14 +521,6 @@
       "tools": "['read', 'search', 'execute']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Navigation query is complete. Here are the structural findings.\"\n    send: false",
-      "user-invocable": "false"
-    },
-    "security.agent.md": {
-      "name": "Security \u2014 daily-pipeline",
-      "description": "\"Top-priority security sentinel: reviews actions for credential exposure, destructive operations, sensitive content leakage, and reference integrity before any sensitive action proceeds\"",
-      "tools": "['read', 'search']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Security review is complete. Return to the orchestrator with findings.\"\n    send: false",
       "user-invocable": "false"
     },
     "code-hygiene.agent.md": {
@@ -701,6 +697,13 @@
       "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Run Reporting has been reviewed and accepted.\"\n    send: false",
       "user-invocable": "false"
     },
+    "team-builder.agent.md": {
+      "name": "Team Builder \u2014 Agent Teams Module",
+      "description": "\"Interactively constructs a complete agent team for a new or existing VS Code Copilot project by conducting an intake interview and invoking the build_team pipeline\"",
+      "tools": "['read', 'edit', 'search', 'execute', 'todo']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "user-invocable": "true"
+    },
     "content-enricher.agent.md": {
       "name": "Content Enricher \u2014 daily-pipeline",
       "description": "\"Fills in default template placeholders and underdeveloped sections in generated agent files for daily-pipeline using the project's source materials\"",
@@ -708,13 +711,6 @@
       "agents": "['primary-producer', 'technical-validator']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": "\n  - label: Validate Enriched Content\n    agent: technical-validator\n    prompt: \"Content enrichment complete. Verify that filled-in values are technically accurate against project source files.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Content enrichment complete. All auto-fillable placeholders have been resolved.\"\n    send: false",
-      "user-invocable": "true"
-    },
-    "team-builder.agent.md": {
-      "name": "Team Builder \u2014 Agent Teams Module",
-      "description": "\"Interactively constructs a complete agent team for a new or existing VS Code Copilot project by conducting an intake interview and invoking the build_team pipeline\"",
-      "tools": "['read', 'edit', 'search', 'execute', 'todo']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "user-invocable": "true"
     }
   }
