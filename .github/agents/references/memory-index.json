@@ -2,7 +2,7 @@
   "artifact_type": "memory-index",
   "memory_index_schema_version": "1.3",
   "index_format_version": "json-bm25-postings-v2",
-  "index_build_id": "86b78271270bd5516e9d26dabf16ac5409e645aa798f0f80995a761d531dffa7",
+  "index_build_id": "277ca91e0e9cd4383f1009d833d85807d9e187a586c293b5330d30470590d8cf",
   "index_write_owner": "agentteams.build_team",
   "vector_runtime_mode": "sparse-tfidf-cosine",
   "vector_model_id": null,
@@ -11,7 +11,7 @@
   "source_fingerprint": "2bc4cf1bc5285ad6ef906ea48798a23275ddf5a55ce682db04453aa1c8f85635",
   "project_name": "daily-pipeline",
   "framework": "copilot-vscode",
-  "built_at": "2026-08-31T13:41:32.036122Z",
+  "built_at": "2026-10-10T01:16:58.043562Z",
   "source_count": 8,
   "documents": [
     {
@@ -43,7 +43,7 @@
         "This repository includes a docs application following the AgentTeams site pattern:"
       ],
       "source_hash": "0a9975bdafd77b7e70df09424f48d9c94b19461e8cfbacdb8cf273e3b0344659",
-      "source_mtime": 1777431326.1510975,
+      "source_mtime": 1791594834.5918815,
       "vector_norm_sq": 1403.468413830925
     },
     {
@@ -60,7 +60,7 @@
         "- Routing is separated between team-mode and sync-mode behavior. - Parser exclusivity is enforced for `--team` and `--sync`. - `--teams-file` is a team-mode input and is not consumed in sync-mode execution."
       ],
       "source_hash": "3c045227cb9939a34c4a7747525eee67f632d8a76f6713e15fceb6a50afccf92",
-      "source_mtime": 1777429804.2255254,
+      "source_mtime": 1791594834.600886,
       "vector_norm_sq": 163.98781084961405
     },
     {
@@ -75,7 +75,7 @@
         "- Stage 9.5 helper path in-package is callable, but orchestration ownership remains external. - Stage-level progression is best-effort; standalone sync CLI can return non-zero on failed targets. - Core package runtime remains independent of `~/.local/bin` script dependencies."
       ],
       "source_hash": "33684350368c3a1c0a42e2ea5999c079775b519fc0b518a25a7b25679c7abb9f",
-      "source_mtime": 1777429958.5820706,
+      "source_mtime": 1791594834.6015444,
       "vector_norm_sq": 65.52100362226032
     },
     {
@@ -92,7 +92,7 @@
         "```bash python3 -m daily_pipeline.cli --sync --root \"$VK_ROOT\" --build-team-py \"$BUILD_TEAM_PY\" --dry-run ```"
       ],
       "source_hash": "1247e0219df87b3b54033a00462b52136c59c9b31ae6600fb870c650a87cdad1",
-      "source_mtime": 1777429800.1626308,
+      "source_mtime": 1791594834.601877,
       "vector_norm_sq": 219.80888025550473
     },
     {
@@ -110,7 +110,7 @@
         "Core package execution does not require scripts from `~/.local/bin`. External script references are optional orchestration runbook examples."
       ],
       "source_hash": "6058c25cb45776edae10b608b95536a0afc5444458b8d12758b6355431a8c48a",
-      "source_mtime": 1777429802.1951704,
+      "source_mtime": 1791594834.6020505,
       "vector_norm_sq": 166.84864121266943
     },
     {
@@ -126,7 +126,7 @@
         "- `daily_pipeline/` implementation behavior - `protocols/stages.md` and `protocols/stages.csv` - `configs/` and `tests/`"
       ],
       "source_hash": "5b7f53f7719f92a7b4925bfb0578411a6e560b92efdc52ccab02282a5dc4d218",
-      "source_mtime": 1777429798.139338,
+      "source_mtime": 1791594834.6022372,
       "vector_norm_sq": 147.95263977238275
     },
     {
@@ -142,7 +142,7 @@
         "- Core execution remains Stages 1-8. - Stage 9 remains external handoff. - Stage 9.5 helper APIs are callable in-package but execution ownership remains external orchestration."
       ],
       "source_hash": "cd4d2f8d88afb641ca5f480daecf2927b01bab77d20569483b8b44d10b801058",
-      "source_mtime": 1777429956.56206,
+      "source_mtime": 1791594834.602645,
       "vector_norm_sq": 72.25415920198229
     },
     {
@@ -163,7 +163,7 @@
         "```json { \"root_package\": \"daily_pipeline\", \"modules\": { \"daily_pipeline\": { \"package\": \"daily_pipeline\", \"path\": \"daily_pipeline/__init__.py\", \"is_package\": true, \"imports_internal\": [], \"external\": [], \"repo_local\": [] }, \"daily_pipeline.abstraction\": { \"package\": \"daily_pipeline\", \"path\": \"daily_pipeline/abstraction/__init__.py\", \"is_package\": true, \"imports_internal\": [], \"external\": [], \"repo_local\": [] }, \"daily_pipeline.abstraction.synthesizer\": { \"package\": \"daily_pip"
       ],
       "source_hash": "337c9508c3345d2122da5e5da03fdeb6d2f3194a5d24e8ccd9643d156a72515a",
-      "source_mtime": 1783125869.6732767,
+      "source_mtime": 1791594834.6039934,
       "vector_norm_sq": 19489.398570255384
     }
   ],

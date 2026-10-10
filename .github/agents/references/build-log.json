@@ -1,5 +1,13 @@
 {
-  "schema_version": "1.2",
+  "schema_version": "1.5",
+  "agentteams_version": "1.0.0rc8",
+  "agentteams_source": {
+    "kind": "checkout",
+    "commit": "b96e7e3ba3a55ae0bba35d0cc84ae4acead29913",
+    "branch": "main",
+    "dirty": true
+  },
+  "generated_at": "2026-10-10T01:16:58.030994+00:00",
   "project_name": "daily-pipeline",
   "framework": "copilot-vscode",
   "project_type": "software",
@@ -18,30 +26,38 @@
     "integration",
     "reporting"
   ],
-  "files_written": [],
+  "files_written": [
+    ".github/agents/references/branch-lifecycle.reference.md",
+    ".github/agents/references/orchestrator-spawn-authority.reference.md",
+    "sandbox/confine-run.sh",
+    "sandbox/mac-escape-tests.sh",
+    "sandbox/dedicated-uid-provisioning.example.sh",
+    "sandbox/pf-per-tenant-anchor.example.conf",
+    ".github/agents/references/authorized-verify-keys/README.md"
+  ],
   "manual_required": 2,
   "template_hashes": {
-    "universal/orchestrator.template.md": "181ce39e3406f1cd",
-    "universal/navigator.template.md": "5a0d707a9f3f5cec",
-    "universal/security.template.md": "e79fe61c5c31297e",
-    "universal/code-hygiene.template.md": "72e2a1f9ec316852",
-    "universal/adversarial.template.md": "0dbc3c4284139780",
-    "universal/conflict-auditor.template.md": "d0e6ed3e98ba1f86",
-    "universal/conflict-resolution.template.md": "fd74ccfd546065c4",
-    "universal/cleanup.template.md": "dd3c78f2548c4686",
-    "universal/agent-updater.template.md": "c647c19909dff2fa",
-    "universal/agent-refactor.template.md": "fb1956da5b1140a2",
-    "universal/repo-liaison.template.md": "57b1c8654c320d59",
-    "universal/git-operations.template.md": "c000c51feb44ad64",
-    "domain/work-summarizer.template.md": "90b19b91ff48a953",
-    "domain/primary-producer.template.md": "e02c72f74753e2a3",
-    "domain/quality-auditor.template.md": "6ce15b22e2a72237",
-    "domain/technical-validator.template.md": "a8ebdc034168749f",
-    "domain/reference-manager.template.md": "7eae1ecba0c1e819",
-    "domain/output-compiler.template.md": "c08d60a4578e90a4",
-    "domain/tool-specific.doc.template.md": "e96ac1f3fc2dfc7b",
-    "domain/tool-reference.template.md": "5ce5638b7094cc86",
-    "domain/code-hygiene-rules-reference.template.md": "cf49b61dc45e4ca4",
+    "universal/orchestrator.template.md": "8eede8f076d2a7f1",
+    "universal/navigator.template.md": "3d28148430bddfdf",
+    "universal/security.template.md": "59429a1480354b77",
+    "universal/code-hygiene.template.md": "8c53882027a0aa40",
+    "universal/adversarial.template.md": "0c7b7cb909b089a0",
+    "universal/conflict-auditor.template.md": "a6199323e4d1add3",
+    "universal/conflict-resolution.template.md": "4542fdba8f977079",
+    "universal/cleanup.template.md": "6a404be5ad0bfbe9",
+    "universal/agent-updater.template.md": "9c141092104f6e5b",
+    "universal/agent-refactor.template.md": "b1417e2f09b84022",
+    "universal/repo-liaison.template.md": "70331bea47521df8",
+    "universal/git-operations.template.md": "ceba0af4e139c43c",
+    "domain/work-summarizer.template.md": "4124536ef03c333d",
+    "domain/primary-producer.template.md": "278ed220891ba707",
+    "domain/quality-auditor.template.md": "3dd911ae905e8b28",
+    "domain/technical-validator.template.md": "0c8c489fb67c5891",
+    "domain/reference-manager.template.md": "299f437acd33eff9",
+    "domain/output-compiler.template.md": "7ec6b1533cae4aaf",
+    "domain/tool-specific.doc.template.md": "d64a53ebf12e6547",
+    "domain/tool-reference.template.md": "82ac08315bbb33b2",
+    "domain/code-hygiene-rules-reference.template.md": "891dd19f0d09cea0",
     "domain/unix-philosophy-mapping-reference.template.md": "702af6b4e9e2b952",
     "universal/security-vulnerability-watch.reference.template.md": "269cdacb3d94fdfa",
     "universal/security-vulnerability-watch.json.template": "ebcec1b04ad46caa",
@@ -50,23 +66,25 @@
     "universal/security-windows-hardening.reference.template.md": "5885668f48e4c295",
     "universal/security-infrastructure-layers.reference.template.md": "5c4c67f28d67149b",
     "universal/ai-bad-habits-watch.reference.template.md": "3265a4ef0b7e5f7a",
-    "universal/framework-watch.reference.template.md": "5232925f7a649199",
+    "universal/framework-watch.reference.template.md": "ca23bcc73afc2e2a",
     "universal/adjacent-repos.reference.template.md": "e66157a91f72492a",
-    "universal/github-workflows-merge.reference.template.md": "4b5d6066a338ae74",
+    "universal/github-workflows-merge.reference.template.md": "47a88addb7b11da8",
+    "universal/branch-lifecycle.reference.template.md": "8f199043003804b3",
     "universal/work-summary-spec.reference.template.md": "d29ca7e680ad715d",
     "universal/work-summary-tooling.reference.template.md": "62e643b1a9711af6",
     "universal/work-summary-backfill.reference.template.md": "5730bac043dc2874",
     "universal/parallelization.reference.template.md": "e31593ccbba4a7ff",
-    "universal/instruction-authority.reference.template.md": "72149ab5244f9be3",
+    "universal/instruction-authority.reference.template.md": "855e46066d9c2258",
+    "universal/orchestrator-spawn-authority.reference.template.md": "f7b044748645b289",
     "universal/redteam-methodology.reference.template.md": "a0443337a9796294",
     "universal/retrospective-remediation.reference.template.md": "1965ac5f52cf72f0",
     "universal/cli-tool-discovery.reference.template.md": "203004e771c8b2fd",
-    "universal/skill-generation.reference.template.md": "47bcf76ed8f69a80",
+    "universal/skill-generation.reference.template.md": "5293714b0f5ada9c",
     "universal/external-retrieval-quality-gate.reference.template.md": "3922b0a2e99e75a3",
-    "workstream-expert.template.md": "145061461736b92b",
-    "copilot-instructions.template.md": "bc94e8e32a6b2cff",
-    "builder/team-builder-copilot-vscode.template.md": "044c1314c4e98a9d",
-    "domain/content-enricher.template.md": "79ddbbf48720bcc7"
+    "workstream-expert.template.md": "19e099ff5eaf447b",
+    "copilot-instructions.template.md": "df942993bbc3bf2c",
+    "builder/team-builder-copilot-vscode.template.md": "49cf6f735fc90e06",
+    "domain/content-enricher.template.md": "25b7c467ae7a8978"
   },
   "output_files_map": [
     {
@@ -271,6 +289,12 @@
       "component_slug": null
     },
     {
+      "path": "references/branch-lifecycle.reference.md",
+      "template": "universal/branch-lifecycle.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
       "path": "references/work-summary-spec.reference.md",
       "template": "universal/work-summary-spec.reference.template.md",
       "type": "reference",
@@ -297,6 +321,12 @@
     {
       "path": "references/instruction-authority.reference.md",
       "template": "universal/instruction-authority.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
+      "path": "references/orchestrator-spawn-authority.reference.md",
+      "template": "universal/orchestrator-spawn-authority.reference.template.md",
       "type": "reference",
       "component_slug": null
     },
@@ -442,70 +472,70 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "29604043c89a5548",
+  "manifest_fingerprint": "0ba3abd749a3dbad",
   "fingerprint_algo_version": 1,
   "file_hashes": {
-    "security.agent.md": "1ca4c159ca186218",
-    "references/security-vulnerability-watch.reference.md": "49acb3ae849209f0",
-    "references/security-vulnerability-watch.json": "ff8b11c12a630c68",
+    "references/branch-lifecycle.reference.md": "d05db90eeed34bfc",
+    "references/orchestrator-spawn-authority.reference.md": "b769351896152e40",
+    "../../sandbox/confine-run.sh": "6779fa05d24b3bef",
+    "../../sandbox/mac-escape-tests.sh": "71d00a1d1d4b83f8",
+    "../../sandbox/dedicated-uid-provisioning.example.sh": "9bf57e5f1a20eda8",
+    "../../sandbox/pf-per-tenant-anchor.example.conf": "3b3a9adf19243916",
+    "references/authorized-verify-keys/README.md": "badf32b421079acf",
+    "orchestrator.agent.md": "0873bc2a2f6364ce",
+    "security.agent.md": "c965754cd1340d0d",
+    "conflict-auditor.agent.md": "7b4173c2c47aa67a",
+    "cleanup.agent.md": "a2313f26e6fe8d29",
+    "quality-auditor.agent.md": "cb7f8ae819421e70",
+    "technical-validator.agent.md": "e1620cd0ad90fb9b",
+    "references/code-hygiene-rules.reference.md": "0c6243a0e8c592e3",
+    "references/security-vulnerability-watch.reference.md": "156ce86917c1fe5f",
+    "references/security-vulnerability-watch.json": "d6185448b5c4c6a9",
+    "references/framework-watch.reference.md": "f3039d5c52af3a87",
+    "references/github-workflows-merge.reference.md": "22f7b600d9d0758c",
+    "references/parallelization.reference.md": "e25040ccfbdae337",
+    "references/instruction-authority.reference.md": "c91672dd5b248086",
+    "../copilot-instructions.md": "089834d71476ffe2",
     "references/pipeline-graph.md": "89c856e7dacadf19",
     "references/pipeline-graph.svg": "f1bd3e585b22f2d9",
-    "orchestrator.agent.md": "a39d8e8bc0fd42dc",
+    "../../.vscode/tasks.json": "2825fce64e3d4c04",
     "navigator.agent.md": "a26e13fbe85948ba",
     "code-hygiene.agent.md": "5ed8df910e4ec29f",
     "adversarial.agent.md": "711660c5d8f70e9f",
-    "conflict-auditor.agent.md": "2afa47ad1ec6d545",
     "conflict-resolution.agent.md": "07f8972f6fd9e2f3",
-    "cleanup.agent.md": "77d4eb130dce1cf1",
     "agent-updater.agent.md": "9eb3968a1a7e1ccf",
     "agent-refactor.agent.md": "be4d01429c88b4c9",
     "repo-liaison.agent.md": "a64c549db7098940",
     "git-operations.agent.md": "d3ae1b3e0b27b02b",
-    "work-summarizer.agent.md": "9af19c9bbd089719",
+    "work-summarizer.agent.md": "e8f0b66f07ba8485",
     "primary-producer.agent.md": "9c7c7d79df4137bb",
-    "quality-auditor.agent.md": "04c85e6b430f7792",
-    "technical-validator.agent.md": "1ce229fa6775d15b",
     "reference-manager.agent.md": "1fbbfefa625e48e0",
     "output-compiler.agent.md": "e2bbef9c2d36d202",
     "references/ref-python-reference.md": "7f8bfbc8d468a7e6",
+    "references/ref-pytest-reference.md": "38b0ffba6ebadf82",
     "references/unix-philosophy-mapping.reference.md": "9d762540146b428e",
     "references/security-linux-hardening.reference.md": "31d9ef1c588dbb10",
     "references/security-macos-hardening.reference.md": "fc17de4688021ce4",
     "references/security-windows-hardening.reference.md": "f271246735ae9ed0",
     "references/ai-bad-habits-watch.reference.md": "23a8012bf8f5196f",
-    "references/framework-watch.reference.md": "32f76e882da9f9fd",
     "references/adjacent-repos.md": "05c49c7e5247e342",
-    "references/parallelization.reference.md": "9938e69caf5e686c",
     "references/retrospective-remediation.reference.md": "04c57ea9ca332eb2",
+    "references/skill-generation.reference.md": "193081eccb28b67f",
     "ingest-expert.agent.md": "0e51edc2bfb4caa8",
     "analysis-expert.agent.md": "eb11f4ff87d949d2",
     "abstraction-expert.agent.md": "90821e79b819420e",
     "integration-expert.agent.md": "7523d3c1cb71f147",
     "reporting-expert.agent.md": "dfaada18a7d3abd5",
-    "../copilot-instructions.md": "2ab83d65f08f8377",
     "team-builder.agent.md": "9d29aab02681c08c",
     "SETUP-REQUIRED.md": "5adab05ba57bb351",
     "content-enricher.agent.md": "a46be9d86f71b295",
-    "references/ref-pytest-reference.md": "38b0ffba6ebadf82",
-    "references/code-hygiene-rules.reference.md": "5de980fdd3ad88df",
-    "references/github-workflows-merge.reference.md": "c1543808654b233e",
     "references/work-summary-spec.reference.md": "96232231a1f7c6be",
     "references/work-summary-tooling.reference.md": "f3656972717153a9",
     "references/work-summary-backfill.reference.md": "024cd86c297d89b4",
-    "references/instruction-authority.reference.md": "ea6fb3a1c6f43f4a",
     "references/cli-tool-discovery.reference.md": "c26106b7fa028d19",
-    "references/skill-generation.reference.md": "193081eccb28b67f",
     "references/external-retrieval-quality-gate.reference.md": "499ecf97122cb7f0"
   },
   "front_matter_baseline": {
-    "security.agent.md": {
-      "name": "Security \u2014 daily-pipeline",
-      "description": "\"Top-priority security sentinel: reviews actions for credential exposure, destructive operations, sensitive content leakage, and reference integrity before any sensitive action proceeds\"",
-      "tools": "['read', 'search']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Security review is complete. Return to the orchestrator with findings.\"\n    send: false",
-      "user-invocable": "false"
-    },
     "orchestrator.agent.md": {
       "name": "Orchestrator \u2014 daily-pipeline",
       "description": "\"Coordinates all agent operations for daily-pipeline: routes work to domain agents, enforces constitutional rules, and closes every multi-file session with a consistency check.\"",
@@ -514,6 +544,49 @@
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": "\n  - label: Produce / Revise Deliverable\n    agent: primary-producer\n    prompt: \"A workstream is ready to produce or revise its deliverable. Provide the workstream name and any specific instructions.\"\n    send: false\n  - label: Audit Quality\n    agent: quality-auditor\n    prompt: \"A deliverable is ready for quality audit. Provide the file path.\"\n    send: false\n  - label: Validate Technical Accuracy\n    agent: technical-validator\n    prompt: \"Audit technical accuracy of claims, code, or specifications in a deliverable. Provide the file path.\"\n    send: false\n  - label: Manage References / Dependencies\n    agent: reference-manager\n    prompt: \"Perform a reference operation: add, verify, deduplicate, or retire. Describe the operation.\"\n    send: false\n  - label: Compile Final Output\n    agent: output-compiler\n    prompt: \"Assemble and compile the final deliverable from all sources.\"\n    send: false\n  - label: Navigate Project\n    agent: navigator\n    prompt: \"Locate files, answer structural questions, or regenerate the project map.\"\n    send: false\n  - label: Security Review\n    agent: security\n    prompt: \"Review the planned action for credentials, destructive operations, or sensitive content.\"\n    send: false\n  - label: Code Hygiene Audit\n    agent: code-hygiene\n    prompt: \"Run a code hygiene audit. Provide scope or 'full' for all rules.\"\n    send: false\n  - label: Adversarial Review\n    agent: adversarial\n    prompt: \"Challenge the presuppositions underlying this plan before execution.\"\n    send: false\n  - label: Conflict Audit\n    agent: conflict-auditor\n    prompt: \"Detect contradictions across project files. Provide scope if targeted.\"\n    send: false\n  - label: Resolve Conflicts\n    agent: conflict-resolution\n    prompt: \"Make ACCEPT/REJECT/REVISE decisions on flagged conflicts.\"\n    send: false\n  - label: Clean Up Artifacts\n    agent: cleanup\n    prompt: \"Remove stale build artifacts, orphaned files, or abandoned drafts.\"\n    send: false\n  - label: Update Agent Docs\n    agent: agent-updater\n    prompt: \"Project structure or conventions have changed. Sync all affected agent files.\"\n    send: false\n  - label: Refactor Agent Docs\n    agent: agent-refactor\n    prompt: \"Check agent docs for reference extraction opportunities and spec compliance.\"\n    send: false\n  - label: Cross-Repository Liaison\n    agent: repo-liaison\n    prompt: \"Assess or communicate impact of this project's activity on adjacent repositories. Describe the change and list any known adjacent repos.\"\n    send: false\n  - label: Summarize Work Period\n    agent: work-summarizer\n    prompt: \"Create daily, weekly, or monthly work summaries from planning artifacts and git diffs for the requested period.\"\n    send: false\n  - label: Git Operations\n    agent: git-operations\n    prompt: \"Run a git operation: commit and push, pull/merge/rebase, resolve conflicts, or recover a file. Describe the operation needed.\"\n    send: false\n",
       "user-invocable": "true"
+    },
+    "security.agent.md": {
+      "name": "Security \u2014 daily-pipeline",
+      "description": "\"Top-priority security sentinel: reviews actions for credential exposure, destructive operations, sensitive content leakage, and reference integrity before any sensitive action proceeds\"",
+      "tools": "['read', 'search']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Security review is complete. Return to the orchestrator with findings.\"\n    send: false",
+      "user-invocable": "false"
+    },
+    "conflict-auditor.agent.md": {
+      "name": "Conflict Auditor \u2014 daily-pipeline",
+      "description": "\"Detects logical conflicts across deliverables, agent documentation, reference files, and source material in daily-pipeline\"",
+      "tools": "['read', 'search']",
+      "agents": "['conflict-resolution', 'agent-updater', 'technical-validator']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Conflict audit is complete. Review the findings.\"\n    send: false\n  - label: Update Agent Docs\n    agent: agent-updater\n    prompt: \"Conflicts detected that require documentation updates.\"\n    send: false\n  - label: Resolve Conflicts\n    agent: conflict-resolution\n    prompt: \"Conflicts have been identified and logged. Make ACCEPT/REJECT/REVISE decisions.\"\n    send: false\n  - label: Verify Source Drift\n    agent: technical-validator\n    prompt: \"SOURCE_DRIFT conflict detected. Verify deliverable description against current source file on disk.\"\n    send: false",
+      "user-invocable": "false"
+    },
+    "cleanup.agent.md": {
+      "name": "Cleanup \u2014 daily-pipeline",
+      "description": "\"Removes stale drafts, build artifacts, and orphaned files from daily-pipeline with mandatory safety checks\"",
+      "tools": "['edit', 'search', 'execute']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Cleanup is complete. Review the removal report.\"\n    send: false",
+      "user-invocable": "false"
+    },
+    "quality-auditor.agent.md": {
+      "name": "Quality Auditor \u2014 daily-pipeline",
+      "description": "\"Read-only audit agent that inspects deliverables in daily-pipeline for structural defects, logical inconsistencies, and LLM-generated prose patterns; does not rewrite\"",
+      "tools": "['read', 'search']",
+      "agents": "['primary-producer']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": "\n  - label: Route Corrections to Primary Producer\n    agent: primary-producer\n    prompt: \"Audit findings attached. Please correct flagged passages.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Quality audit complete. See findings.\"\n    send: false\n",
+      "user-invocable": "false"
+    },
+    "technical-validator.agent.md": {
+      "name": "Technical Validator \u2014 daily-pipeline",
+      "description": "\"Read-only audit agent that verifies technical accuracy in daily-pipeline \u2014 code examples, file excerpts, API references, and tool invocations match what exists on disk\"",
+      "tools": "['read', 'search']",
+      "agents": "['primary-producer', 'reference-manager', 'conflict-auditor']",
+      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
+      "handoffs": "\n  - label: Route Corrections to Primary Producer\n    agent: primary-producer\n    prompt: \"Technical accuracy findings attached. Please correct flagged inaccuracies.\"\n    send: false\n  - label: Route Reference Issues\n    agent: reference-manager\n    prompt: \"Reference accuracy issues found. Please verify.\"\n    send: false\n  - label: Log Conflict\n    agent: conflict-auditor\n    prompt: \"Technical conflict detected. Logging and routing.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Technical validation complete. See findings.\"\n    send: false",
+      "user-invocable": "false"
     },
     "navigator.agent.md": {
       "name": "Navigator \u2014 daily-pipeline",
@@ -539,29 +612,12 @@
       "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Adversarial review is complete. Return findings \u2014 validated presuppositions, challenged presuppositions, and cascade analysis \u2014 to the orchestrator for plan revision.\"\n    send: false\n  - label: Audit for Conflicts\n    agent: conflict-auditor\n    prompt: \"Adversarial review surfaced assumptions that may conflict with documented facts. Run a targeted conflict audit on the identified areas.\"\n    send: false",
       "user-invocable": "true"
     },
-    "conflict-auditor.agent.md": {
-      "name": "Conflict Auditor \u2014 daily-pipeline",
-      "description": "\"Detects logical conflicts across deliverables, agent documentation, reference files, and source material in daily-pipeline\"",
-      "tools": "['read', 'search']",
-      "agents": "['conflict-resolution', 'agent-updater', 'technical-validator']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Conflict audit is complete. Review the findings.\"\n    send: false\n  - label: Update Agent Docs\n    agent: agent-updater\n    prompt: \"Conflicts detected that require documentation updates.\"\n    send: false\n  - label: Resolve Conflicts\n    agent: conflict-resolution\n    prompt: \"Conflicts have been identified and logged. Make ACCEPT/REJECT/REVISE decisions.\"\n    send: false\n  - label: Verify Source Drift\n    agent: technical-validator\n    prompt: \"SOURCE_DRIFT conflict detected. Verify deliverable description against current source file on disk.\"\n    send: false",
-      "user-invocable": "false"
-    },
     "conflict-resolution.agent.md": {
       "name": "Conflict Resolution \u2014 daily-pipeline",
       "description": "\"Makes ACCEPT/REJECT/REVISE decisions on conflicts flagged by the conflict auditor in daily-pipeline\"",
       "tools": "['edit', 'search', 'read']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Conflict resolution is complete. Review decisions and route corrections.\"\n    send: false\n  - label: Update Agent Docs\n    agent: agent-updater\n    prompt: \"Conflict resolutions may require agent documentation updates.\"\n    send: false",
-      "user-invocable": "false"
-    },
-    "cleanup.agent.md": {
-      "name": "Cleanup \u2014 daily-pipeline",
-      "description": "\"Removes stale drafts, build artifacts, and orphaned files from daily-pipeline with mandatory safety checks\"",
-      "tools": "['edit', 'search', 'execute']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Cleanup is complete. Review the removal report.\"\n    send: false",
       "user-invocable": "false"
     },
     "agent-updater.agent.md": {
@@ -614,24 +670,6 @@
       "agents": "['quality-auditor', 'conflict-auditor']",
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": "\n  - label: Quality Audit\n    agent: quality-auditor\n    prompt: \"Revised draft is ready for quality audit.\"\n    send: false\n  - label: Conflict Audit\n    agent: conflict-auditor\n    prompt: \"New deliverable added. Run consistency check.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Deliverable production is complete.\"\n    send: false\n",
-      "user-invocable": "false"
-    },
-    "quality-auditor.agent.md": {
-      "name": "Quality Auditor \u2014 daily-pipeline",
-      "description": "\"Read-only audit agent that inspects deliverables in daily-pipeline for structural defects, logical inconsistencies, and LLM-generated prose patterns; does not rewrite\"",
-      "tools": "['read', 'search']",
-      "agents": "['primary-producer']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": "\n  - label: Route Corrections to Primary Producer\n    agent: primary-producer\n    prompt: \"Audit findings attached. Please correct flagged passages.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Quality audit complete. See findings.\"\n    send: false\n",
-      "user-invocable": "false"
-    },
-    "technical-validator.agent.md": {
-      "name": "Technical Validator \u2014 daily-pipeline",
-      "description": "\"Read-only audit agent that verifies technical accuracy in daily-pipeline \u2014 code examples, file excerpts, API references, and tool invocations match what exists on disk\"",
-      "tools": "['read', 'search']",
-      "agents": "['primary-producer', 'reference-manager', 'conflict-auditor']",
-      "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
-      "handoffs": "\n  - label: Route Corrections to Primary Producer\n    agent: primary-producer\n    prompt: \"Technical accuracy findings attached. Please correct flagged inaccuracies.\"\n    send: false\n  - label: Route Reference Issues\n    agent: reference-manager\n    prompt: \"Reference accuracy issues found. Please verify.\"\n    send: false\n  - label: Log Conflict\n    agent: conflict-auditor\n    prompt: \"Technical conflict detected. Logging and routing.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Technical validation complete. See findings.\"\n    send: false",
       "user-invocable": "false"
     },
     "reference-manager.agent.md": {
@@ -712,6 +750,145 @@
       "model": "[\"Claude Sonnet 4.6 (copilot)\"]",
       "handoffs": "\n  - label: Validate Enriched Content\n    agent: technical-validator\n    prompt: \"Content enrichment complete. Verify that filled-in values are technically accurate against project source files.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Content enrichment complete. All auto-fillable placeholders have been resolved.\"\n    send: false",
       "user-invocable": "true"
+    }
+  },
+  "prompt_root_hashes": {
+    ".github/agents/abstraction-expert.agent.md": {
+      "invariant_core": "22865343d5410a5b9f6bf746260ff712d050e3ef8c1427a60abd7f94bc5ec18e",
+      "component_spec": "1b437fa228581a2ec8afbe5c67b809292513aa491851af87b004e8e26e5e0234",
+      "review_protocol": "02cf50fba478fcc6202c2ffde432fbb02b7506c9784246ad66dbd71459959caf"
+    },
+    ".github/agents/adversarial.agent.md": {
+      "content": "e06183252707a318b2f955752e99a90fa397819df721213dc95fe979bcafe459"
+    },
+    ".github/agents/agent-refactor.agent.md": {
+      "content": "b79a0411bb777fc90c202a10b46bc519bc45b5c23508c4b02ab90fd1916b7354"
+    },
+    ".github/agents/agent-updater.agent.md": {
+      "content": "6b3ee7b5d6c1b6a7200236821cb18d5053cabcb5953bcab5f69147d17903d965"
+    },
+    ".github/agents/analysis-expert.agent.md": {
+      "invariant_core": "22865343d5410a5b9f6bf746260ff712d050e3ef8c1427a60abd7f94bc5ec18e",
+      "component_spec": "d46b4d7a721d3a8a8af92d02be3affc627555dfc64b714ab916cc33b895f79aa",
+      "review_protocol": "02cf50fba478fcc6202c2ffde432fbb02b7506c9784246ad66dbd71459959caf"
+    },
+    ".github/agents/cleanup.agent.md": {
+      "content": "794b1cf73785183cb4f00d66be1aa32e4796d58cb20ee149a7565738af018225"
+    },
+    ".github/agents/code-hygiene.agent.md": {
+      "content": "e033da13dc890d77d2f7037fc29efd902af02c333831071cd313073166dac49e"
+    },
+    ".github/agents/conflict-auditor.agent.md": {
+      "authority_sources_list": "9e271506f8cb948c087e41a73a7ff875ee6b1253896df1d43d978a6c61d58ee8",
+      "rules": "9667b10268dd7a058c0dbeb757bbaf7937550a95bc459e2bdefcb4989b79b9a2",
+      "handoff_payload_conflict_codes": "506c97de1dfef1269beed438b6055154cd3a439047084983f9ac0a80353b7b51",
+      "invariant_core": "9b62e5b358ee6726ec3600c39b2c57fb451c623a4fb6ade7f4776c2570e836dc",
+      "typed_handoff_audit": "fc72a6ded9e4248c0c174d24b21d57fe6ddd2bc09cf71feba6f5ddeac4802f67",
+      "behavioral_spec_cross_check": "d33518a32d59fa60e97f94e60df6934397e5e937e4716aea6a8e28f6fefbe597",
+      "handoff_payload_codes": "38a1bcd36aa352b02b6d96b38af008454e46d34b558188c323241ef43c3f3e1a",
+      "memory_index_consultation": "d73e2eb4b3c7d5d30693d0f8f8d088d74ef4be6f0292e816083e774d29c563c2"
+    },
+    ".github/agents/conflict-resolution.agent.md": {
+      "content": "43f49ef646651471d26de0459a7c4a22dca85d224cb15d0db74a434c24a7f696",
+      "invariant_core": "22865343d5410a5b9f6bf746260ff712d050e3ef8c1427a60abd7f94bc5ec18e",
+      "memory_index_consultation": "1f9ab4e9c464b9123c74b5416a22acd7c1086b5f4d8311ac68c5c22969411f9b",
+      "rules": "5a133df68a1d37204898e3310a3756bb9bf7dbd1ede35e31e2b5800dcef55e65"
+    },
+    ".github/agents/content-enricher.agent.md": {
+      "content": "fe3ab41c967bfb2e8c64a2ddee9f80fa17eafc60fa99ea78687de05b07e4e086"
+    },
+    ".github/agents/git-operations.agent.md": {
+      "content": "0f710883ad4d678f1ba94ca1b94e2731a2c34a71a6416937170128f22daf5308"
+    },
+    ".github/agents/ingest-expert.agent.md": {
+      "invariant_core": "22865343d5410a5b9f6bf746260ff712d050e3ef8c1427a60abd7f94bc5ec18e",
+      "component_spec": "02c3893430fbf505b3b3742a8406a8ff6fdbe4cb064c500af6706e20990e2bed",
+      "review_protocol": "02cf50fba478fcc6202c2ffde432fbb02b7506c9784246ad66dbd71459959caf"
+    },
+    ".github/agents/integration-expert.agent.md": {
+      "invariant_core": "22865343d5410a5b9f6bf746260ff712d050e3ef8c1427a60abd7f94bc5ec18e",
+      "component_spec": "4e962776ed1e01ffa7d24e18974d0f0a462ae00c2de894c5a8db691c37bfbb15",
+      "review_protocol": "02cf50fba478fcc6202c2ffde432fbb02b7506c9784246ad66dbd71459959caf"
+    },
+    ".github/agents/navigator.agent.md": {
+      "invariant_core": "05aac7cabeea587ef7f6a7071f606bed85d271c26453655455db5122fe2fb52a",
+      "workstream_source_map": "0beb1528f5ecfdb474d632afc150b1e0dc9068303228242e5fd4cea2d77fdfee",
+      "invariant_rules": "9f02cd5b924adde05a397c1b80f155200b00f523ebc2e4ddce10fc55dffb80bd",
+      "code_index_consultation": "560588e20a4a7fccd2004323c8aa94422d41e8aa7ebf8ff48ab7dcbc5142ff41"
+    },
+    ".github/agents/orchestrator.agent.md": {
+      "constitutional_core": "e447f730dbfb55d33f01bac40e940edc40d6ddbb58725a99f59e7d30adab7c84",
+      "authority_hierarchy": "e1acd54a5da95801fcd1806fadbe4c9f78add481fd015ea15440e70a72b2fe73",
+      "routing_table_rows": "7f62c3d963861b3cd3a3b5c6863293c68b08eaa3c5a7c351b3db4febf83a0910",
+      "update_compatibility_source_pack": "24662ea1c046bf2831dfa898b937114683aa5e9ca695b243aaf3241ca6ab34ea",
+      "available_workflows": "0b075fff9bed5d76b4b953f360a2a3a4194983e42f3b29f75ea974c0ce5b05d8"
+    },
+    ".github/agents/output-compiler.agent.md": {
+      "content": "4daaa21d86119a2e1d9e85afbe02e0b08ebe37d3e4f537686c880f00f03216ae"
+    },
+    ".github/agents/primary-producer.agent.md": {
+      "content": "4a4f277a31c07c09ffc0adaa88114b78081cfe4ce3ba2feb1546183d0a1feff1"
+    },
+    ".github/agents/quality-auditor.agent.md": {
+      "content": "8c3d2ebddf80ceb9e4ca9d70074fa84d6d1fe022e998c27d5f919383250311f2",
+      "invariant_core": "22865343d5410a5b9f6bf746260ff712d050e3ef8c1427a60abd7f94bc5ec18e",
+      "defect_taxonomy": "e9468640170cbdc1e966b0c589f2d1e4926c1fde9ca792f49923fae80e903b79",
+      "memory_index_consultation": "27cbd064106c208ad8564aa435aaea40afad5719030e064b4f55d5708cb6b9c1",
+      "audit_protocol": "6f7dd04ad5bc4fdc90898a08269ca14eca4e0bd5826af0444d66debf313e1498",
+      "output_format": "4d2983fcb4a1bb09df289219928ea3844d56fed192f91098c702e458b5eb0e6e",
+      "boundary_rules": "91444ed2e3202780cdc752d5e4cefb5aea17e9d58c0d6dd6b009dcbf51e7f64c"
+    },
+    ".github/agents/reference-manager.agent.md": {
+      "content": "3673709acbe78f25757013e03373b59ee96368aff7169721c9ac163368ca9ecb"
+    },
+    ".github/agents/repo-liaison.agent.md": {
+      "purpose": "7ed196855e4155563c45c92dfc519b8227d35c77716663f35cb568f8a18cc95c",
+      "invariant_core": "0deff3d0809cbc336f8aff15cd6e7a584e9403a7164248b6f8348dfdc834a02d",
+      "protocols": "6f55687af8f77e8c33970516f55b33bb5b1a4d3bb90bfb28c1ade76a806b5513",
+      "output_format": "92a7ecbd969c55a1ba9b02c7d56b9e23c4a65d486eeb6a0ae775690d3fbd6a46"
+    },
+    ".github/agents/reporting-expert.agent.md": {
+      "invariant_core": "22865343d5410a5b9f6bf746260ff712d050e3ef8c1427a60abd7f94bc5ec18e",
+      "component_spec": "aaa8ad731963a9a7a9ea2cf10cfdea6c2ce19e9ee00b6a1e536f5c4ed4ce6615",
+      "review_protocol": "02cf50fba478fcc6202c2ffde432fbb02b7506c9784246ad66dbd71459959caf"
+    },
+    ".github/agents/security.agent.md": {
+      "security_authority": "22a76a0db3797893ea30a2e60814ab047622005077cbf6464100510187962d20",
+      "invariant_core": "ff22ac3ecdf1e94935ebec4ef2960946be13a0362b416ada020c97065d6e8f87",
+      "security_rules_invariant": "ba5e07be8fbe57acb3dee535007839326e78652746937c7e043859976111e2a9",
+      "threat_intelligence": "b4993b92ba606b30266ee0fae96018eb664f930c3b47811d33fab105fcddafa4",
+      "security_verdict_contract": "e17bc133696fef7e7aaa86af1023b9ad979f3f6cd87d853af62c8e019efff501"
+    },
+    ".github/agents/team-builder.agent.md": {
+      "content": "e5d320f7c48099bcbda7456950755668b8134f44a5fb0878a27810b2f07fb76e"
+    },
+    ".github/agents/technical-validator.agent.md": {
+      "authority_sources_list": "9e271506f8cb948c087e41a73a7ff875ee6b1253896df1d43d978a6c61d58ee8",
+      "invariant_core": "7adfc511ccfd9b2a91c93a9a441afdc6b9650de80c17bfa4751125e09075621f",
+      "accuracy_rules": "cf7b9555eed3b39638fa1c1016f84caa590691686fdf6b47aeabc8ea8b2b0417",
+      "memory_index_consultation": "a1d83b568b52c6d48aec65e88b098c16ab229201c714d3794bafa82cec021bed",
+      "cross_reference_rules": "a98aee0f1402dd069e280347dd6eb751d7de27c4f05884aa43aebb4b484cd92e",
+      "output_format": "7bf8d1da76afa8db69ae4e2382d560767ef4c7a7831cc4d60f4917edc553272c",
+      "boundary_rules": "633e41e63ba35fde70c573320cc6ddbe6983a5b5644ad52a08dfd6a330768cda"
+    },
+    ".github/agents/tool-python.agent.md": {
+      "content": "b2580c0b21363fc05494ee52396735cabe5c36a8c87cb50461f9a853ede65966"
+    },
+    ".github/agents/tool-specific.agent.md": {
+      "content": "c7e503844a79352bd5a56196b55b4d6ebc627c0f915ff438e9711158920baebc"
+    },
+    ".github/agents/work-summarizer.agent.md": {
+      "content": "3a655a6cf2d392d8c51371618edf1bced11fc24d35a524fd2a253a7b436bb7ae"
+    },
+    ".github/copilot-instructions.md": {
+      "project_overview": "1034ce9c251a578608f6520f40e16454a4b4d27d4f07ec2f517b73366d556570",
+      "directory_structure": "29bc50d5a8a00456b8e90cf86afff5459b73957bea96bb6c671ee44a92474115",
+      "output_conventions": "c6b5dfde162f866005d8e292f142fe7b34c9f425c89f3ac0f25d5f66d1464fa2",
+      "agent_team": "dd3573a7f7ad6ef296125fc54a668b3f9051b4a87031dbc9270dfd43b196d826",
+      "authority_hierarchy": "009decd4fc19fce472cfa63f619e0f642653d92ed49aec9354df5a50fed26541",
+      "constitutional_core": "42c4ffd29ed450ae96e0ef2e4f68d504568c3e1922bc4c10d1a7c0e9c054d7b3",
+      "source_repositories": "6dabebffdf2e2ca1ce573f895a098f440607b9e17601d7afb17eed71c96e1adf",
+      "tone_and_style": "d0b42a0c3d2c045dbbe4e980eb42023b1b31915d93e219545a8f78de1dcece24"
     }
   }
 }
