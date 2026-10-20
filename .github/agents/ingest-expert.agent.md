@@ -42,10 +42,6 @@ You are the domain expert for **Team Ingestion** (component 1) in daily-pipeline
 
 ---
 
-## Invariant Core
-
-> ⛔ **Do not modify or omit.**
-
 <!-- AGENTTEAMS:BEGIN invariant_core v=1 -->
 ## Invariant Core
 

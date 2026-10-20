@@ -42,10 +42,6 @@ You are the domain expert for **Shared Capability and Reference Analysis** (comp
 
 ---
 
-## Invariant Core
-
-> ⛔ **Do not modify or omit.**
-
 <!-- AGENTTEAMS:BEGIN invariant_core v=1 -->
 ## Invariant Core
 
