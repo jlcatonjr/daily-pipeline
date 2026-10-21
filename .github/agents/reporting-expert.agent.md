@@ -42,10 +42,6 @@ You are the domain expert for **Run Reporting** (component 5) in daily-pipeline.
 
 ---
 
-## Invariant Core
-
-> ⛔ **Do not modify or omit.**
-
 <!-- AGENTTEAMS:BEGIN invariant_core v=1 -->
 ## Invariant Core
 

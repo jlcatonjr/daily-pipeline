@@ -42,10 +42,6 @@ You are the domain expert for **AgentTeams Integration** (component 4) in daily-
 
 ---
 
-## Invariant Core
-
-> ⛔ **Do not modify or omit.**
-
 <!-- AGENTTEAMS:BEGIN invariant_core v=1 -->
 ## Invariant Core
 

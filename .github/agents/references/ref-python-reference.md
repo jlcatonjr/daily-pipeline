@@ -18,8 +18,6 @@ Consult the official Python documentation at: https://docs.python.org/3.11/
 Verify configuration options, API signatures, and version-specific behavior against this
 documentation before making changes.
 
-## Key API Surface
-
 <!-- AGENTTEAMS:BEGIN key_api_surface v=1 -->
 ## Key API Surface
 <!-- AGENTTEAMS:END key_api_surface -->
@@ -65,13 +63,6 @@ Before any configuration change:
 3. Capture stdout and stderr
 4. Check exit code — non-zero exit is a failure; log and escalate
 5. Verify output artifacts exist in expected locations
-
-## Verification
-
-After every invocation, verify:
-- All expected output files are present
-- Output is not empty (zero-byte output indicates silent failure)
-- No error or warning lines appear in the log that weren't present in the previous successful run
 
 ## Cleanup
 

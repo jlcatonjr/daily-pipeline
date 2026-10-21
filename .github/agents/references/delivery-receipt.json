@@ -1,11 +1,11 @@
 {
   "artifact_type": "delivery-receipt",
   "receipt_schema_version": "1.0",
-  "delivered_at": "2026-10-10T01:16:58Z",
+  "delivered_at": "2026-10-20T16:13:06Z",
   "project_name": "daily-pipeline",
   "framework": "copilot-vscode",
-  "manifest_fingerprint": "0ba3abd749a3dbad",
+  "manifest_fingerprint": "d52e71dda5eae35b",
   "fingerprint_algo_version": 1,
   "output_dir": ".github/agents",
-  "agentteams_version": "1.0.0rc8"
+  "agentteams_version": "1.0.0"
 }
