@@ -1,13 +1,13 @@
 {
   "schema_version": "1.5",
-  "agentteams_version": "1.0.0",
+  "agentteams_version": "1.1.0rc12",
   "agentteams_source": {
     "kind": "vcs-pin",
-    "commit": "cc5b8c9ec4efdcb479939e0c1246a0ac11913259",
+    "commit": "ac93628a9b875cf1049100795291f2bd5f537a4d",
     "branch": null,
     "dirty": false
   },
-  "generated_at": "2026-10-20T16:13:06.028684+00:00",
+  "generated_at": "2026-10-31T11:24:51.290176+00:00",
   "project_name": "daily-pipeline",
   "framework": "copilot-vscode",
   "project_type": "software",
@@ -26,12 +26,14 @@
     "integration",
     "reporting"
   ],
-  "files_written": [],
+  "files_written": [
+    ".github/agents/references/sandbox-handoff.reference.md"
+  ],
   "manual_required": 2,
   "template_hashes": {
-    "universal/orchestrator.template.md": "171d8c2a2a8ec0ad",
+    "universal/orchestrator.template.md": "1a69f80133e36dda",
     "universal/navigator.template.md": "3d28148430bddfdf",
-    "universal/security.template.md": "3b9958a26d342746",
+    "universal/security.template.md": "12f027791fe214d2",
     "universal/code-hygiene.template.md": "8c53882027a0aa40",
     "universal/adversarial.template.md": "0c7b7cb909b089a0",
     "universal/conflict-auditor.template.md": "a6199323e4d1add3",
@@ -40,7 +42,7 @@
     "universal/agent-updater.template.md": "fceaeaa65379ff06",
     "universal/agent-refactor.template.md": "b1417e2f09b84022",
     "universal/repo-liaison.template.md": "70331bea47521df8",
-    "universal/git-operations.template.md": "04ede882f19cbfa2",
+    "universal/git-operations.template.md": "9f3fcbd9167a8833",
     "domain/work-summarizer.template.md": "4124536ef03c333d",
     "domain/primary-producer.template.md": "278ed220891ba707",
     "domain/quality-auditor.template.md": "3dd911ae905e8b28",
@@ -60,12 +62,13 @@
     "universal/ai-bad-habits-watch.reference.template.md": "3265a4ef0b7e5f7a",
     "universal/framework-watch.reference.template.md": "ca23bcc73afc2e2a",
     "universal/adjacent-repos.reference.template.md": "e66157a91f72492a",
-    "universal/github-workflows-merge.reference.template.md": "cfb434aeaa6fbae0",
+    "universal/github-workflows-merge.reference.template.md": "aa26e7db5d333f1f",
     "universal/branch-lifecycle.reference.template.md": "8f199043003804b3",
     "universal/work-summary-spec.reference.template.md": "d29ca7e680ad715d",
     "universal/work-summary-tooling.reference.template.md": "62e643b1a9711af6",
     "universal/work-summary-backfill.reference.template.md": "5730bac043dc2874",
-    "universal/parallelization.reference.template.md": "e31593ccbba4a7ff",
+    "universal/parallelization.reference.template.md": "12111b7bb9a9aa10",
+    "universal/sandbox-handoff.reference.template.md": "fe27b3ca2d7de60d",
     "universal/instruction-authority.reference.template.md": "a73a355a8da0c15f",
     "universal/orchestrator-spawn-authority.reference.template.md": "221ebb904e4f4e48",
     "universal/redteam-methodology.reference.template.md": "a0443337a9796294",
@@ -75,7 +78,7 @@
     "universal/external-retrieval-quality-gate.reference.template.md": "3922b0a2e99e75a3",
     "workstream-expert.template.md": "19e099ff5eaf447b",
     "copilot-instructions.template.md": "d3fcc564166c5285",
-    "builder/team-builder-copilot-vscode.template.md": "49cf6f735fc90e06",
+    "builder/team-builder-copilot-vscode.template.md": "799171f781e58676",
     "domain/content-enricher.template.md": "25b7c467ae7a8978"
   },
   "output_files_map": [
@@ -311,6 +314,12 @@
       "component_slug": null
     },
     {
+      "path": "references/sandbox-handoff.reference.md",
+      "template": "universal/sandbox-handoff.reference.template.md",
+      "type": "reference",
+      "component_slug": null
+    },
+    {
       "path": "references/instruction-authority.reference.md",
       "template": "universal/instruction-authority.reference.template.md",
       "type": "reference",
@@ -464,31 +473,23 @@
     "repo-liaison",
     "git-operations"
   ],
-  "manifest_fingerprint": "d52e71dda5eae35b",
+  "manifest_fingerprint": "6710067c7443dc84",
   "fingerprint_algo_version": 1,
   "file_hashes": {
-    "orchestrator.agent.md": "c7df21fb6b84b75c",
+    "references/sandbox-handoff.reference.md": "76a2aa15a392e80f",
+    "orchestrator.agent.md": "aabc84f871630488",
+    "security.agent.md": "cedc638b3966006d",
+    "references/security-vulnerability-watch.reference.md": "a0772fd085e3f9ec",
+    "references/security-vulnerability-watch.json": "4249afb7ffde12ff",
+    "references/parallelization.reference.md": "fbd84bddbf5f6c13",
+    "references/pipeline-graph.md": "9a0dc89eee190be0",
+    "references/pipeline-graph.svg": "63c6a2b297067bc6",
+    "../../sandbox/mac-escape-tests.sh": "369ca51f0388d18a",
     "navigator.agent.md": "b21d0aa8f308d999",
-    "security.agent.md": "0006f2cf1da93f45",
-    "conflict-auditor.agent.md": "9489653935022ce8",
-    "conflict-resolution.agent.md": "5f0b78b41c3f7dda",
-    "quality-auditor.agent.md": "275b9a14b89e0758",
-    "technical-validator.agent.md": "b28011739e1bf9f0",
-    "references/ref-python-reference.md": "2b62dc4ad643059e",
-    "references/security-vulnerability-watch.reference.md": "4d6a2941d1b2700d",
-    "references/security-vulnerability-watch.json": "bbb7d505cd795547",
-    "references/adjacent-repos.md": "34130697c76035e8",
-    "references/instruction-authority.reference.md": "fee5b360c277fc11",
-    "references/orchestrator-spawn-authority.reference.md": "ff3ae86afc238378",
-    "ingest-expert.agent.md": "7d5de262d20d6917",
-    "analysis-expert.agent.md": "0f43ea058048b9da",
-    "abstraction-expert.agent.md": "fa87e7075c58b748",
-    "integration-expert.agent.md": "45f5532d6e7099f2",
-    "reporting-expert.agent.md": "c657b4cbc73302d6",
-    "../copilot-instructions.md": "d69cb1456926db00",
-    "../../sandbox/confine-run.sh": "37e852098a5e6b92",
     "code-hygiene.agent.md": "5ed8df910e4ec29f",
     "adversarial.agent.md": "711660c5d8f70e9f",
+    "conflict-auditor.agent.md": "9489653935022ce8",
+    "conflict-resolution.agent.md": "5f0b78b41c3f7dda",
     "cleanup.agent.md": "a2313f26e6fe8d29",
     "agent-updater.agent.md": "9eb3968a1a7e1ccf",
     "agent-refactor.agent.md": "be4d01429c88b4c9",
@@ -496,17 +497,27 @@
     "git-operations.agent.md": "d3ae1b3e0b27b02b",
     "work-summarizer.agent.md": "e8f0b66f07ba8485",
     "primary-producer.agent.md": "9c7c7d79df4137bb",
+    "quality-auditor.agent.md": "275b9a14b89e0758",
+    "technical-validator.agent.md": "b28011739e1bf9f0",
     "reference-manager.agent.md": "1fbbfefa625e48e0",
     "output-compiler.agent.md": "e2bbef9c2d36d202",
+    "references/ref-python-reference.md": "2b62dc4ad643059e",
     "references/unix-philosophy-mapping.reference.md": "9d762540146b428e",
     "references/security-linux-hardening.reference.md": "31d9ef1c588dbb10",
     "references/security-macos-hardening.reference.md": "fc17de4688021ce4",
     "references/security-windows-hardening.reference.md": "f271246735ae9ed0",
     "references/ai-bad-habits-watch.reference.md": "23a8012bf8f5196f",
     "references/framework-watch.reference.md": "f3039d5c52af3a87",
+    "references/adjacent-repos.md": "34130697c76035e8",
     "references/github-workflows-merge.reference.md": "22f7b600d9d0758c",
     "references/retrospective-remediation.reference.md": "04c57ea9ca332eb2",
     "references/skill-generation.reference.md": "193081eccb28b67f",
+    "ingest-expert.agent.md": "7d5de262d20d6917",
+    "analysis-expert.agent.md": "0f43ea058048b9da",
+    "abstraction-expert.agent.md": "fa87e7075c58b748",
+    "integration-expert.agent.md": "45f5532d6e7099f2",
+    "reporting-expert.agent.md": "c657b4cbc73302d6",
+    "../copilot-instructions.md": "d69cb1456926db00",
     "team-builder.agent.md": "9d29aab02681c08c",
     "SETUP-REQUIRED.md": "5adab05ba57bb351",
     "content-enricher.agent.md": "a46be9d86f71b295",
@@ -515,11 +526,10 @@
     "references/work-summary-spec.reference.md": "96232231a1f7c6be",
     "references/work-summary-tooling.reference.md": "f3656972717153a9",
     "references/work-summary-backfill.reference.md": "024cd86c297d89b4",
-    "references/parallelization.reference.md": "e25040ccfbdae337",
+    "references/instruction-authority.reference.md": "fee5b360c277fc11",
     "references/cli-tool-discovery.reference.md": "c26106b7fa028d19",
     "references/external-retrieval-quality-gate.reference.md": "499ecf97122cb7f0",
-    "references/authorized-verify-keys/README.md": "badf32b421079acf",
-    "references/pipeline-graph.md": "89c856e7dacadf19"
+    "references/authorized-verify-keys/README.md": "badf32b421079acf"
   },
   "front_matter_baseline": {
     "orchestrator.agent.md": {
@@ -529,13 +539,6 @@
       "handoffs": "\n  - label: Produce / Revise Deliverable\n    agent: primary-producer\n    prompt: \"A workstream is ready to produce or revise its deliverable. Provide the workstream name and any specific instructions.\"\n    send: false\n  - label: Audit Quality\n    agent: quality-auditor\n    prompt: \"A deliverable is ready for quality audit. Provide the file path.\"\n    send: false\n  - label: Validate Technical Accuracy\n    agent: technical-validator\n    prompt: \"Audit technical accuracy of claims, code, or specifications in a deliverable. Provide the file path.\"\n    send: false\n  - label: Manage References / Dependencies\n    agent: reference-manager\n    prompt: \"Perform a reference operation: add, verify, deduplicate, or retire. Describe the operation.\"\n    send: false\n  - label: Compile Final Output\n    agent: output-compiler\n    prompt: \"Assemble and compile the final deliverable from all sources.\"\n    send: false\n  - label: Navigate Project\n    agent: navigator\n    prompt: \"Locate files, answer structural questions, or regenerate the project map.\"\n    send: false\n  - label: Security Review\n    agent: security\n    prompt: \"Review the planned action for credentials, destructive operations, or sensitive content.\"\n    send: false\n  - label: Code Hygiene Audit\n    agent: code-hygiene\n    prompt: \"Run a code hygiene audit. Provide scope or 'full' for all rules.\"\n    send: false\n  - label: Adversarial Review\n    agent: adversarial\n    prompt: \"Challenge the presuppositions underlying this plan before execution.\"\n    send: false\n  - label: Conflict Audit\n    agent: conflict-auditor\n    prompt: \"Detect contradictions across project files. Provide scope if targeted.\"\n    send: false\n  - label: Resolve Conflicts\n    agent: conflict-resolution\n    prompt: \"Make ACCEPT/REJECT/REVISE decisions on flagged conflicts.\"\n    send: false\n  - label: Clean Up Artifacts\n    agent: cleanup\n    prompt: \"Remove stale build artifacts, orphaned files, or abandoned drafts.\"\n    send: false\n  - label: Update Agent Docs\n    agent: agent-updater\n    prompt: \"Project structure or conventions have changed. Sync all affected agent files.\"\n    send: false\n  - label: Refactor Agent Docs\n    agent: agent-refactor\n    prompt: \"Check agent docs for reference extraction opportunities and spec compliance.\"\n    send: false\n  - label: Cross-Repository Liaison\n    agent: repo-liaison\n    prompt: \"Assess or communicate impact of this project's activity on adjacent repositories. Describe the change and list any known adjacent repos.\"\n    send: false\n  - label: Summarize Work Period\n    agent: work-summarizer\n    prompt: \"Create daily, weekly, or monthly work summaries from planning artifacts and git diffs for the requested period.\"\n    send: false\n  - label: Git Operations\n    agent: git-operations\n    prompt: \"Run a git operation: commit and push, pull/merge/rebase, resolve conflicts, or recover a file. Describe the operation needed.\"\n    send: false\n",
       "user-invocable": "true"
     },
-    "navigator.agent.md": {
-      "name": "Navigator \u2014 daily-pipeline",
-      "description": "\"Repository structure navigation, project map maintenance, file location lookups, and dependency queries for daily-pipeline\"",
-      "tools": "['read', 'search', 'execute']",
-      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Navigation query is complete. Here are the structural findings.\"\n    send: false",
-      "user-invocable": "false"
-    },
     "security.agent.md": {
       "name": "Security \u2014 daily-pipeline",
       "description": "\"Top-priority security sentinel: reviews actions for credential exposure, destructive operations, sensitive content leakage, and reference integrity before any sensitive action proceeds\"",
@@ -543,75 +546,11 @@
       "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Security review is complete. Return to the orchestrator with findings.\"\n    send: false",
       "user-invocable": "false"
     },
-    "conflict-auditor.agent.md": {
-      "name": "Conflict Auditor \u2014 daily-pipeline",
-      "description": "\"Detects logical conflicts across deliverables, agent documentation, reference files, and source material in daily-pipeline\"",
-      "tools": "['read', 'search']",
-      "agents": "['conflict-resolution', 'agent-updater', 'technical-validator']",
-      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Conflict audit is complete. Review the findings.\"\n    send: false\n  - label: Update Agent Docs\n    agent: agent-updater\n    prompt: \"Conflicts detected that require documentation updates.\"\n    send: false\n  - label: Resolve Conflicts\n    agent: conflict-resolution\n    prompt: \"Conflicts have been identified and logged. Make ACCEPT/REJECT/REVISE decisions.\"\n    send: false\n  - label: Verify Source Drift\n    agent: technical-validator\n    prompt: \"SOURCE_DRIFT conflict detected. Verify deliverable description against current source file on disk.\"\n    send: false",
-      "user-invocable": "false"
-    },
-    "conflict-resolution.agent.md": {
-      "name": "Conflict Resolution \u2014 daily-pipeline",
-      "description": "\"Makes ACCEPT/REJECT/REVISE decisions on conflicts flagged by the conflict auditor in daily-pipeline\"",
-      "tools": "['edit', 'search', 'read']",
-      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Conflict resolution is complete. Review decisions and route corrections.\"\n    send: false\n  - label: Update Agent Docs\n    agent: agent-updater\n    prompt: \"Conflict resolutions may require agent documentation updates.\"\n    send: false",
-      "user-invocable": "false"
-    },
-    "quality-auditor.agent.md": {
-      "name": "Quality Auditor \u2014 daily-pipeline",
-      "description": "\"Read-only audit agent that inspects deliverables in daily-pipeline for structural defects, logical inconsistencies, and LLM-generated prose patterns; does not rewrite\"",
-      "tools": "['read', 'search']",
-      "agents": "['primary-producer']",
-      "handoffs": "\n  - label: Route Corrections to Primary Producer\n    agent: primary-producer\n    prompt: \"Audit findings attached. Please correct flagged passages.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Quality audit complete. See findings.\"\n    send: false\n",
-      "user-invocable": "false"
-    },
-    "technical-validator.agent.md": {
-      "name": "Technical Validator \u2014 daily-pipeline",
-      "description": "\"Read-only audit agent that verifies technical accuracy in daily-pipeline \u2014 code examples, file excerpts, API references, and tool invocations match what exists on disk\"",
-      "tools": "['read', 'search']",
-      "agents": "['primary-producer', 'reference-manager', 'conflict-auditor']",
-      "handoffs": "\n  - label: Route Corrections to Primary Producer\n    agent: primary-producer\n    prompt: \"Technical accuracy findings attached. Please correct flagged inaccuracies.\"\n    send: false\n  - label: Route Reference Issues\n    agent: reference-manager\n    prompt: \"Reference accuracy issues found. Please verify.\"\n    send: false\n  - label: Log Conflict\n    agent: conflict-auditor\n    prompt: \"Technical conflict detected. Logging and routing.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Technical validation complete. See findings.\"\n    send: false",
-      "user-invocable": "false"
-    },
-    "ingest-expert.agent.md": {
-      "name": "\"Team Ingestion Expert \u2014 daily-pipeline\"",
-      "description": "\"Component expert for Team Ingestion in daily-pipeline \u2014 prepares Component Briefs, reviews drafts against brief checklist, approves deliverables\"",
-      "tools": "['read', 'search', 'agent']",
-      "agents": "['primary-producer', 'adversarial', 'reference-manager']",
-      "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Team Ingestion has been reviewed and accepted.\"\n    send: false",
-      "user-invocable": "false"
-    },
-    "analysis-expert.agent.md": {
-      "name": "\"Shared Capability and Reference Analysis Expert \u2014 daily-pipeline\"",
-      "description": "\"Component expert for Shared Capability and Reference Analysis in daily-pipeline \u2014 prepares Component Briefs, reviews drafts against brief checklist, approves deliverables\"",
-      "tools": "['read', 'search', 'agent']",
-      "agents": "['primary-producer', 'adversarial', 'reference-manager']",
-      "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Shared Capability and Reference Analysis has been reviewed and accepted.\"\n    send: false",
-      "user-invocable": "false"
-    },
-    "abstraction-expert.agent.md": {
-      "name": "\"Abstract Team Synthesis Expert \u2014 daily-pipeline\"",
-      "description": "\"Component expert for Abstract Team Synthesis in daily-pipeline \u2014 prepares Component Briefs, reviews drafts against brief checklist, approves deliverables\"",
-      "tools": "['read', 'search', 'agent']",
-      "agents": "['primary-producer', 'adversarial', 'reference-manager']",
-      "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Abstract Team Synthesis has been reviewed and accepted.\"\n    send: false",
-      "user-invocable": "false"
-    },
-    "integration-expert.agent.md": {
-      "name": "\"AgentTeams Integration Expert \u2014 daily-pipeline\"",
-      "description": "\"Component expert for AgentTeams Integration in daily-pipeline \u2014 prepares Component Briefs, reviews drafts against brief checklist, approves deliverables\"",
-      "tools": "['read', 'search', 'agent']",
-      "agents": "['primary-producer', 'adversarial', 'reference-manager']",
-      "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"AgentTeams Integration has been reviewed and accepted.\"\n    send: false",
-      "user-invocable": "false"
-    },
-    "reporting-expert.agent.md": {
-      "name": "\"Run Reporting Expert \u2014 daily-pipeline\"",
-      "description": "\"Component expert for Run Reporting in daily-pipeline \u2014 prepares Component Briefs, reviews drafts against brief checklist, approves deliverables\"",
-      "tools": "['read', 'search', 'agent']",
-      "agents": "['primary-producer', 'adversarial', 'reference-manager']",
-      "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Run Reporting has been reviewed and accepted.\"\n    send: false",
+    "navigator.agent.md": {
+      "name": "Navigator \u2014 daily-pipeline",
+      "description": "\"Repository structure navigation, project map maintenance, file location lookups, and dependency queries for daily-pipeline\"",
+      "tools": "['read', 'search', 'execute']",
+      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Navigation query is complete. Here are the structural findings.\"\n    send: false",
       "user-invocable": "false"
     },
     "code-hygiene.agent.md": {
@@ -627,6 +566,21 @@
       "tools": "['read', 'search']",
       "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Adversarial review is complete. Return findings \u2014 validated presuppositions, challenged presuppositions, and cascade analysis \u2014 to the orchestrator for plan revision.\"\n    send: false\n  - label: Audit for Conflicts\n    agent: conflict-auditor\n    prompt: \"Adversarial review surfaced assumptions that may conflict with documented facts. Run a targeted conflict audit on the identified areas.\"\n    send: false",
       "user-invocable": "true"
+    },
+    "conflict-auditor.agent.md": {
+      "name": "Conflict Auditor \u2014 daily-pipeline",
+      "description": "\"Detects logical conflicts across deliverables, agent documentation, reference files, and source material in daily-pipeline\"",
+      "tools": "['read', 'search']",
+      "agents": "['conflict-resolution', 'agent-updater', 'technical-validator']",
+      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Conflict audit is complete. Review the findings.\"\n    send: false\n  - label: Update Agent Docs\n    agent: agent-updater\n    prompt: \"Conflicts detected that require documentation updates.\"\n    send: false\n  - label: Resolve Conflicts\n    agent: conflict-resolution\n    prompt: \"Conflicts have been identified and logged. Make ACCEPT/REJECT/REVISE decisions.\"\n    send: false\n  - label: Verify Source Drift\n    agent: technical-validator\n    prompt: \"SOURCE_DRIFT conflict detected. Verify deliverable description against current source file on disk.\"\n    send: false",
+      "user-invocable": "false"
+    },
+    "conflict-resolution.agent.md": {
+      "name": "Conflict Resolution \u2014 daily-pipeline",
+      "description": "\"Makes ACCEPT/REJECT/REVISE decisions on conflicts flagged by the conflict auditor in daily-pipeline\"",
+      "tools": "['edit', 'search', 'read']",
+      "handoffs": "\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Conflict resolution is complete. Review decisions and route corrections.\"\n    send: false\n  - label: Update Agent Docs\n    agent: agent-updater\n    prompt: \"Conflict resolutions may require agent documentation updates.\"\n    send: false",
+      "user-invocable": "false"
     },
     "cleanup.agent.md": {
       "name": "Cleanup \u2014 daily-pipeline",
@@ -681,6 +635,22 @@
       "handoffs": "\n  - label: Quality Audit\n    agent: quality-auditor\n    prompt: \"Revised draft is ready for quality audit.\"\n    send: false\n  - label: Conflict Audit\n    agent: conflict-auditor\n    prompt: \"New deliverable added. Run consistency check.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Deliverable production is complete.\"\n    send: false\n",
       "user-invocable": "false"
     },
+    "quality-auditor.agent.md": {
+      "name": "Quality Auditor \u2014 daily-pipeline",
+      "description": "\"Read-only audit agent that inspects deliverables in daily-pipeline for structural defects, logical inconsistencies, and LLM-generated prose patterns; does not rewrite\"",
+      "tools": "['read', 'search']",
+      "agents": "['primary-producer']",
+      "handoffs": "\n  - label: Route Corrections to Primary Producer\n    agent: primary-producer\n    prompt: \"Audit findings attached. Please correct flagged passages.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Quality audit complete. See findings.\"\n    send: false\n",
+      "user-invocable": "false"
+    },
+    "technical-validator.agent.md": {
+      "name": "Technical Validator \u2014 daily-pipeline",
+      "description": "\"Read-only audit agent that verifies technical accuracy in daily-pipeline \u2014 code examples, file excerpts, API references, and tool invocations match what exists on disk\"",
+      "tools": "['read', 'search']",
+      "agents": "['primary-producer', 'reference-manager', 'conflict-auditor']",
+      "handoffs": "\n  - label: Route Corrections to Primary Producer\n    agent: primary-producer\n    prompt: \"Technical accuracy findings attached. Please correct flagged inaccuracies.\"\n    send: false\n  - label: Route Reference Issues\n    agent: reference-manager\n    prompt: \"Reference accuracy issues found. Please verify.\"\n    send: false\n  - label: Log Conflict\n    agent: conflict-auditor\n    prompt: \"Technical conflict detected. Logging and routing.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Technical validation complete. See findings.\"\n    send: false",
+      "user-invocable": "false"
+    },
     "reference-manager.agent.md": {
       "name": "Reference Manager \u2014 daily-pipeline",
       "description": "\"Manages the bibliography and reference database for daily-pipeline \u2014 CRUD operations, citation verification, anti-fabrication enforcement\"",
@@ -694,6 +664,46 @@
       "tools": "['read', 'edit', 'execute']",
       "agents": "['technical-validator']",
       "handoffs": "\n  - label: Validate Technical Accuracy\n    agent: technical-validator\n    prompt: \"Validate technical accuracy before final assembly.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Final output assembly complete.\"\n    send: false\n",
+      "user-invocable": "false"
+    },
+    "ingest-expert.agent.md": {
+      "name": "\"Team Ingestion Expert \u2014 daily-pipeline\"",
+      "description": "\"Component expert for Team Ingestion in daily-pipeline \u2014 prepares Component Briefs, reviews drafts against brief checklist, approves deliverables\"",
+      "tools": "['read', 'search', 'agent']",
+      "agents": "['primary-producer', 'adversarial', 'reference-manager']",
+      "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Team Ingestion has been reviewed and accepted.\"\n    send: false",
+      "user-invocable": "false"
+    },
+    "analysis-expert.agent.md": {
+      "name": "\"Shared Capability and Reference Analysis Expert \u2014 daily-pipeline\"",
+      "description": "\"Component expert for Shared Capability and Reference Analysis in daily-pipeline \u2014 prepares Component Briefs, reviews drafts against brief checklist, approves deliverables\"",
+      "tools": "['read', 'search', 'agent']",
+      "agents": "['primary-producer', 'adversarial', 'reference-manager']",
+      "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Shared Capability and Reference Analysis has been reviewed and accepted.\"\n    send: false",
+      "user-invocable": "false"
+    },
+    "abstraction-expert.agent.md": {
+      "name": "\"Abstract Team Synthesis Expert \u2014 daily-pipeline\"",
+      "description": "\"Component expert for Abstract Team Synthesis in daily-pipeline \u2014 prepares Component Briefs, reviews drafts against brief checklist, approves deliverables\"",
+      "tools": "['read', 'search', 'agent']",
+      "agents": "['primary-producer', 'adversarial', 'reference-manager']",
+      "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Abstract Team Synthesis has been reviewed and accepted.\"\n    send: false",
+      "user-invocable": "false"
+    },
+    "integration-expert.agent.md": {
+      "name": "\"AgentTeams Integration Expert \u2014 daily-pipeline\"",
+      "description": "\"Component expert for AgentTeams Integration in daily-pipeline \u2014 prepares Component Briefs, reviews drafts against brief checklist, approves deliverables\"",
+      "tools": "['read', 'search', 'agent']",
+      "agents": "['primary-producer', 'adversarial', 'reference-manager']",
+      "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"AgentTeams Integration has been reviewed and accepted.\"\n    send: false",
+      "user-invocable": "false"
+    },
+    "reporting-expert.agent.md": {
+      "name": "\"Run Reporting Expert \u2014 daily-pipeline\"",
+      "description": "\"Component expert for Run Reporting in daily-pipeline \u2014 prepares Component Briefs, reviews drafts against brief checklist, approves deliverables\"",
+      "tools": "['read', 'search', 'agent']",
+      "agents": "['primary-producer', 'adversarial', 'reference-manager']",
+      "handoffs": "\n  - label: Vet Brief Before Drafting\n    agent: adversarial\n    prompt: \"Component Brief prepared. Review for hidden presuppositions before drafting begins.\"\n    send: false\n  - label: Send to Primary Producer\n    agent: primary-producer\n    prompt: \"Component Brief accepted. Ready for drafting.\"\n    send: false\n  - label: Verify Citations\n    agent: reference-manager\n    prompt: \"Verify citation keys in Component Brief before drafting begins.\"\n    send: false\n  - label: Return to Orchestrator\n    agent: orchestrator\n    prompt: \"Run Reporting has been reviewed and accepted.\"\n    send: false",
       "user-invocable": "false"
     },
     "team-builder.agent.md": {
@@ -779,7 +789,7 @@
       "authority_hierarchy": "e1acd54a5da95801fcd1806fadbe4c9f78add481fd015ea15440e70a72b2fe73",
       "routing_table_rows": "7f62c3d963861b3cd3a3b5c6863293c68b08eaa3c5a7c351b3db4febf83a0910",
       "update_compatibility_source_pack": "24662ea1c046bf2831dfa898b937114683aa5e9ca695b243aaf3241ca6ab34ea",
-      "available_workflows": "0b075fff9bed5d76b4b953f360a2a3a4194983e42f3b29f75ea974c0ce5b05d8"
+      "available_workflows": "8d19fa60bc7e06212d3912daf928874a2ccf15212f051141e5af72d9f2d1e0dd"
     },
     ".github/agents/output-compiler.agent.md": {
       "content": "4daaa21d86119a2e1d9e85afbe02e0b08ebe37d3e4f537686c880f00f03216ae"
@@ -812,8 +822,8 @@
     ".github/agents/security.agent.md": {
       "security_authority": "22a76a0db3797893ea30a2e60814ab047622005077cbf6464100510187962d20",
       "invariant_core": "ff22ac3ecdf1e94935ebec4ef2960946be13a0362b416ada020c97065d6e8f87",
-      "security_rules_invariant": "8bd67a40239bf37f836d7ad8fa7497d3fefe759048e2242f6d04f3555fd048c6",
-      "threat_intelligence": "3636e484b4db9bb46233088d9974e09edf74b06508e5d6e50107ae3e1f5b9517",
+      "security_rules_invariant": "98fd5921a96f09c4a0864c5c2a65c1126824da09a2ac76430f25f72962ae1161",
+      "threat_intelligence": "6ce328fbe19a3ade0eece733426a4f140fd332b504270051c2a7a35aa41e2d82",
       "security_verdict_contract": "e17bc133696fef7e7aaa86af1023b9ad979f3f6cd87d853af62c8e019efff501"
     },
     ".github/agents/team-builder.agent.md": {
