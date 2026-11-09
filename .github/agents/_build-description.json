@@ -1,4 +1,5 @@
 {
+  "authorized_managers": ["infrastructure-management"],
   "$schema": "../agentteams/schemas/project-description.schema.json",
   "project_name": "daily-pipeline",
   "project_goal": "Build and run a standalone daily pipeline that ingests multiple agent teams, detects shared capabilities and references, synthesizes an abstract team, and prepares AgentTeams integration update requests for create/update workflows.",
